@@ -1,0 +1,35 @@
+# deps
+node_modules/
+
+# build
+dist/
+.astro/
+
+# env
+.env
+.env.*
+
+# editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# os
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# claude / tooling
+.claude/
+.playwright-mcp/
+
+# screenshots (local only)
+v2-*.png
+v3-*.png
+wookieos-*.png
+qp-test-*.png
+
+# profile readme (goes in woosqa/woosqa repo)
+woosqa-profile-readme.md

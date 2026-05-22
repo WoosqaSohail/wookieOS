@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="wookieOS — portfolio of woosqa. designer, illustrator." />
+  <title>wookieOS — woosqa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=Press+Start+2P&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#mobile-projects">skip to projects</a>
+
+  <!-- ============================================================
+       BOOT OVERLAY
+       ============================================================ -->
+  <div class="boot-overlay" id="boot-overlay" aria-hidden="true">
+    <div class="boot-lines" id="boot-lines"></div>
+  </div>
+
+  <!-- ============================================================
+       LOGIN SCREEN
+       ============================================================ -->
+  <div class="login-screen" id="login-screen">
+    <div class="login-content">
+      <div class="login-avatar">
+        <svg viewBox="0 0 16 16" shape-rendering="crispEdges">
+          <rect x="5" y="1" width="6" height="1" fill="#2A1B40"/>
+          <rect x="4" y="2" width="8" height="1" fill="#2A1B40"/>
+          <rect x="3" y="3" width="10" height="2" fill="#2A1B40"/>
+          <rect x="10" y="2" width="1" height="2" fill="#9C7DF0"/>
+          <rect x="3" y="4" width="3" height="2" fill="#2A1B40"/>
+          <rect x="9" y="4" width="4" height="1" fill="#2A1B40"/>
+          <rect x="4" y="5" width="8" height="6" fill="#F5D2DE"/>
+          <rect x="3" y="5" width="1" height="6" fill="#2A1B40"/>
+          <rect x="12" y="5" width="1" height="6" fill="#2A1B40"/>
+          <rect x="5" y="7" width="2" height="1" fill="#1F1430"/>
+          <rect x="9" y="7" width="2" height="1" fill="#1F1430"/>
+          <rect x="5" y="7" width="1" height="1" fill="#FBF6E8"/>
+          <rect x="9" y="7" width="1" height="1" fill="#FBF6E8"/>
+          <rect x="4" y="8" width="2" height="1" fill="#FF7AA8" opacity="0.4"/>
+          <rect x="10" y="8" width="2" height="1" fill="#FF7AA8" opacity="0.4"/>
+          <rect x="7" y="9" width="2" height="1" fill="#E5BBC9"/>
+          <rect x="7" y="11" width="2" height="1" fill="#FBF6E8"/>
+          <rect x="3" y="11" width="4" height="1" fill="#9C7DF0"/>
+          <rect x="9" y="11" width="4" height="1" fill="#9C7DF0"/>
+          <rect x="2" y="12" width="12" height="2" fill="#9C7DF0"/>
+          <rect x="2" y="13" width="12" height="1" fill="#6E4FCC"/>
+        </svg>
+      </div>
+      <h1 class="login-name">wookie</h1>
+      <p class="login-role">illustrator &rarr; product designer</p>
+      <p class="login-tagline">open to work &middot; 2026</p>
+      <button class="login-btn" type="button" id="login-btn">
+        <span class="login-btn-glyph" aria-hidden="true">&#9654;</span> log in
+      </button>
+    </div>
+    <p class="login-version">wookieOS v.0.2 &middot; '02 edition</p>
+  </div>
+
+  <!-- ============================================================
+       DESKTOP
+       ============================================================ -->
+  <div class="desktop" id="desktop" aria-label="wookieOS desktop">
+
+    <!-- CRT overlays (scanlines, vignette, chromatic edge) -->
+    <div class="crt-scanlines" aria-hidden="true"></div>
+    <div class="crt-vignette" aria-hidden="true"></div>
+
+    <!-- Sticky note -->
+    <aside class="sticky-note" role="note" aria-label="About note">
+      <div class="sticky-body">
+        <p class="sticky-line"><strong>wookie</strong> <span class="sticky-muted">(woosqa)</span></p>
+        <p class="sticky-line">illustrator <span class="sticky-arrow">&rarr;</span> product designer</p>
+        <p class="sticky-line"><span class="sticky-tag">open</span> to work · 2026</p>
+      </div>
+    </aside>
+
+    <!-- Icon grid -->
+    <nav class="desktop-icons" aria-label="Projects and pages">
+
+      <button class="desktop-icon stagger-1" data-window="consultly" type="button">
+        <span class="icon-pixel">
+          <!-- Chat bubble pixel art -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="2" y="2" width="12" height="9" fill="#9C7DF0"/>
+            <rect x="2" y="2" width="12" height="1" fill="#C4B5FD"/>
+            <rect x="2" y="10" width="12" height="1" fill="#5A3FB3"/>
+            <rect x="1" y="3" width="1" height="7" fill="#1F1430"/>
+            <rect x="14" y="3" width="1" height="7" fill="#1F1430"/>
+            <rect x="2" y="1" width="12" height="1" fill="#1F1430"/>
+            <rect x="2" y="11" width="12" height="1" fill="#1F1430"/>
+            <rect x="3" y="11" width="1" height="2" fill="#9C7DF0"/>
+            <rect x="4" y="12" width="1" height="2" fill="#9C7DF0"/>
+            <rect x="3" y="13" width="2" height="1" fill="#1F1430"/>
+            <rect x="5" y="14" width="1" height="1" fill="#1F1430"/>
+            <rect x="4" y="13" width="1" height="1" fill="#1F1430"/>
+            <rect x="4" y="6" width="1" height="2" fill="#FFF6E0"/>
+            <rect x="7" y="6" width="1" height="2" fill="#FFF6E0"/>
+            <rect x="10" y="6" width="1" height="2" fill="#FFF6E0"/>
+          </svg>
+        </span>
+        <span class="icon-label">consultly</span>
+        <span class="icon-meta">.app</span>
+      </button>
+
+      <button class="desktop-icon stagger-2" data-window="frenzly" type="button">
+        <span class="icon-pixel">
+          <!-- Fox/creature face pixel art -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="2" y="2" width="2" height="2" fill="#C49AAA"/>
+            <rect x="12" y="2" width="2" height="2" fill="#C49AAA"/>
+            <rect x="1" y="3" width="1" height="2" fill="#1F1430"/>
+            <rect x="14" y="3" width="1" height="2" fill="#1F1430"/>
+            <rect x="2" y="1" width="2" height="1" fill="#1F1430"/>
+            <rect x="12" y="1" width="2" height="1" fill="#1F1430"/>
+            <rect x="3" y="4" width="10" height="9" fill="#E5BBC9"/>
+            <rect x="3" y="3" width="10" height="1" fill="#1F1430"/>
+            <rect x="2" y="4" width="1" height="9" fill="#1F1430"/>
+            <rect x="13" y="4" width="1" height="9" fill="#1F1430"/>
+            <rect x="3" y="13" width="10" height="1" fill="#1F1430"/>
+            <rect x="3" y="4" width="10" height="1" fill="#F5D2DE"/>
+            <rect x="5" y="7" width="2" height="2" fill="#1F1430"/>
+            <rect x="9" y="7" width="2" height="2" fill="#1F1430"/>
+            <rect x="4" y="10" width="2" height="1" fill="#FF7AA8" opacity="0.7"/>
+            <rect x="10" y="10" width="2" height="1" fill="#FF7AA8" opacity="0.7"/>
+            <rect x="7" y="10" width="2" height="1" fill="#1F1430"/>
+          </svg>
+        </span>
+        <span class="icon-label">frenzly</span>
+        <span class="icon-meta">.app</span>
+      </button>
+
+      <button class="desktop-icon stagger-3" data-window="storyloop" type="button">
+        <span class="icon-pixel">
+          <!-- Open book pixel art -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="2" y="3" width="6" height="10" fill="#F2E5C8"/>
+            <rect x="8" y="3" width="6" height="10" fill="#EBE0BE"/>
+            <rect x="2" y="2" width="12" height="1" fill="#1F1430"/>
+            <rect x="2" y="13" width="12" height="1" fill="#1F1430"/>
+            <rect x="1" y="3" width="1" height="10" fill="#1F1430"/>
+            <rect x="14" y="3" width="1" height="10" fill="#1F1430"/>
+            <rect x="7" y="3" width="2" height="10" fill="#1F1430"/>
+            <rect x="3" y="5" width="3" height="1" fill="#7DB5D9"/>
+            <rect x="3" y="7" width="4" height="1" fill="#7DB5D9"/>
+            <rect x="3" y="9" width="3" height="1" fill="#C49AAA"/>
+            <rect x="10" y="5" width="3" height="1" fill="#C49AAA"/>
+            <rect x="10" y="7" width="3" height="1" fill="#7DB5D9"/>
+            <rect x="10" y="9" width="3" height="1" fill="#C49AAA"/>
+          </svg>
+        </span>
+        <span class="icon-label">storyloop</span>
+        <span class="icon-meta">.url</span>
+      </button>
+
+      <button class="desktop-icon stagger-4" data-window="more" type="button">
+        <span class="icon-pixel">
+          <!-- Folder pixel art -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="2" y="4" width="4" height="1" fill="#7DB5D9"/>
+            <rect x="2" y="3" width="4" height="1" fill="#1F1430"/>
+            <rect x="6" y="4" width="1" height="1" fill="#1F1430"/>
+            <rect x="2" y="5" width="12" height="8" fill="#7DB5D9"/>
+            <rect x="2" y="5" width="12" height="1" fill="#A5D2EC"/>
+            <rect x="2" y="12" width="12" height="1" fill="#4F87B5"/>
+            <rect x="1" y="5" width="1" height="8" fill="#1F1430"/>
+            <rect x="14" y="5" width="1" height="8" fill="#1F1430"/>
+            <rect x="2" y="13" width="12" height="1" fill="#1F1430"/>
+            <rect x="6" y="5" width="8" height="1" fill="#1F1430"/>
+            <rect x="9" y="8" width="1" height="1" fill="#F2E5C8"/>
+            <rect x="10" y="9" width="1" height="1" fill="#F2E5C8"/>
+            <rect x="9" y="10" width="1" height="1" fill="#F2E5C8"/>
+            <rect x="8" y="9" width="1" height="1" fill="#F2E5C8"/>
+          </svg>
+        </span>
+        <span class="icon-label">more.work</span>
+        <span class="icon-meta">.dir</span>
+      </button>
+
+      <button class="desktop-icon stagger-5" data-window="about" type="button">
+        <span class="icon-pixel">
+          <!-- Pixel heart -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="3" y="3" width="3" height="1" fill="#1F1430"/>
+            <rect x="10" y="3" width="3" height="1" fill="#1F1430"/>
+            <rect x="2" y="4" width="1" height="2" fill="#1F1430"/>
+            <rect x="6" y="4" width="1" height="1" fill="#1F1430"/>
+            <rect x="9" y="4" width="1" height="1" fill="#1F1430"/>
+            <rect x="13" y="4" width="1" height="2" fill="#1F1430"/>
+            <rect x="3" y="4" width="3" height="1" fill="#FF7AA8"/>
+            <rect x="10" y="4" width="3" height="1" fill="#FF7AA8"/>
+            <rect x="2" y="6" width="12" height="3" fill="#FF7AA8"/>
+            <rect x="3" y="5" width="3" height="1" fill="#FF9CC0"/>
+            <rect x="10" y="5" width="3" height="1" fill="#FF9CC0"/>
+            <rect x="3" y="9" width="10" height="1" fill="#FF7AA8"/>
+            <rect x="4" y="10" width="8" height="1" fill="#FF7AA8"/>
+            <rect x="5" y="11" width="6" height="1" fill="#FF7AA8"/>
+            <rect x="6" y="12" width="4" height="1" fill="#FF7AA8"/>
+            <rect x="7" y="13" width="2" height="1" fill="#FF7AA8"/>
+            <rect x="2" y="9" width="1" height="1" fill="#1F1430"/>
+            <rect x="13" y="9" width="1" height="1" fill="#1F1430"/>
+            <rect x="3" y="10" width="1" height="1" fill="#1F1430"/>
+            <rect x="12" y="10" width="1" height="1" fill="#1F1430"/>
+            <rect x="4" y="11" width="1" height="1" fill="#1F1430"/>
+            <rect x="11" y="11" width="1" height="1" fill="#1F1430"/>
+            <rect x="5" y="12" width="1" height="1" fill="#1F1430"/>
+            <rect x="10" y="12" width="1" height="1" fill="#1F1430"/>
+            <rect x="6" y="13" width="1" height="1" fill="#1F1430"/>
+            <rect x="9" y="13" width="1" height="1" fill="#1F1430"/>
+            <rect x="7" y="14" width="2" height="1" fill="#1F1430"/>
+            <rect x="4" y="7" width="1" height="1" fill="#FFC8DC"/>
+          </svg>
+        </span>
+        <span class="icon-label">about.me</span>
+        <span class="icon-meta">.txt</span>
+      </button>
+
+      <button class="desktop-icon stagger-6" data-window="contact" type="button">
+        <span class="icon-pixel">
+          <!-- Envelope pixel art -->
+          <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+            <rect x="2" y="4" width="12" height="8" fill="#7DC9B5"/>
+            <rect x="2" y="4" width="12" height="1" fill="#A5DCCB"/>
+            <rect x="2" y="11" width="12" height="1" fill="#4FA68F"/>
+            <rect x="1" y="4" width="1" height="8" fill="#1F1430"/>
+            <rect x="14" y="4" width="1" height="8" fill="#1F1430"/>
+            <rect x="2" y="3" width="12" height="1" fill="#1F1430"/>
+            <rect x="2" y="12" width="12" height="1" fill="#1F1430"/>
+            <rect x="3" y="5" width="2" height="1" fill="#1F1430"/>
+            <rect x="5" y="6" width="2" height="1" fill="#1F1430"/>
+            <rect x="7" y="7" width="2" height="1" fill="#1F1430"/>
+            <rect x="9" y="6" width="2" height="1" fill="#1F1430"/>
+            <rect x="11" y="5" width="2" height="1" fill="#1F1430"/>
+          </svg>
+        </span>
+        <span class="icon-label">contact</span>
+        <span class="icon-meta">.msg</span>
+      </button>
+    </nav>
+
+    <!-- Recycle bin (lower left) -->
+    <button class="recycle-bin" data-window="trash" type="button" aria-label="Recycle Bin">
+      <span class="icon-pixel">
+        <svg viewBox="0 0 16 16" class="px" aria-hidden="true" shape-rendering="crispEdges">
+          <rect x="3" y="3" width="10" height="1" fill="#1F1430"/>
+          <rect x="6" y="2" width="4" height="1" fill="#1F1430"/>
+          <rect x="3" y="4" width="10" height="1" fill="#9C7DF0"/>
+          <rect x="4" y="5" width="8" height="9" fill="#7B5CD9"/>
+          <rect x="4" y="5" width="8" height="1" fill="#9C7DF0"/>
+          <rect x="3" y="5" width="1" height="9" fill="#1F1430"/>
+          <rect x="12" y="5" width="1" height="9" fill="#1F1430"/>
+          <rect x="4" y="14" width="8" height="1" fill="#1F1430"/>
+          <rect x="6" y="7" width="1" height="6" fill="#1F1430"/>
+          <rect x="8" y="7" width="1" height="6" fill="#1F1430"/>
+          <rect x="10" y="7" width="1" height="6" fill="#1F1430"/>
+        </svg>
+      </span>
+      <span class="icon-label">trash</span>
+    </button>
+
+
+  </div>
+
+  <!-- ============================================================
+       TASKBAR
+       ============================================================ -->
+  <footer class="taskbar" aria-label="taskbar">
+    <button class="start-button" data-window="start" type="button" aria-label="Start menu">
+      <span class="start-glyph" aria-hidden="true">
+        <svg viewBox="0 0 12 12" shape-rendering="crispEdges"><rect x="0" y="2" width="12" height="3" fill="#FF7AA8"/><rect x="0" y="7" width="12" height="3" fill="#9C7DF0"/></svg>
+      </span>
+      <span class="start-label">start</span>
+    </button>
+
+    <div class="taskbar-divider" aria-hidden="true"></div>
+
+    <div class="taskbar-pinned" id="taskbar-pinned" aria-label="Pinned apps"></div>
+
+    <div class="taskbar-divider" aria-hidden="true"></div>
+
+    <div class="taskbar-windows" id="taskbar-windows" aria-label="Open windows"></div>
+
+    <div class="taskbar-divider" aria-hidden="true"></div>
+
+    <div class="taskbar-meta">
+      <span class="taskbar-name" data-text="wookieOS">wookieOS</span>
+      <span class="taskbar-version">v.0.2 · '02 ed.</span>
+    </div>
+
+    <div class="taskbar-divider" aria-hidden="true"></div>
+
+    <div class="taskbar-right">
+      <span class="taskbar-tray" aria-label="Tray icons">
+        <span class="tray-pixel tray-pixel--mag" aria-hidden="true"></span>
+        <span class="tray-pixel tray-pixel--lav" aria-hidden="true"></span>
+        <span class="tray-pixel tray-pixel--mnt" aria-hidden="true"></span>
+      </span>
+      <time class="clock" id="clock" aria-live="off">12:00</time>
+    </div>
+  </footer>
+
+  <!-- Quick settings panel -->
+  <div class="quick-panel hidden" id="quick-panel" aria-label="Quick settings">
+    <div class="qp-music">
+      <div class="qp-music-head">
+        <span class="qp-note" aria-hidden="true">&#9835;</span>
+        <span class="qp-playing">now playing</span>
+      </div>
+      <div class="qp-track" id="music-track">&mdash;</div>
+      <div class="qp-bar"><div class="qp-bar-fill" id="music-progress"></div></div>
+      <div class="qp-controls">
+        <button class="qp-btn" id="music-prev" type="button" aria-label="Previous">&#9665;</button>
+        <button class="qp-btn qp-btn--play" id="music-play" type="button" aria-label="Play">&#9654;</button>
+        <button class="qp-btn" id="music-next" type="button" aria-label="Next">&#9655;</button>
+        <span class="qp-vol-icon" aria-hidden="true">&#9673;</span>
+        <input type="range" class="qp-slider" id="music-volume" min="0" max="100" value="20" aria-label="Volume" />
+      </div>
+    </div>
+    <div class="qp-divider"></div>
+    <div class="qp-time-section">
+      <span class="qp-big-time" id="qp-time">12:00</span>
+      <span class="qp-full-date" id="qp-date">thursday, may 22, 2026</span>
+    </div>
+    <div class="qp-cal" id="qp-cal"></div>
+    <div class="qp-divider"></div>
+    <div class="qp-toggles">
+      <button class="qp-toggle active" id="toggle-crt" type="button">crt</button>
+      <button class="qp-toggle" type="button">bt</button>
+      <button class="qp-toggle active" type="button">dark</button>
+      <button class="qp-toggle" id="toggle-night" type="button">night</button>
+    </div>
+  </div>
+
+  <!-- Desktop context menu -->
+  <div class="ctx-menu hidden" id="ctx-menu">
+    <button class="ctx-item" data-ctx="refresh" type="button">refresh</button>
+    <div class="ctx-sep"></div>
+    <button class="ctx-item" data-ctx="about" type="button">about wookieOS</button>
+    <button class="ctx-item" data-ctx="settings" type="button">settings</button>
+  </div>
+
+  <!-- Window stage -->
+  <div class="window-stage" id="window-stage" aria-live="polite"></div>
+
+  <!-- ============================================================
+       MOBILE
+       ============================================================ -->
+  <main class="mobile-view" id="mobile-projects">
+    <header class="mobile-hero">
+      <span class="mobile-eyebrow">wookieOS v.0.2</span>
+      <h1 class="mobile-title">hi, i'm wookie.</h1>
+      <p class="mobile-tagline">illustrator &rarr; product designer.<br/>open to work, 2026.</p>
+      <p class="mobile-note">[desktop recommended for the full experience]</p>
+    </header>
+
+    <section class="mobile-projects" aria-label="Projects">
+      <a href="#" class="mobile-card" data-window-mobile="consultly">
+        <img src="images/consultly.png" alt="Consultly case study" />
+        <div class="mobile-card-body">
+          <span class="mobile-tag">.app</span>
+          <h2>consultly</h2>
+          <p>consultancy mobile app — connecting experts with clients.</p>
+        </div>
+      </a>
+      <a href="#" class="mobile-card" data-window-mobile="frenzly">
+        <img src="images/frenzly.png" alt="Frenzly case study" />
+        <div class="mobile-card-body">
+          <span class="mobile-tag">.app</span>
+          <h2>frenzly</h2>
+          <p>language learning app with an AI tutor companion.</p>
+        </div>
+      </a>
+      <a href="#" class="mobile-card" data-window-mobile="storyloop">
+        <img src="images/storyloop.png" alt="Storyloop case study" />
+        <div class="mobile-card-body">
+          <span class="mobile-tag">.url</span>
+          <h2>storyloop</h2>
+          <p>curated scrollytelling platform for long-form storytelling.</p>
+        </div>
+      </a>
+    </section>
+
+    <footer class="mobile-footer">
+      <p>wookieOS · v.0.2 '02 edition</p>
+    </footer>
+  </main>
+
+  <!-- Hidden YouTube player target -->
+  <div id="yt-player" aria-hidden="true"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
