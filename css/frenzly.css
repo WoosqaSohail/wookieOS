@@ -1,0 +1,761 @@
+/* =================================================================
+   FRENZLY CASE STUDY — scale-to-fit canvas + cinematic animations
+   ================================================================= */
+
+/* Window-body override: zero padding, dark bg, gutter for scrollbar reserved */
+.window--browser .window-body:has(.fz-root),
+.window-body:has(.fz-root) {
+  padding: 0;
+  background: #0a0514;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.fz-root {
+  --fz-bg: #0a0514;
+  --fz-purple: #9040f0;
+  --fz-purple-deep: #5500b5;
+  --fz-purple-soft: #d1abff;
+  --fz-purple-glow: #e7d3ff;
+  --fz-red: #fb2c36;
+  --fz-text: #d1d5dc;
+  --fz-text-mute: #99a1af;
+  --fz-disp-font: 'Bebas Neue', 'Pixelify Sans', sans-serif;
+  --fz-body-font: 'Urbanist', system-ui, sans-serif;
+  --fz-mont-font: 'Montserrat', sans-serif;
+  width: 100%;
+  background: var(--fz-bg);
+}
+.fz-viewport {
+  width: 100%;
+  position: relative;
+}
+.fz-canvas {
+  position: relative;
+  width: 1440px;
+  background: var(--fz-bg);
+  transform-origin: top left;
+  font-family: var(--fz-body-font);
+  color: var(--fz-text);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.fz-canvas img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  display: block;
+}
+
+/* ============== HERO (scroll-driven assembly) ============== */
+.fz-hero {
+  position: relative;
+  width: 1440px;
+  height: 1080px;
+  --hp: 0;
+  --p-phone: 0;
+  --p-frenzly: 0;
+  --p-head: 0;
+  --p-settled: 0;
+}
+/* Gradient fade from hero into dark section */
+.fz-hero::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent, var(--fz-bg));
+  z-index: 10;
+  pointer-events: none;
+}
+.fz-hero-sticky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+.fz-hero-base {
+  position: absolute; inset: 0;
+  background: linear-gradient(133deg, #ffffff 4%, #b3b3b3 87%);
+  z-index: 0;
+}
+.fz-hero-purple {
+  position: absolute; inset: 0;
+  background: linear-gradient(163deg, rgba(144,64,240,0.7) 8%, rgba(85,0,181,0.7) 79%);
+  z-index: 1;
+}
+/* FRENZLY backdrop: rises from below + fades in */
+.fz-hero-title {
+  position: absolute;
+  left: 50%; top: 280px;
+  font-family: var(--fz-disp-font);
+  font-size: 586px; line-height: 1;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  mix-blend-mode: soft-light;
+  z-index: 2;
+  pointer-events: none;
+  background-size: 200% 200%;
+  opacity: var(--p-frenzly);
+  transform: translateX(-50%)
+             translateY(calc((1 - var(--p-frenzly)) * 220px));
+  animation: fz-grad-pan 14s ease-in-out infinite;
+}
+@keyframes fz-grad-pan {
+  0%, 100% { background-position: 0% 0%; }
+  50%      { background-position: 100% 100%; }
+}
+/* Mountain stage: rises from below + fades in */
+.fz-hero-stage {
+  position: absolute;
+  left: -40px; top: 73px;
+  width: 1520px; height: 1047.5px;
+  z-index: 3;
+  opacity: var(--p-phone);
+  transform: translateY(calc((1 - var(--p-phone)) * 320px))
+             scale(calc(0.96 + var(--p-phone) * 0.04))
+             translate(var(--mx, 0px), var(--my, 0px));
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+.fz-canvas .fz-hero-mountains {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+}
+/* Phone screen: positioned inside stage, inherits stage animation */
+.fz-canvas .fz-hero-screen {
+  position: absolute;
+  left: 552px; top: 21px;
+  width: 337px; height: 760px;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hero header (Case Study 2026 + Designed on Figma): subtle fade-in */
+.fz-hero-head {
+  position: absolute;
+  left: 60px; right: 60px; top: 40px;
+  display: flex; justify-content: space-between; align-items: flex-start;
+  z-index: 5;
+  color: #fff;
+  opacity: var(--p-head);
+  transform: translateY(calc((1 - var(--p-head)) * -20px));
+}
+.fz-hero-tag-title {
+  margin: 0; font-family: var(--fz-body-font);
+  font-weight: 700; font-size: 30px; line-height: 1.1;
+  text-align: right;
+}
+.fz-hero-tag-year {
+  margin: 4px 0 0; font-family: var(--fz-body-font);
+  font-weight: 400; font-size: 30px; line-height: 1.1;
+  text-align: right;
+}
+.fz-hero-design {
+  display: flex; align-items: center; gap: 14px;
+  font-family: var(--fz-body-font);
+  font-size: 32px;
+}
+.fz-figma-logo { width: 48px; height: 48px; }
+
+/* "Scroll to explore" hint */
+.fz-hero-hint {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  z-index: 8;
+  opacity: calc(1 - var(--hp, 0));
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  color: rgba(255,255,255,0.45);
+  font-family: var(--fz-body-font);
+  font-size: 18px; font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.fz-hero-hint-arrow {
+  font-size: 22px;
+  animation: fz-hint-bounce 2s ease-in-out infinite;
+}
+@keyframes fz-hint-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.7; }
+  50%      { transform: translateY(8px); opacity: 1; }
+}
+
+/* Hero atmospheric layers */
+.fz-hero-mist {
+  position: absolute;
+  width: 800px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(209,171,255,0.35), transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: 4;
+  mix-blend-mode: screen;
+}
+.fz-hero-mist--a {
+  left: -200px; top: 500px;
+  animation: fz-mist-drift-a 22s ease-in-out infinite;
+}
+.fz-hero-mist--b {
+  right: -200px; top: 700px;
+  animation: fz-mist-drift-b 28s ease-in-out infinite;
+}
+@keyframes fz-mist-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  50%      { transform: translate(120px, -30px) scale(1.15); opacity: 0.85; }
+}
+@keyframes fz-mist-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1.1); opacity: 0.5; }
+  50%      { transform: translate(-100px, 40px) scale(0.95); opacity: 0.75; }
+}
+.fz-hero-flare {
+  position: absolute;
+  left: -30%; top: 200px;
+  width: 50%; height: 80px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6) 50%, transparent);
+  filter: blur(20px);
+  pointer-events: none;
+  z-index: 6;
+  mix-blend-mode: overlay;
+  animation: fz-flare 14s ease-in-out infinite;
+}
+@keyframes fz-flare {
+  0%, 70%, 100% { transform: translateX(0); opacity: 0; }
+  10% { opacity: 0; }
+  35% { transform: translateX(260%); opacity: 0.9; }
+  55% { transform: translateX(520%); opacity: 0; }
+}
+
+/* ============== DARK SECTION ============== */
+.fz-dark {
+  position: relative;
+  width: 1440px;
+  background: var(--fz-bg);
+  overflow: hidden;
+  padding: 90px 0 0;
+}
+/* Blueprint grid texture */
+.fz-dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(209, 171, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(209, 171, 255, 0.09) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: -0.5px -0.5px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 95% 75% at 50% 45%, #000 50%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 75% at 50% 45%, #000 50%, transparent 100%);
+}
+/* Major grid lines every 5 cells for blueprint vibe */
+.fz-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(209, 171, 255, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(209, 171, 255, 0.13) 1px, transparent 1px);
+  background-size: 400px 400px;
+  background-position: -0.5px -0.5px;
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(ellipse 95% 75% at 50% 45%, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 95% 75% at 50% 45%, #000 55%, transparent 100%);
+}
+
+/* Atmospheric blobs */
+.fz-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  opacity: 0.35;
+  z-index: 0;
+}
+.fz-blob--1 {
+  left: 50%; top: 200px;
+  width: 1100px; height: 700px;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, rgba(144,64,240,0.85), rgba(85,0,181,0.3));
+  animation: fz-blob-drift 30s ease-in-out infinite;
+}
+.fz-blob--2 {
+  left: -200px; top: 1400px;
+  width: 900px; height: 600px;
+  background: radial-gradient(circle, rgba(144,64,240,0.6), transparent 70%);
+  animation: fz-blob-drift 38s ease-in-out infinite reverse;
+}
+.fz-blob--3 {
+  right: -150px; top: 2400px;
+  width: 800px; height: 600px;
+  background: radial-gradient(circle, rgba(144,64,240,0.7), transparent 70%);
+  animation: fz-blob-drift 34s ease-in-out infinite;
+}
+@keyframes fz-blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%      { transform: translate(60px, -40px) scale(1.1); }
+}
+
+/* Sections */
+.fz-section {
+  position: relative;
+  width: 1322px;
+  margin: 0 auto;
+  padding: 80px 0;
+  z-index: 2;
+}
+
+/* Display heading shared */
+.fz-display {
+  margin: 0;
+  display: flex; flex-wrap: nowrap; justify-content: center; align-items: center;
+  gap: 14px;
+  font-family: var(--fz-disp-font);
+  font-size: 78px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-align: center;
+  font-weight: 400;
+}
+.fz-display-text {
+  background: linear-gradient(90deg, #ffffff 16%, var(--fz-purple-glow));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.fz-display-amp,
+.fz-display-dot {
+  background: linear-gradient(135deg, var(--fz-purple) 8%, var(--fz-purple-deep) 79%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.fz-underline {
+  width: 167px; height: 4px;
+  margin: 20px auto 0;
+  background: linear-gradient(90deg, transparent, var(--fz-purple), transparent);
+  border-radius: 2px;
+}
+
+/* Overview */
+.fz-overview { text-align: center; }
+.fz-paragraph {
+  max-width: 1077px;
+  margin: 46px auto 0;
+  font-family: var(--fz-body-font);
+  font-size: 28px; line-height: 1.4;
+  color: var(--fz-text);
+}
+
+/* Challenge & Solution */
+.fz-cs { padding-top: 120px; }
+.fz-cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 68px;
+  margin-top: 80px;
+  width: 1308px;
+  margin-left: auto; margin-right: auto;
+}
+.fz-cs-col { display: flex; flex-direction: column; gap: 34px; }
+.fz-cs-head {
+  display: flex; align-items: center; gap: 17px;
+}
+.fz-cs-icon {
+  width: 62px; height: 62px;
+  border-radius: 15px;
+  display: grid; place-items: center;
+  border: 1.5px solid;
+}
+.fz-cs-icon svg { width: 34px; height: 34px; }
+.fz-cs-icon--problem {
+  background: rgba(251, 44, 54, 0.1);
+  border-color: rgba(251, 44, 54, 0.3);
+  color: var(--fz-red);
+}
+.fz-cs-icon--fix {
+  background: rgba(144, 64, 240, 0.1);
+  border-color: rgba(144, 64, 240, 0.3);
+  color: var(--fz-purple);
+}
+.fz-cs-head-text {
+  margin: 0;
+  font-family: var(--fz-body-font);
+  font-weight: 700; font-size: 32px; line-height: 1.2;
+  color: #fff;
+}
+
+/* Cards */
+.fz-card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 25px;
+  padding: 34px;
+  min-height: 164px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.fz-card:hover {
+  border-color: rgba(144,64,240,0.35);
+  box-shadow: 0 18px 40px rgba(85,0,181,0.25);
+}
+.fz-card-title {
+  margin: 0 0 12px;
+  font-family: var(--fz-body-font);
+  font-weight: 700; font-size: 21px;
+  color: #fff;
+}
+.fz-card-text {
+  margin: 0;
+  font-family: var(--fz-body-font);
+  font-size: 17px; line-height: 1.6;
+  color: var(--fz-text-mute);
+}
+
+/* Problem card — red bar on left */
+.fz-card--problem .fz-card-bar {
+  position: absolute;
+  left: -4px; top: 55px;
+  width: 5px; height: 51px;
+  background: var(--fz-red);
+  border-radius: 0 3px 3px 0;
+  box-shadow: 0 0 16px rgba(251,44,54,0.4);
+}
+
+/* Fix card — gradient border + icon */
+.fz-card--fix {
+  background: linear-gradient(90deg, rgba(144,64,240,0.12), rgba(0,0,0,0));
+  border-color: rgba(144,64,240,0.25);
+  display: flex; gap: 17px; align-items: flex-start;
+}
+.fz-card--fix .fz-card-text { color: var(--fz-text); }
+.fz-card-icon {
+  flex-shrink: 0;
+  width: 51px; height: 51px;
+  background: var(--fz-purple);
+  border-radius: 15px;
+  display: grid; place-items: center;
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(89,22,139,0.6), 0 4px 8px rgba(89,22,139,0.45);
+  transition: transform 0.4s ease;
+}
+.fz-card--fix:hover .fz-card-icon { transform: rotate(-6deg) scale(1.05); }
+.fz-card-icon svg { width: 26px; height: 26px; }
+.fz-card-body { flex: 1; min-width: 0; }
+
+/* ============== TYPOGRAPHY ============== */
+.fz-typo { padding-top: 120px; }
+.fz-typo-block {
+  position: relative;
+  margin: 60px auto 0;
+  width: 1312px;
+  background: linear-gradient(173deg, var(--fz-purple) 8%, var(--fz-purple-deep) 79%);
+  border-radius: 64px;
+  padding: 60px 80px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 140px;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(85,0,181,0.4);
+}
+.fz-typo-block::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(255,255,255,0.15), transparent 60%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+.fz-typo-aa-wrap {
+  position: relative;
+  display: flex; flex-direction: column; align-items: flex-start;
+  z-index: 2;
+}
+.fz-typo-aa {
+  font-family: var(--fz-mont-font);
+  font-weight: 600;
+  font-size: 253px;
+  line-height: 1;
+  color: #fff;
+  opacity: 0.95;
+  letter-spacing: -0.05em;
+}
+.fz-typo-label {
+  font-family: var(--fz-mont-font);
+  font-weight: 700;
+  font-size: 37px;
+  color: #fff;
+  opacity: 0.7;
+  margin-top: -10px;
+}
+.fz-typo-alphabet {
+  font-family: var(--fz-mont-font);
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+  color: #fff;
+  z-index: 2;
+}
+.fz-typo-alphabet p { margin: 0; }
+.fz-typo-numbers {
+  font-weight: 400;
+  margin-top: 8px !important;
+}
+
+/* Typography phones */
+.fz-typo-phones {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  margin: 50px auto 0;
+  width: 1312px;
+}
+.fz-typo-card {
+  position: relative;
+  height: 443px;
+  border-radius: 64px;
+  overflow: hidden;
+  background: #d9d9d9;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+.fz-typo-card--purple {
+  background: linear-gradient(149deg, var(--fz-purple) 22%, #6a5699 105%);
+}
+.fz-typo-phone-stage {
+  position: absolute;
+}
+.fz-typo-phone-stage--a {
+  left: -12px; top: 0;
+  width: 652px; height: 489px;
+}
+.fz-typo-phone-stage--b {
+  left: -13px; top: -80px;
+  width: 641px; height: 641px;
+}
+.fz-canvas .fz-typo-phone-body {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.fz-canvas .fz-typo-phone-screen {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.fz-canvas .fz-typo-phone-screen--a {
+  left: 237px; top: 80px;
+  width: 208px; height: 324px;
+}
+.fz-canvas .fz-typo-phone-screen--b {
+  left: 243px; top: 174px;
+  width: 152px; height: 314px;
+}
+
+/* ============== SMART TEACHER AI ============== */
+.fz-teacher {
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+.fz-teacher-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 1269px;
+  margin: 0 auto;
+  align-items: center;
+}
+.fz-teacher-phone-col {
+  position: relative;
+}
+.fz-teacher-sticky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fz-teacher-phone-card {
+  position: relative;
+  width: 575px; height: 586px;
+  border-radius: 71px;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--fz-purple) 8%, var(--fz-purple-deep) 79%);
+  box-shadow: 0 40px 100px rgba(85,0,181,0.5);
+  isolation: isolate;
+}
+.fz-canvas .fz-teacher-phone-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 1;
+}
+.fz-canvas .fz-teacher-screen-img {
+  position: absolute;
+  left: 211px; top: 4px;
+  width: 353px; height: 442px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Teacher text column */
+.fz-teacher-text-col {
+  padding-top: 80px;
+}
+.fz-teacher-h {
+  margin: 0;
+  display: flex; flex-wrap: wrap; gap: 14px; align-items: center;
+  font-family: var(--fz-disp-font);
+  font-size: 96px;
+  line-height: 0.95;
+  font-weight: 400;
+}
+.fz-teacher-h-1 { color: #fff; }
+.fz-teacher-h-2 {
+  background: linear-gradient(175deg, var(--fz-purple) 8%, var(--fz-purple-deep) 79%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.fz-teacher-sub {
+  margin: 24px 0 0;
+  font-family: var(--fz-body-font);
+  font-weight: 400; font-size: 24px;
+  color: #fff;
+}
+.fz-teacher-body {
+  margin: 24px 0 0;
+  font-family: var(--fz-body-font);
+  font-size: 26px; line-height: 1.4;
+  color: #fff;
+  max-width: 572px;
+}
+
+/* ============== OUTRO ============== */
+.fz-outro {
+  position: relative;
+  width: 1440px;
+  padding: 20px 0 0;
+  overflow: hidden;
+}
+.fz-outro-text {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-family: var(--fz-disp-font);
+  font-weight: 400;
+  font-size: 230px;
+  line-height: 0.82;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(144, 64, 240, 0.5) 20%,
+    rgba(144, 64, 240, 0.13) 75%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+}
+
+/* ============== SCROLL-DRIVEN SECTION REVEALS ============== */
+/* Each section gets --p-enter (0→1 as it enters viewport) and --p-vis (visible envelope) */
+[data-fz-stage] {
+  --p-enter: 0;
+  --p-exit: 0;
+  --p-vis: 0;
+}
+
+/* Display headings rise + fade based on section's enter progress */
+[data-fz-stage] .fz-display {
+  opacity: var(--p-enter, 0);
+  transform: translateY(calc((1 - var(--p-enter, 0)) * 40px));
+}
+/* Underline scales out from center */
+[data-fz-stage] .fz-underline {
+  opacity: var(--p-enter, 0);
+  transform: scaleX(var(--p-enter, 0));
+  transform-origin: center;
+}
+/* Paragraph: rise + fade, slightly delayed */
+[data-fz-stage] .fz-paragraph {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.4 - 0.4));
+  transform: translateY(calc((1 - var(--p-enter, 0)) * 30px));
+}
+
+/* Pain-points column: cards slide in from LEFT, staggered */
+.fz-cs-col--problems .fz-cs-head {
+  opacity: var(--p-enter, 0);
+  transform: translateX(calc((var(--p-enter, 0) - 1) * 60px));
+}
+.fz-cs-col--problems .fz-card {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.2));
+  transform: translateX(calc((var(--p-enter, 0) - 1) * 100px))
+             rotate(calc((1 - var(--p-enter, 0)) * -2deg));
+}
+.fz-cs-col--problems .fz-card:nth-of-type(2) {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.35));
+}
+.fz-cs-col--problems .fz-card:nth-of-type(3) {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.5));
+}
+
+/* Fix column: cards slide in from RIGHT, staggered */
+.fz-cs-col--fix .fz-cs-head {
+  opacity: var(--p-enter, 0);
+  transform: translateX(calc((1 - var(--p-enter, 0)) * 60px));
+}
+.fz-cs-col--fix .fz-card {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.2));
+  transform: translateX(calc((1 - var(--p-enter, 0)) * 100px))
+             rotate(calc((1 - var(--p-enter, 0)) * 2deg));
+}
+.fz-cs-col--fix .fz-card:nth-of-type(2) {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.35));
+}
+.fz-cs-col--fix .fz-card:nth-of-type(3) {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.5 - 0.5));
+}
+
+/* Typography block: rise + scale */
+[data-fz-stage="typo"] .fz-typo-block {
+  opacity: var(--p-enter, 0);
+  transform: translateY(calc((1 - var(--p-enter, 0)) * 60px))
+             scale(calc(0.95 + var(--p-enter, 0) * 0.05));
+}
+[data-fz-stage="typo"] .fz-typo-phones {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.6 - 0.5));
+  transform: translateY(calc((1 - var(--p-enter, 0)) * 80px));
+}
+
+/* Smart Teacher: phone from left, text from right */
+[data-fz-stage="teacher"] .fz-teacher-phone-card {
+  opacity: var(--p-enter, 0);
+  transform: translateX(calc((var(--p-enter, 0) - 1) * 120px))
+             rotate(calc((1 - var(--p-enter, 0)) * -4deg));
+}
+[data-fz-stage="teacher"] .fz-teacher-text {
+  opacity: calc(max(0, var(--p-enter, 0) * 1.4 - 0.3));
+  transform: translateX(calc((1 - var(--p-enter, 0)) * 80px));
+}
+
+/* Outro: subtle rise + fade */
+[data-fz-stage="outro"] .fz-outro-text {
+  opacity: calc(0.4 + var(--p-enter, 0) * 0.6);
+  transform: translateY(calc((1 - var(--p-enter, 0)) * 50px));
+  transition: none;
+}

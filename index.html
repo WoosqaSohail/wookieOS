@@ -7,8 +7,10 @@
   <title>wookieOS — woosqa</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=Press+Start+2P&display=swap" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&family=Pixelify+Sans:wght@400;500;600;700&family=Silkscreen:wght@400;700&family=Press+Start+2P&family=Bebas+Neue&family=Urbanist:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/os.css" />
+  <link rel="stylesheet" href="css/frenzly.css" />
 </head>
 <body>
   <a class="skip-link" href="#mobile-projects">skip to projects</a>
@@ -310,7 +312,16 @@
         <span class="qp-playing">now playing</span>
       </div>
       <div class="qp-track" id="music-track">&mdash;</div>
-      <div class="qp-bar"><div class="qp-bar-fill" id="music-progress"></div></div>
+      <div class="qp-bar" id="music-bar" role="slider" aria-label="Seek track">
+        <div class="qp-bar-fill" id="music-progress"></div>
+        <div class="qp-bar-thumb" id="music-thumb"></div>
+      </div>
+      <div class="qp-time">
+        <button class="qp-time-elapsed" id="music-time-toggle" type="button" aria-label="Toggle elapsed/remaining">
+          <span id="music-current">0:00</span>
+        </button>
+        <span id="music-duration">0:00</span>
+      </div>
       <div class="qp-controls">
         <button class="qp-btn" id="music-prev" type="button" aria-label="Previous">&#9665;</button>
         <button class="qp-btn qp-btn--play" id="music-play" type="button" aria-label="Play">&#9654;</button>
@@ -391,6 +402,6 @@
   <!-- Hidden YouTube player target -->
   <div id="yt-player" aria-hidden="true"></div>
 
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

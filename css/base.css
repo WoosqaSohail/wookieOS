@@ -1,0 +1,96 @@
+/* =============================================================
+   wookieOS  v.0.2  ·  '02 edition
+   Pixel-art / e-girl dusk / sophisticated faux-OS
+   ============================================================= */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Dark plums (base / chrome accents) */
+  --plum-900: #150B22;
+  --plum-800: #1F1430;
+  --plum-700: #2A1B40;
+  --plum-600: #3D2A5C;
+
+  /* Lavender / cyber */
+  --lav-100: #EDE6FF;
+  --lav-200: #D7CBFA;
+  --lav-400: #9C7DF0;
+  --lav-600: #6E4FCC;
+
+  /* Mauve / dusty rose (e-girl accents) */
+  --rose-100: #F5D2DE;
+  --rose-300: #E5BBC9;
+  --rose-500: #C49AAA;
+  --rose-700: #8E6878;
+  --magenta:  #FF4FA0;
+  --hot-pink: #FF7AA8;
+
+  /* Teal companion */
+  --teal-300: #7DC9B5;
+  --teal-500: #4FA68F;
+
+  /* Cream + UI lights */
+  --cream-100: #FBF6E8;
+  --cream-200: #F2E5C8;
+  --cream-300: #E8D8B2;
+  --paper:     #F7EFD8;
+  --paper-line: rgba(197, 154, 170, 0.35);
+  --lav-glow:  rgba(156, 125, 240, 0.7);
+
+  /* System accents */
+  --acid:      #C6F02C;       /* chartreuse glitch accent */
+  --cyber:     #5EE6FF;       /* electric cyan */
+
+  /* Fonts */
+  --fnt-brand: 'DotGothic16', 'VT323', monospace;
+  --fnt-pixel: 'VT323', monospace;
+  --fnt-mini:  'Silkscreen', 'Press Start 2P', monospace;
+  --fnt-tiny:  'Press Start 2P', monospace;
+  --fnt-body:  'Pixelify Sans', 'VT323', monospace;
+
+  /* Radii — flatter */
+  --r-sm: 0px;
+  --r-md: 2px;
+  --r-lg: 4px;
+
+  /* Hard shadows */
+  --shadow-card:   6px 6px 0 var(--plum-900), 0 12px 24px rgba(0, 0, 0, 0.35);
+  --shadow-window: 8px 8px 0 var(--plum-900), 0 18px 38px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--fnt-body);
+  color: var(--cream-100);
+  background: var(--plum-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { overflow: hidden; transition: filter 0.4s ease; }
+
+button { font-family: inherit; color: inherit; cursor: pointer; }
+img { display: block; max-width: 100%; }
+
+/* Skip link */
+.skip-link {
+  position: absolute; top: -100px; left: 8px;
+  background: var(--plum-800); color: var(--cream-100);
+  padding: 10px 16px; border-radius: var(--r-sm);
+  z-index: 9999;
+  font-family: var(--fnt-pixel); font-size: 16px;
+  text-decoration: none;
+  border: 1px solid var(--lav-400);
+}
+.skip-link:focus { top: 8px; }
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid var(--cyber);
+  outline-offset: 3px;
+}
+
