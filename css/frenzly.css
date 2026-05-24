@@ -87,7 +87,9 @@
 /* FRENZLY backdrop: rises from below + fades in */
 .fz-hero-title {
   position: absolute;
-  left: 50%; top: 280px;
+  left: 0; top: 280px;
+  width: 100%;
+  text-align: center;
   font-family: var(--fz-disp-font);
   font-size: 586px; line-height: 1;
   white-space: nowrap;
@@ -101,8 +103,7 @@
   pointer-events: none;
   background-size: 200% 200%;
   opacity: var(--p-frenzly);
-  transform: translateX(-50%)
-             translateY(calc((1 - var(--p-frenzly)) * 220px));
+  transform: translateY(calc((1 - var(--p-frenzly)) * 220px));
   animation: fz-grad-pan 14s ease-in-out infinite;
 }
 @keyframes fz-grad-pan {

@@ -5,6 +5,7 @@
 
 (() => {
   'use strict';
+  history.scrollRestoration = 'manual';
 
   /* ---------- Window definitions ---------- */
   const WINDOWS = {
@@ -482,12 +483,11 @@
     }
   };
 
-  /* ---------- Boot sequence ---------- */
+  /* ---------- Boot sequence: personality text + resource loader ---------- */
   (() => {
     const FLAVOR = [
       'caffeine level: adequate',
       'figma is open in another tab, probably',
-      'loading pixels ... ████████░░ 80%',
       'mood: ship it energy',
       'fonts: loaded. patience: loading...',
       'initializing dusk.exe',
@@ -497,10 +497,6 @@
       'confidence.exe not found · continuing anyway',
       'panic mode: disabled for now',
       'compiling portfolio ... almost',
-      'loading late night algebra ...',
-      'coffee: 2nd cup · deadline: approaching',
-      'rendering at maximum effort',
-      'checking vibes ... pass',
     ];
     const pick = () => FLAVOR[Math.floor(Math.random() * FLAVOR.length)];
 
@@ -516,23 +512,94 @@
       'ready.',
     ];
 
+    // Personality text
     const container = document.getElementById('boot-lines');
-    if (!container) return;
+    if (container) {
+      const delays = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7];
+      lines.forEach((text, i) => {
+        const p = document.createElement('p');
+        p.style.animationDelay = `${delays[i]}s`;
+        if (i === lines.length - 1) {
+          p.innerHTML = `&gt; <span class="boot-ok">${text}</span>`;
+        } else if (i === 3) {
+          p.innerHTML = `&gt; <span class="boot-flavor">${text}</span>`;
+        } else {
+          p.textContent = `> ${text}`;
+        }
+        container.appendChild(p);
+      });
+    }
 
-    const delays = [0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5, 1.7];
+    // Spinner + loading
+    const pctEl = document.getElementById('boot-pct');
+    const circleEl = document.getElementById('boot-spin-circle');
+    const overlay = document.getElementById('boot-overlay');
+    if (!pctEl || !circleEl || !overlay) return;
 
-    lines.forEach((text, i) => {
-      const p = document.createElement('p');
-      p.style.animationDelay = `${delays[i]}s`;
-      if (i === lines.length - 1) {
-        p.innerHTML = `&gt; <span class="boot-ok">${text}</span>`;
-      } else if (i === 3) {
-        p.innerHTML = `&gt; <span class="boot-flavor">${text}</span>`;
-      } else {
-        p.textContent = `> ${text}`;
+    const CIRCUMFERENCE = 2 * Math.PI * 16; // ~100.5
+    let displayPct = 0;
+
+    function setPct(pct) {
+      pct = Math.min(100, Math.max(0, Math.round(pct)));
+      displayPct = pct;
+      pctEl.textContent = pct + '%';
+      const offset = CIRCUMFERENCE - (CIRCUMFERENCE * pct / 100);
+      circleEl.style.strokeDashoffset = offset;
+    }
+
+    function finish() {
+      setPct(100);
+      setTimeout(() => overlay.classList.add('done'), 300);
+    }
+
+    // Phase 1: mock progress while text plays out (2.5s)
+    const MIN_DISPLAY = 2500;
+    const mockInterval = setInterval(() => {
+      if (displayPct < 45) setPct(displayPct + Math.random() * 8 + 2);
+    }, 180);
+
+    // Phase 2: real resource tracking
+    let resLoaded = 0;
+    const imgs = document.querySelectorAll('img');
+    const preloadUrls = ['images/wallpaper-purple.jpg', 'images/wallpaper-dusk.jpg'];
+    const resTotal = imgs.length + preloadUrls.length + 1; // +1 for fonts
+
+    function onResource() {
+      resLoaded++;
+      // Map real loading to 45%–100% range (first 45% was mocked)
+      const realPct = 45 + (resLoaded / resTotal) * 55;
+      setPct(realPct);
+      if (resLoaded >= resTotal) {
+        clearInterval(mockInterval);
+        const elapsed = Date.now() - bootStartTime;
+        const wait = Math.max(0, MIN_DISPLAY - elapsed);
+        setTimeout(finish, wait);
       }
-      container.appendChild(p);
+    }
+
+    const bootStartTime = Date.now();
+
+    imgs.forEach(img => {
+      if (img.complete) onResource();
+      else { img.addEventListener('load', onResource); img.addEventListener('error', onResource); }
     });
+
+    preloadUrls.forEach(src => {
+      const im = new Image();
+      im.addEventListener('load', onResource);
+      im.addEventListener('error', onResource);
+      im.src = src;
+    });
+
+    document.fonts.ready.then(onResource);
+
+    // Safety: force done after 10s
+    setTimeout(() => {
+      if (!overlay.classList.contains('done')) {
+        clearInterval(mockInterval);
+        finish();
+      }
+    }, 10000);
   })();
 
   /* ---------- DOM refs ---------- */
