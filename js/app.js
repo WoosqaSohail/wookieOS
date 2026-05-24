@@ -549,7 +549,10 @@
 
     function finish() {
       setPct(100);
-      setTimeout(() => overlay.classList.add('done'), 300);
+      // Wait one frame after 100% so the browser paints the loaded backgrounds
+      requestAnimationFrame(() => {
+        setTimeout(() => overlay.classList.add('done'), 300);
+      });
     }
 
     // Phase 1: mock progress while text plays out (2.5s)
@@ -561,8 +564,14 @@
     // Phase 2: real resource tracking
     let resLoaded = 0;
     const imgs = document.querySelectorAll('img');
-    const preloadUrls = ['images/wallpaper-purple.jpg', 'images/wallpaper-dusk.jpg'];
-    const resTotal = imgs.length + preloadUrls.length + 1; // +1 for fonts
+    const preloadUrls = [
+      'images/wallpaper-purple.jpg',
+      'images/wallpaper-dusk.jpg',
+      'images/consultly.png',
+      'images/frenzly.png',
+      'images/storyloop.png',
+    ];
+    const resTotal = imgs.length + preloadUrls.length + 1;
 
     function onResource() {
       resLoaded++;
