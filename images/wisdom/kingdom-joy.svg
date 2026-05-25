@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="jy-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="60%" stop-color="#F2C849"/>
+      <stop offset="100%" stop-color="#E0A82E"/>
+    </linearGradient>
+    <radialGradient id="jy-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFF3D0"/>
+      <stop offset="70%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#FFE082" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#jy-sky)"/>
+  <!-- Sun glow -->
+  <circle cx="200" cy="110" r="110" fill="url(#jy-sun)"/>
+  <!-- Sun rays -->
+  <g stroke="#0B1E27" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <line x1="200" y1="35" x2="200" y2="55"/>
+    <line x1="200" y1="165" x2="200" y2="185"/>
+    <line x1="125" y1="110" x2="145" y2="110"/>
+    <line x1="255" y1="110" x2="275" y2="110"/>
+    <line x1="148" y1="58" x2="160" y2="70"/>
+    <line x1="240" y1="150" x2="252" y2="162"/>
+    <line x1="252" y1="58" x2="240" y2="70"/>
+    <line x1="160" y1="150" x2="148" y2="162"/>
+  </g>
+  <!-- Sun core -->
+  <circle cx="200" cy="110" r="42" fill="#FFF3D0" stroke="#0B1E27" stroke-width="3"/>
+  <!-- Smiley eyes -->
+  <circle cx="188" cy="105" r="3" fill="#0B1E27"/>
+  <circle cx="212" cy="105" r="3" fill="#0B1E27"/>
+  <!-- Smile -->
+  <path d="M 184 118 Q 200 130 216 118" stroke="#0B1E27" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Distant hills -->
+  <path d="M 0 240 Q 60 215 120 235 T 240 230 T 400 240 L 400 300 L 0 300 Z" fill="#4D8A4A"/>
+  <path d="M 0 260 Q 80 240 160 260 T 320 255 T 400 265 L 400 300 L 0 300 Z" fill="#3F7340"/>
+  <!-- Flowers in meadow -->
+  <g>
+    <circle cx="60" cy="265" r="4" fill="#D26336"/>
+    <circle cx="60" cy="265" r="1.5" fill="#FFF3D0"/>
+    <line x1="60" y1="269" x2="60" y2="278" stroke="#3F7340" stroke-width="1.5"/>
+  </g>
+  <g>
+    <circle cx="120" cy="275" r="4" fill="#7A2E3F"/>
+    <circle cx="120" cy="275" r="1.5" fill="#FFF3D0"/>
+    <line x1="120" y1="279" x2="120" y2="288" stroke="#3F7340" stroke-width="1.5"/>
+  </g>
+  <g>
+    <circle cx="280" cy="270" r="4" fill="#D26336"/>
+    <circle cx="280" cy="270" r="1.5" fill="#FFF3D0"/>
+    <line x1="280" y1="274" x2="280" y2="283" stroke="#3F7340" stroke-width="1.5"/>
+  </g>
+  <g>
+    <circle cx="340" cy="278" r="4" fill="#7A2E3F"/>
+    <circle cx="340" cy="278" r="1.5" fill="#FFF3D0"/>
+    <line x1="340" y1="282" x2="340" y2="291" stroke="#3F7340" stroke-width="1.5"/>
+  </g>
+  <!-- Cute small cloud -->
+  <ellipse cx="80" cy="55" rx="28" ry="9" fill="#FFF3D0" opacity="0.85"/>
+  <ellipse cx="320" cy="70" rx="32" ry="10" fill="#FFF3D0" opacity="0.8"/>
+</svg>

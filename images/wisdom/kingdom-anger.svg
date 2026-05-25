@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="ag-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#561E2A"/>
+      <stop offset="60%" stop-color="#7A2E3F"/>
+      <stop offset="100%" stop-color="#9C3D52"/>
+    </linearGradient>
+    <radialGradient id="ag-glow" cx="0.5" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#F2C849" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#F2C849" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#ag-sky)"/>
+  <circle cx="200" cy="100" r="120" fill="url(#ag-glow)"/>
+  <!-- Sparks/embers -->
+  <circle cx="80" cy="60" r="2" fill="#F2C849" opacity="0.8"/>
+  <circle cx="320" cy="80" r="3" fill="#D26336" opacity="0.7"/>
+  <circle cx="120" cy="40" r="1.5" fill="#F2C849" opacity="0.6"/>
+  <circle cx="280" cy="50" r="2" fill="#F2C849" opacity="0.5"/>
+  <circle cx="350" cy="130" r="2.5" fill="#D26336" opacity="0.7"/>
+  <circle cx="60" cy="120" r="1.5" fill="#F2C849" opacity="0.5"/>
+  <!-- Volcano silhouette -->
+  <path d="M 0 300 L 0 240 L 80 200 L 130 180 L 170 140 L 200 110 L 230 140 L 270 180 L 320 200 L 400 240 L 400 300 Z" fill="#0B1E27"/>
+  <!-- Crater glow / lava -->
+  <ellipse cx="200" cy="115" rx="32" ry="8" fill="#F2C849"/>
+  <ellipse cx="200" cy="118" rx="22" ry="5" fill="#FFF3D0"/>
+  <!-- Lava flames -->
+  <path d="M 188 110 Q 192 90 198 95 Q 200 75 204 90 Q 210 80 212 100 Q 210 108 200 110 Z" fill="#D26336"/>
+  <path d="M 195 108 Q 197 95 201 100 Q 203 85 205 102 Q 207 105 200 108 Z" fill="#F2C849"/>
+  <!-- Lava streams down volcano -->
+  <path d="M 200 122 Q 195 145 188 160 Q 184 175 180 195 L 175 215 L 172 240 Q 170 250 168 260" stroke="#D26336" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M 210 125 Q 218 145 225 165 L 230 190 L 232 215" stroke="#D26336" stroke-width="2" fill="none" opacity="0.7"/>
+</svg>

@@ -11,10 +11,163 @@
   const WINDOWS = {
     consultly: {
       chrome: 'browser', icon: '◐', label: 'consultly',
-      title: 'consultly — woosqa.work',
-      width: 880, height: 720,
+      title: 'consultly — case study',
+      width: 960, height: 720,
       urlbar: 'woosqa.work/consultly',
-      body: `<img src="images/consultly.png" alt="Consultly case study" />`
+      body: `
+        <div class="cs-root" data-consultly>
+          <div class="cs-viewport">
+            <div class="cs-canvas">
+
+              <!-- ========== HERO ========== -->
+              <section class="cs-hero" data-cs-stage="hero">
+                <img class="cs-hero-img" src="images/consultly/sec-hero.png" alt="Consultly hero — Case Study 2026, designed on Figma" draggable="false" />
+                <div class="cs-hero-hint">
+                  <span>scroll to explore</span>
+                  <span class="cs-hero-hint-arrow">↓</span>
+                </div>
+              </section>
+
+              <!-- ========== PROJECT INTRO ========== -->
+              <section class="cs-intro" data-cs-stage="intro">
+                <div class="cs-intro-row">
+                  <div class="cs-intro-left">
+                    <p class="cs-intro-label">PROJECT NAME</p>
+                    <h1 class="cs-intro-title">Consultly</h1>
+                  </div>
+                  <p class="cs-intro-tagline">A multi-sided platform connecting users with verified experts through real-time paid consultations.</p>
+                </div>
+                <div class="cs-intro-tags">
+                  <span class="cs-tag">iOS &amp; Android</span>
+                  <span class="cs-tag">Web Dashboard</span>
+                  <span class="cs-tag">Fintech Integration</span>
+                </div>
+              </section>
+
+              <!-- ========== USER GOALS (HTML + phone PNG) ========== -->
+              <section class="cs-goal" data-cs-stage="goal-user">
+                <div class="cs-goal-row">
+                  <div class="cs-goal-card">
+                    <img src="images/consultly/phone-user.png" alt="" draggable="false" />
+                  </div>
+                  <div class="cs-goal-text">
+                    <h2 class="cs-goal-title">User Goals<span class="cs-goal-dot">.</span></h2>
+                    <ul class="cs-goal-list">
+                      <li>Discover the right expert quickly</li>
+                      <li>Book sessions with clear pricing and availability</li>
+                      <li>Pay securely and confidently</li>
+                      <li>Review experts after sessions</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ========== EXPERT GOALS ========== -->
+              <section class="cs-goal" data-cs-stage="goal-expert">
+                <div class="cs-goal-row cs-goal-row--reverse">
+                  <div class="cs-goal-card">
+                    <img src="images/consultly/phone-expert.png" alt="" draggable="false" />
+                  </div>
+                  <div class="cs-goal-text">
+                    <h2 class="cs-goal-title">Expert Goals<span class="cs-goal-dot">.</span></h2>
+                    <ul class="cs-goal-list">
+                      <li>Simple onboarding and profile setup</li>
+                      <li>Flexible availability and pricing control</li>
+                      <li>Reliable payouts</li>
+                      <li>Visibility and credibility through reviews</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ========== BUSINESS GOALS ========== -->
+              <section class="cs-goal" data-cs-stage="goal-business">
+                <div class="cs-goal-row">
+                  <div class="cs-goal-card">
+                    <img src="images/consultly/phone-business.png" alt="" draggable="false" />
+                  </div>
+                  <div class="cs-goal-text">
+                    <h2 class="cs-goal-title">Business Goals<span class="cs-goal-dot">.</span></h2>
+                    <ul class="cs-goal-list">
+                      <li>Monetize through platform commission</li>
+                      <li>Maintain content and expert quality</li>
+                      <li>Enable admin oversight and reporting</li>
+                      <li>Ensure security and regulatory compliance</li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ========== APP ARCHITECTURE (HTML + per-pill PNGs) ========== -->
+              <section class="cs-arch" data-cs-stage="arch">
+                <div class="cs-arch-head">
+                  <h2 class="cs-arch-title">Application Architecture<span class="cs-goal-dot">.</span></h2>
+                  <p class="cs-arch-sub">High-level user flow and system structure.</p>
+                </div>
+                <div class="cs-arch-stage">
+                  <svg class="cs-arch-lines" aria-hidden="true" preserveAspectRatio="none"></svg>
+                  <div class="cs-arch-col cs-arch-col--left">
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <ul class="cs-arch-list"><li>Login</li><li>Sign up</li><li>Forgot password</li><li>Email verification</li><li>Social login</li></ul>
+                      <img class="cs-arch-pill" src="images/consultly/pill-registration.png" alt="Registration / Login" draggable="false" style="height:42px;width:auto" />
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <ul class="cs-arch-list"><li>Browse experts</li><li>Search by name</li><li>Categories</li><li>Expert profile</li><li>Availability</li></ul>
+                      <img class="cs-arch-pill" src="images/consultly/pill-discovery.png" alt="Expert Discovery" draggable="false" style="height:42px;width:auto" />
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <ul class="cs-arch-list"><li>Select time slot</li><li>Session duration</li><li>Price breakdown</li><li>Instant booking</li><li>Reschedule</li></ul>
+                      <img class="cs-arch-pill" src="images/consultly/pill-booking.png" alt="Booking & Scheduling" draggable="false" style="height:42px;width:auto" />
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <ul class="cs-arch-list"><li>Payment auth</li><li>Stripe checkout</li><li>Payment success</li><li>Refunds</li><li>Platform commission</li></ul>
+                      <img class="cs-arch-pill" src="images/consultly/pill-payments.png" alt="Payments & Billing" draggable="false" style="height:42px;width:auto" />
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <ul class="cs-arch-list"><li>In-app video</li><li>Call timer</li><li>Mute / controls</li><li>End call</li></ul>
+                      <img class="cs-arch-pill" src="images/consultly/pill-consultation.png" alt="Live Consultation" draggable="false" style="height:42px;width:auto" />
+                    </div>
+                  </div>
+                  <img class="cs-arch-hub" src="images/consultly/pill-hub.png" alt="Consultly" draggable="false" style="height:80px;width:auto" />
+                  <div class="cs-arch-col cs-arch-col--right">
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <img class="cs-arch-pill" src="images/consultly/pill-profile.png" alt="User Profile" draggable="false" style="height:42px;width:auto" />
+                      <ul class="cs-arch-list"><li>Personal details</li><li>Time zone setup</li><li>Payment methods</li><li>Notifications</li><li>Delete account</li></ul>
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <img class="cs-arch-pill" src="images/consultly/pill-expertmode.png" alt="Expert Mode" draggable="false" style="height:42px;width:auto" />
+                      <ul class="cs-arch-list"><li>Become an expert</li><li>Profile setup</li><li>Availability</li><li>Earnings</li><li>Payouts</li></ul>
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <img class="cs-arch-pill" src="images/consultly/pill-reviews.png" alt="Reviews & Ratings" draggable="false" style="height:42px;width:auto" />
+                      <ul class="cs-arch-list"><li>Post-call review</li><li>Star rating</li><li>Written feedback</li><li>View past reviews</li></ul>
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <img class="cs-arch-pill" src="images/consultly/pill-notifications.png" alt="Notifications" draggable="false" style="height:42px;width:auto" />
+                      <ul class="cs-arch-list"><li>Booking updates</li><li>Call reminders</li><li>Payment alerts</li><li>System notifications</li></ul>
+                    </div>
+                    <div class="cs-arch-mod" data-cs-mod>
+                      <img class="cs-arch-pill" src="images/consultly/pill-admin.png" alt="Admin Dashboard" draggable="false" style="height:42px;width:auto" />
+                      <ul class="cs-arch-list"><li>User management</li><li>Transactions</li><li>Reports</li><li>Content moderation</li><li>Platform settings</li></ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- ========== TYPOGRAPHY ========== -->
+              <section class="cs-typo" data-cs-stage="typo">
+                <h2 class="cs-typo-title">Typography<span class="cs-goal-dot">.</span></h2>
+                <img class="cs-typo-img" src="images/consultly/sec-typo.svg" alt="Poppins — Regular, Medium, Semi bold, Bold" draggable="false" style="width:1020px;height:auto" />
+              </section>
+
+              <!-- ========== PHONE GALLERY + OUTRO (combined composite) ========== -->
+              <section class="cs-gallery" data-cs-stage="gallery">
+                <img class="cs-gallery-img" src="images/consultly/sec-gallery-outro.png" alt="Consultly app screens — thanks for watching!" draggable="false" />
+              </section>
+
+            </div>
+          </div>
+        </div>`
     },
     frenzly: {
       chrome: 'browser', icon: '◐', label: 'frenzly',
@@ -217,71 +370,633 @@
     },
     storyloop: {
       chrome: 'browser', icon: '◐', label: 'storyloop',
-      title: 'storyloop — woosqa.work',
-      width: 880, height: 720,
-      urlbar: 'woosqa.work/storyloop',
+      title: 'storyloop — case study',
+      width: 1100, height: 760,
+      urlbar: 'storyloop.work',
       body: `
-        <div class="browser-stub">
-          <svg class="browser-stub-art" viewBox="0 0 16 16" shape-rendering="crispEdges">
-            <rect x="2" y="3" width="12" height="10" fill="#9C7DF0"/>
-            <rect x="2" y="3" width="12" height="1" fill="#C4B5FD"/>
-            <rect x="1" y="3" width="1" height="10" fill="#1F1430"/>
-            <rect x="14" y="3" width="1" height="10" fill="#1F1430"/>
-            <rect x="2" y="2" width="12" height="1" fill="#1F1430"/>
-            <rect x="2" y="13" width="12" height="1" fill="#1F1430"/>
-            <rect x="4" y="6" width="3" height="1" fill="#FFF6E0"/>
-            <rect x="4" y="8" width="5" height="1" fill="#FFF6E0"/>
-            <rect x="4" y="10" width="2" height="1" fill="#FFF6E0"/>
-            <rect x="9" y="6" width="3" height="1" fill="#FFF6E0"/>
-            <rect x="9" y="8" width="2" height="1" fill="#FFF6E0"/>
-          </svg>
-          <h3>storyloop // loading</h3>
-          <p>scrollytelling platform case study. write-up coming soon — figma source is being pulled from the archive.</p>
-          <span class="stub-tag">draft · v0.1</span>
+        <div class="sl-root" data-storyloop data-mode="cover">
+          <div class="sl-stage">
+
+            <!-- ============ MODE 1 — COVER ============ -->
+            <section class="sl-mode sl-mode--cover is-active" data-mode-pane="cover">
+              <div class="sl-cover">
+                <div class="sl-cover-bg" aria-hidden="true"></div>
+                <div class="sl-cover-glow-top" aria-hidden="true"></div>
+                <div class="sl-cover-glow-bot" aria-hidden="true"></div>
+
+                <div class="sl-cover-topbar">
+                  <div class="sl-wordmark">Storyloop</div>
+                  <button class="sl-btn-primary sl-btn-primary--sm" data-sl-goto="landing" type="button">
+                    explore the platform
+                    <span aria-hidden="true">→</span>
+                  </button>
+                </div>
+
+                <div class="sl-cover-headline">
+                  <h1>Content Curation &amp; Storytelling Platform</h1>
+                  <p>Storyloop is a curated scrollytelling platform that delivers immersive, long-form content through a visually engaging gallery and a streamlined admin dashboard for creating and managing featured stories.</p>
+                </div>
+
+                <div class="sl-cover-ipad">
+                  <img src="images/storyloop/cover-ipad.png" alt="Storyloop reader landing on an iPad" draggable="false" />
+                </div>
+              </div>
+            </section>
+
+            <!-- ============ MODE 2 — READER LANDING ============ -->
+            <section class="sl-mode sl-mode--landing" data-mode-pane="landing">
+              <div class="sl-landing">
+                <div class="sl-hero-block">
+                  <div class="sl-hero-clusters" aria-hidden="true"></div>
+                  <div class="sl-hero-glow" aria-hidden="true"></div>
+                  <div class="sl-hero-fade" aria-hidden="true"></div>
+
+                  <nav class="sl-nav">
+                    <div class="sl-wordmark sl-wordmark--small">Storyloop</div>
+                    <div class="sl-nav-right">
+                      <button class="sl-nav-signin" data-sl-goto="signin" type="button">Sign in</button>
+                      <button class="sl-nav-search" type="button" aria-label="Search">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                      </button>
+                    </div>
+                  </nav>
+
+                  <header class="sl-hero">
+                    <div class="sl-hero-inner">
+                      <h1>Discover Stories That Scroll With You.</h1>
+                      <p>Dive into visual narratives crafted by creators from the Storyloop ecosystem. Elegant, immersive, and endlessly scrollable.</p>
+                      <button class="sl-btn-primary" data-sl-scroll-to="grid" type="button">
+                        Explore Stories
+                        <span aria-hidden="true">↓</span>
+                      </button>
+                    </div>
+                  </header>
+                </div>
+
+                <div class="sl-filter-row" data-sl-grid-section>
+                  <div class="sl-filter-tabs" role="tablist">
+                    <button class="sl-filter-tab is-active" data-cat="all" type="button">All</button>
+                    <button class="sl-filter-tab" data-cat="design" type="button">Design</button>
+                    <button class="sl-filter-tab" data-cat="culture" type="button">Culture</button>
+                    <button class="sl-filter-tab" data-cat="tech" type="button">Tech</button>
+                    <button class="sl-filter-tab" data-cat="travel" type="button">Travel</button>
+                    <button class="sl-filter-tab" data-cat="more" type="button">More</button>
+                  </div>
+                  <button class="sl-filter-search" type="button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                  </button>
+                </div>
+
+                <div class="sl-grid">
+                  <article class="sl-card" data-cat="design">
+                    <div class="sl-card-thumb" style="background-image:url('images/consultly.png')"><span class="sl-card-cat">Design</span></div>
+                    <h3 class="sl-card-title">Behind the Bezel: The Consultly Case</h3>
+                    <p class="sl-card-byline">by Mira K. · 9 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="design">
+                    <div class="sl-card-thumb" style="background-image:url('images/frenzly.png')"><span class="sl-card-cat">Design</span></div>
+                    <h3 class="sl-card-title">From Frenzly to Fluent: A Language App's Story</h3>
+                    <p class="sl-card-byline">by Hugo Vale · 7 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="more">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop.png')"><span class="sl-card-cat">Meta</span></div>
+                    <h3 class="sl-card-title">Storyloop: Designing the Scroll</h3>
+                    <p class="sl-card-byline">by the editors · 12 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="tech">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-04.jpg')"><span class="sl-card-cat">Tech</span></div>
+                    <h3 class="sl-card-title">The Quiet Death of the Mouse</h3>
+                    <p class="sl-card-byline">by R. Tanaka · 6 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="culture">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-05.jpg')"><span class="sl-card-cat">Culture</span></div>
+                    <h3 class="sl-card-title">Why We Crave Long-Form Again</h3>
+                    <p class="sl-card-byline">by Anika Sole · 10 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="culture">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-06.jpg')"><span class="sl-card-cat">Culture</span></div>
+                    <h3 class="sl-card-title">The Aesthetics of Permanence</h3>
+                    <p class="sl-card-byline">by Lev Markov · 8 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="design">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-07.jpg')"><span class="sl-card-cat">Design</span></div>
+                    <h3 class="sl-card-title">What Brutalism Got Right</h3>
+                    <p class="sl-card-byline">by Pia Renz · 7 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="tech">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-08.jpg')"><span class="sl-card-cat">Tech</span></div>
+                    <h3 class="sl-card-title">How Static Pages Won</h3>
+                    <p class="sl-card-byline">by Devon Park · 11 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="travel">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-09.jpg')"><span class="sl-card-cat">Travel</span></div>
+                    <h3 class="sl-card-title">Notes from a Slow Train through Hokkaido</h3>
+                    <p class="sl-card-byline">by Yuki Mori · 14 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="travel">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-10.jpg')"><span class="sl-card-cat">Travel</span></div>
+                    <h3 class="sl-card-title">Lisbon at the Edge of Sleep</h3>
+                    <p class="sl-card-byline">by Inês Costa · 9 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="more">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-11.jpg')"><span class="sl-card-cat">More</span></div>
+                    <h3 class="sl-card-title">On Reading Without Optimizing</h3>
+                    <p class="sl-card-byline">by Ada Wren · 13 min read</p>
+                  </article>
+                  <article class="sl-card" data-cat="tech">
+                    <div class="sl-card-thumb" style="background-image:url('images/storyloop/story-12.jpg')"><span class="sl-card-cat">Tech</span></div>
+                    <h3 class="sl-card-title">The Year We Forgot the Cursor</h3>
+                    <p class="sl-card-byline">by Sami Ho · 8 min read</p>
+                  </article>
+                </div>
+
+                <div class="sl-pagination" aria-label="Pagination (visual only)">
+                  <button class="sl-page" type="button">‹</button>
+                  <button class="sl-page is-active" type="button">1</button>
+                  <button class="sl-page" type="button">2</button>
+                  <button class="sl-page" type="button">3</button>
+                  <button class="sl-page" type="button">›</button>
+                </div>
+
+                <footer class="sl-landing-footer">All rights reserved © 2026 · Storyloop</footer>
+              </div>
+            </section>
+
+            <!-- ============ MODE 3 — ADMIN TOUR ============ -->
+            <section class="sl-mode sl-mode--admin" data-mode-pane="admin">
+
+              <!-- AUTH (fullscreen) -->
+              <div class="sl-admin-auth-screen" data-step="signin">
+                <div class="sl-auth-wrap">
+                  <div class="sl-auth-brand">
+                    <div class="sl-wordmark">Storyloop</div>
+                  </div>
+                  <form class="sl-auth-card" data-sl-form="signin">
+                    <h2>Sign In</h2>
+                    <p class="sl-auth-sub">Welcome back. Sign in to continue.</p>
+                    <div class="sl-field">
+                      <label for="sl-email">Email</label>
+                      <input class="sl-input" id="sl-email" type="email" placeholder="johndoe@email.com" autocomplete="off" />
+                    </div>
+                    <div class="sl-field">
+                      <label for="sl-pw">Password</label>
+                      <input class="sl-input" id="sl-pw" type="password" placeholder="enter password (try 'wrong')" autocomplete="off" />
+                    </div>
+                    <div class="sl-auth-row">
+                      <label class="sl-checkbox">
+                        <input type="checkbox" />
+                        <span>Keep me logged in</span>
+                      </label>
+                      <a data-sl-goto="reset">Forgot password?</a>
+                    </div>
+                    <button class="sl-auth-btn" type="submit">Sign In</button>
+                  </form>
+                </div>
+              </div>
+
+              <!-- APP SHELL -->
+              <div class="sl-admin-shell" data-step="app" style="display:none;">
+                <aside class="sl-sidebar">
+                  <div class="sl-sidebar-brand">
+                    Storyloop
+                  </div>
+                  <button class="sl-sidebar-item is-active" data-screen-target="dashboard" type="button">
+                    <span class="sl-sidebar-item-glyph">▦</span><span>All Stories</span>
+                  </button>
+                  <button class="sl-sidebar-item" data-screen-target="addstory" type="button">
+                    <span class="sl-sidebar-item-glyph">＋</span><span>Add New Story</span>
+                  </button>
+                  <button class="sl-sidebar-item" data-screen-target="featured" type="button">
+                    <span class="sl-sidebar-item-glyph">★</span><span>Featured Stories</span>
+                  </button>
+                  <button class="sl-sidebar-item" data-screen-target="settings" type="button">
+                    <span class="sl-sidebar-item-glyph">⚙</span><span>Settings &amp; Profile</span>
+                  </button>
+                  <div class="sl-sidebar-user">
+                    <div class="sl-sidebar-avatar"></div>
+                    <div class="sl-sidebar-user-info">
+                      <div class="sl-sidebar-user-name">Wookie K.</div>
+                      <div class="sl-sidebar-user-role">Admin</div>
+                    </div>
+                  </div>
+                </aside>
+
+                <main class="sl-content">
+                  <div class="sl-topbar">
+                    <div class="sl-topbar-title">
+                      <h2 data-sl-screen-title>All Stories</h2>
+                      <span class="sl-topbar-crumb" data-sl-screen-crumb>Manage all published, draft, and suspended stories.</span>
+                    </div>
+                  </div>
+
+                  <!-- Dashboard / All Stories -->
+                  <div class="sl-screen is-active" data-screen="dashboard">
+                    <div class="sl-dash-actions">
+                      <div class="sl-dash-search"><input type="text" placeholder="Search stories…" /></div>
+                      <button class="sl-btn-primary" data-screen-target="addstory" type="button">＋ Add New Story</button>
+                    </div>
+                    <table class="sl-table">
+                      <thead>
+                        <tr><th>Title</th><th>Category</th><th>Author</th><th>Status</th><th>Created</th><th style="width:60px;"></th></tr>
+                      </thead>
+                      <tbody data-sl-stories-body>
+                        <tr data-row-status="published">
+                          <td>The Quiet Death of the Mouse</td><td>Tech</td><td>R. Tanaka</td>
+                          <td><span class="sl-status sl-status--published">Published</span></td><td>May 14, 2026</td>
+                          <td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>
+                        </tr>
+                        <tr data-row-status="published">
+                          <td>Notes from a Slow Train through Hokkaido</td><td>Travel</td><td>Yuki Mori</td>
+                          <td><span class="sl-status sl-status--published">Published</span></td><td>May 11, 2026</td>
+                          <td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>
+                        </tr>
+                        <tr data-row-status="draft">
+                          <td>What Brutalism Got Right</td><td>Design</td><td>Pia Renz</td>
+                          <td><span class="sl-status sl-status--draft">Draft</span></td><td>May 09, 2026</td>
+                          <td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>
+                        </tr>
+                        <tr data-row-status="published">
+                          <td>Why We Crave Long-Form Again</td><td>Culture</td><td>Anika Sole</td>
+                          <td><span class="sl-status sl-status--published">Published</span></td><td>May 04, 2026</td>
+                          <td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>
+                        </tr>
+                        <tr data-row-status="suspended">
+                          <td>The Year We Forgot the Cursor</td><td>Tech</td><td>Sami Ho</td>
+                          <td><span class="sl-status sl-status--suspended">Suspended</span></td><td>Apr 27, 2026</td>
+                          <td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- Add new story -->
+                  <div class="sl-screen" data-screen="addstory">
+                    <form class="sl-form" data-sl-form="addstory">
+                      <div class="sl-field sl-form-full">
+                        <label for="sl-story-title">Title</label>
+                        <input class="sl-input" id="sl-story-title" type="text" placeholder="Give your story a headline…" required />
+                      </div>
+                      <div class="sl-field">
+                        <label for="sl-story-cat">Category</label>
+                        <select class="sl-select" id="sl-story-cat">
+                          <option>Design</option><option>Culture</option><option>Tech</option><option>Travel</option><option>More</option>
+                        </select>
+                      </div>
+                      <div class="sl-field">
+                        <label for="sl-story-author">Author</label>
+                        <input class="sl-input" id="sl-story-author" type="text" placeholder="e.g. Wookie K." />
+                      </div>
+                      <div class="sl-field sl-form-full">
+                        <label>Thumbnail</label>
+                        <label class="sl-upload" data-sl-upload>
+                          <input type="file" accept="image/*" />
+                          <svg class="sl-upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                          <div class="sl-upload-text"><strong>Click to upload</strong> or drag a file<br/><span style="opacity:0.6">PNG / JPG · 16:9 recommended</span></div>
+                        </label>
+                      </div>
+                      <div class="sl-field sl-form-full">
+                        <label for="sl-story-body">Story body</label>
+                        <textarea class="sl-input" id="sl-story-body" placeholder="Write the long-form content here…"></textarea>
+                      </div>
+                      <div class="sl-form-actions">
+                        <button class="sl-btn-ghost" type="button" data-screen-target="dashboard">Cancel</button>
+                        <button class="sl-btn-ghost" type="button" data-sl-action="savedraft">Save as Draft</button>
+                        <button class="sl-btn-primary" type="submit">Publish Story</button>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Featured stories (static placeholder) -->
+                  <div class="sl-screen" data-screen="featured">
+                    <div class="sl-static-screen">
+                      <div class="sl-static-screen-glyph">★</div>
+                      <h3>Featured Stories Manager</h3>
+                      <p>Curate the homepage carousel: re-order, schedule publish windows, and preview the hero layout before pushing live. Static preview — try the Publish action below.</p>
+                      <div style="display:flex;gap:10px;margin-top:10px;">
+                        <button class="sl-btn-ghost" type="button" data-screen-target="dashboard">Back to Dashboard</button>
+                        <button class="sl-btn-primary" type="button" data-sl-action="publish-featured">Publish Featured Story</button>
+                      </div>
+                      <div class="sl-static-screen-note">screen 5 of 6 · static demo</div>
+                    </div>
+                  </div>
+
+                  <!-- Settings & Profile -->
+                  <div class="sl-screen" data-screen="settings">
+                    <div class="sl-settings-tabs">
+                      <button class="sl-settings-tab is-active" type="button">Profile</button>
+                      <button class="sl-settings-tab" type="button" disabled>Change Password</button>
+                      <button class="sl-settings-tab" type="button" disabled>Edit Profile</button>
+                    </div>
+                    <form class="sl-form" data-sl-form="profile">
+                      <div class="sl-profile-row sl-form-full">
+                        <div class="sl-profile-avatar"></div>
+                        <div>
+                          <h3 class="sl-profile-meta-name">Wookie K.</h3>
+                          <div class="sl-profile-meta-role">Admin · wookie@storyloop.work</div>
+                        </div>
+                      </div>
+                      <div class="sl-field">
+                        <label for="sl-profile-name">Display name</label>
+                        <input class="sl-input" id="sl-profile-name" type="text" value="Wookie K." />
+                      </div>
+                      <div class="sl-field">
+                        <label for="sl-profile-email">Email</label>
+                        <input class="sl-input" id="sl-profile-email" type="email" value="wookie@storyloop.work" />
+                      </div>
+                      <div class="sl-field sl-form-full">
+                        <label for="sl-profile-bio">Bio</label>
+                        <textarea class="sl-input" id="sl-profile-bio" placeholder="A short bio for your author page…">Designer · editor · curator at Storyloop. I like long-form, slow scrolls, and the smell of a freshly compiled stylesheet.</textarea>
+                      </div>
+                      <div class="sl-form-actions">
+                        <button class="sl-btn-primary" type="submit">Save Changes</button>
+                      </div>
+                    </form>
+                  </div>
+                </main>
+              </div>
+
+              <!-- DONE screen -->
+              <div class="sl-admin-done-screen" data-step="done" style="display:none;">
+                <div class="sl-done">
+                  <div class="sl-done-glyph">✓</div>
+                  <h2>That's the demo.</h2>
+                  <p>You walked the full Storyloop flow — cover, reader landing, admin auth, dashboard, story authoring, and profile. Real HTML, real interactions. Thanks for clicking around.</p>
+                  <div style="display:flex;gap:10px;">
+                    <button class="sl-btn-ghost" type="button" data-sl-goto="cover">Back to Cover</button>
+                    <button class="sl-btn-primary" type="button" data-screen-target="dashboard">Restart Admin Tour</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODALS -->
+              <div class="sl-modal-backdrop" data-modal="login-warn">
+                <div class="sl-modal">
+                  <div class="sl-modal-icon sl-modal-icon--warning">!</div>
+                  <h3>Couldn't sign you in</h3>
+                  <p>That email or password doesn't match our records. Try again, or reset your password.</p>
+                  <div class="sl-modal-actions">
+                    <button class="sl-modal-btn sl-modal-btn--primary" type="button" data-sl-modal-close>Try again</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sl-modal-backdrop" data-modal="publish-confirm">
+                <div class="sl-modal">
+                  <div class="sl-modal-icon sl-modal-icon--info">↑</div>
+                  <h3>Publish this Story?</h3>
+                  <p>It'll appear on the public reader landing immediately.</p>
+                  <div class="sl-modal-actions">
+                    <button class="sl-modal-btn sl-modal-btn--ghost" type="button" data-sl-modal-close>Cancel</button>
+                    <button class="sl-modal-btn sl-modal-btn--primary" type="button" data-sl-modal-confirm="publish">Publish</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sl-modal-backdrop" data-modal="suspend-confirm">
+                <div class="sl-modal">
+                  <div class="sl-modal-icon sl-modal-icon--warning">⏸</div>
+                  <h3>Suspend this Story?</h3>
+                  <p>It'll be hidden from the public reader landing but stay in your dashboard.</p>
+                  <div class="sl-modal-actions">
+                    <button class="sl-modal-btn sl-modal-btn--ghost" type="button" data-sl-modal-close>Cancel</button>
+                    <button class="sl-modal-btn sl-modal-btn--primary" type="button" data-sl-modal-confirm="suspend">Suspend</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sl-modal-backdrop" data-modal="delete-confirm">
+                <div class="sl-modal">
+                  <div class="sl-modal-icon sl-modal-icon--danger">✕</div>
+                  <h3>Delete this Story?</h3>
+                  <p>This can't be undone. The story and its analytics will be removed permanently.</p>
+                  <div class="sl-modal-actions">
+                    <button class="sl-modal-btn sl-modal-btn--ghost" type="button" data-sl-modal-close>Cancel</button>
+                    <button class="sl-modal-btn sl-modal-btn--danger" type="button" data-sl-modal-confirm="delete">Delete</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TOAST -->
+              <div class="sl-toast" data-sl-toast>
+                <span data-sl-toast-text>Saved.</span>
+              </div>
+
+            </section>
+
+          </div>
+
+          <!-- ============ FOOTER CHROME (admin only) ============ -->
+          <div class="sl-chrome">
+            <button class="sl-chrome-home" type="button" data-sl-goto="cover">← back to cover</button>
+            <div class="sl-chrome-center">
+              <span class="sl-chrome-indicator" data-sl-chrome-indicator>step 1 of 5</span>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button class="sl-chrome-btn" type="button" data-sl-chrome="prev">‹ prev</button>
+              <button class="sl-chrome-btn sl-chrome-btn--primary" type="button" data-sl-chrome="next">next ›</button>
+            </div>
+          </div>
         </div>`
     },
-    more: {
-      chrome: 'folder', icon: '▤', label: 'more.work',
-      title: 'more.work — folder',
-      width: 540, height: 380,
+    wisdom: {
+      chrome: 'wordpad', icon: '\u{1F4D6}', label: 'wisdom',
+      title: 'wisdom.doc — WordPad',
+      width: 820, height: 640,
+      menubar: ['file', 'edit', 'view', 'format', 'help'],
+      toolbar: '<span>📖 Wisdom Case Study</span><span class="toolbar-status">case-study.doc</span>',
       body: `
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="3" width="12" height="10" fill="#FF7AA8"/><rect x="2" y="3" width="12" height="1" fill="#FFC8DC"/><rect x="2" y="13" width="12" height="1" fill="#C2256E"/><rect x="1" y="3" width="1" height="10" fill="#1F1430"/><rect x="14" y="3" width="1" height="10" fill="#1F1430"/><rect x="2" y="2" width="12" height="1" fill="#1F1430"/><rect x="4" y="5" width="3" height="3" fill="#FBF6E8"/><rect x="9" y="5" width="3" height="3" fill="#FBF6E8"/><rect x="4" y="10" width="8" height="1" fill="#1F1430"/></svg>
-          </span>
-          <span class="folder-item-label">store_01</span>
-        </button>
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#7DC9B5"/><rect x="2" y="2" width="12" height="1" fill="#A5DCCB"/><rect x="2" y="13" width="12" height="1" fill="#4FA68F"/><rect x="1" y="2" width="1" height="12" fill="#1F1430"/><rect x="14" y="2" width="1" height="12" fill="#1F1430"/><rect x="4" y="5" width="8" height="1" fill="#FBF6E8"/><rect x="4" y="7" width="6" height="1" fill="#FBF6E8"/><rect x="4" y="9" width="7" height="1" fill="#FBF6E8"/></svg>
-          </span>
-          <span class="folder-item-label">landing_02</span>
-        </button>
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="5" y="2" width="6" height="12" fill="#C4B5FD"/><rect x="5" y="2" width="6" height="1" fill="#EDE6FF"/><rect x="5" y="13" width="6" height="1" fill="#6E4FCC"/><rect x="4" y="2" width="1" height="12" fill="#1F1430"/><rect x="11" y="2" width="1" height="12" fill="#1F1430"/><rect x="6" y="4" width="4" height="7" fill="#FBF6E8"/><rect x="7" y="12" width="2" height="1" fill="#1F1430"/></svg>
-          </span>
-          <span class="folder-item-label">app_02</span>
-        </button>
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#F2E5C8"/><rect x="2" y="2" width="12" height="1" fill="#FBF6E8"/><rect x="2" y="13" width="12" height="1" fill="#E8D8B2"/><rect x="1" y="2" width="1" height="12" fill="#1F1430"/><rect x="14" y="2" width="1" height="12" fill="#1F1430"/><rect x="4" y="5" width="6" height="1" fill="#C49AAA"/><rect x="4" y="7" width="8" height="1" fill="#9C7DF0"/><rect x="4" y="9" width="5" height="1" fill="#C49AAA"/></svg>
-          </span>
-          <span class="folder-item-label">landing_03</span>
-        </button>
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="3" y="3" width="10" height="10" fill="#9C7DF0"/><rect x="3" y="3" width="10" height="1" fill="#C4B5FD"/><rect x="3" y="12" width="10" height="1" fill="#6E4FCC"/><rect x="2" y="3" width="1" height="10" fill="#1F1430"/><rect x="13" y="3" width="1" height="10" fill="#1F1430"/><rect x="6" y="6" width="2" height="2" fill="#FBF6E8"/><rect x="9" y="6" width="2" height="2" fill="#FBF6E8"/><rect x="5" y="10" width="6" height="1" fill="#FBF6E8"/></svg>
-          </span>
-          <span class="folder-item-label">landing_04</span>
-        </button>
-        <button class="folder-item" type="button">
-          <span class="folder-item-thumb">
-            <svg viewBox="0 0 16 16" shape-rendering="crispEdges"><rect x="2" y="2" width="12" height="12" fill="#1F1430"/><rect x="3" y="3" width="10" height="10" fill="#3D2A5C"/><rect x="5" y="5" width="2" height="2" fill="#FF7AA8"/><rect x="9" y="5" width="2" height="2" fill="#7DC9B5"/><rect x="5" y="9" width="2" height="2" fill="#C6F02C"/><rect x="9" y="9" width="2" height="2" fill="#5EE6FF"/></svg>
-          </span>
-          <span class="folder-item-label">illust_archive</span>
-        </button>
-      `
+        <div class="wd-root">
+
+          <!-- ========== COVER ========== -->
+          <div class="wd-cover">
+            <div class="wd-cover-tag">CASE STUDY · WIP · MAY 2026</div>
+            <h1>Wisdom: The World of Emotions</h1>
+            <p class="wd-cover-sub">Better Kids · Landing page rebuild, end-to-end</p>
+          </div>
+
+          <!-- ========== BRIEF ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">00 — The Brief</p>
+            <h3 class="wd-section-title">Real product. Lost website.</h3>
+            <p style="font-size:13px;margin:0 0 12px;">Better Kids makes Wisdom — an SEL game for kids 4–8 that <strong>actually works</strong>. Apple "App of the Day." 4 stars on Common Sense Media. HundrED-recognized. CASEL-aligned. Backed by a randomized controlled trial.</p>
+            <p style="font-size:13px;margin:0 0 0;">Their site? A stock Shopify template, ten cramped screenshots, and a tagline you scroll past. The product earns trust. The site burns it.</p>
+            <p class="wd-pull">Most landing-page work is fixing pixels. This was fixing the gap between what the product is and what the site says it is.</p>
+          </div>
+
+          <!-- ========== AUDIT ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">01 — The Audit</p>
+            <h3 class="wd-section-title">What the old site got wrong.</h3>
+            <ul class="wd-problem-list">
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>Generic Shopify template.</strong> No design system, no point of view.</span></li>
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>10-screenshot hero grid.</strong> Zero focal point. The eye bounces and bails.</span></li>
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>Credentials hidden below the fold.</strong> App of the Day, RCT, CASEL — all buried.</span></li>
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>Single funnel for two audiences.</strong> Parents and educators routed identically.</span></li>
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>Broken inner pages.</strong> /parents and /educators 404 from the nav.</span></li>
+              <li class="wd-problem-item"><span class="wd-problem-icon">✗</span><span><strong>No motion, no rhythm, no story.</strong> Nothing earned the next scroll.</span></li>
+            </ul>
+            <div class="wd-screenshot">
+              <img src="images/wisdom/before-hero.png" alt="Original betterkids.education hero" />
+              <p class="wd-screenshot-caption">betterkids.education · captured May 2026</p>
+            </div>
+          </div>
+
+          <!-- ========== RESEARCH ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">02 — The Research</p>
+            <h3 class="wd-section-title">Pulled from the real product.</h3>
+            <p style="font-size:13px;margin:0 0 14px;">Before designing anything I went hunting for what was already there. Trust badges from the actual brand owners, screenshots straight from the App Store, copy lifted from real parent and counselor reviews.</p>
+            <div class="wd-badge-row">
+              <span class="wd-badge"><span class="wd-badge-icon">🍎</span> Apple App of the Day</span>
+              <span class="wd-badge"><span class="wd-badge-icon">⭐</span> 4★ Common Sense Media</span>
+              <span class="wd-badge"><span class="wd-badge-icon">🌍</span> HundrED Innovation</span>
+              <span class="wd-badge"><span class="wd-badge-icon">📚</span> CASEL-Aligned</span>
+              <span class="wd-badge"><span class="wd-badge-icon">🧪</span> RCT-Validated</span>
+            </div>
+            <p style="font-size:12px;margin:14px 0 8px;color:#666;">Logos sourced from Wikimedia (Common Sense), each org's own CDN (CASEL, HundrED), and Apple's SVG marks. Screenshots pulled live from the iTunes lookup API. No mocks, no fakes.</p>
+            <div class="wd-wip">
+              <span class="wd-wip-tag">WIP</span>
+              <div><strong>Heads up on the App Store screenshots —</strong> the ones currently in the marquee and the hero phone are pulled straight from the live App Store listing and they're, honestly, not great. Heavy text overlays, busy poster backgrounds, screenshot-of-a-screenshot framing. They're placeholders. Next pass on this case study: redo all ten screens as clean iPhone-native captures (or AI-regenerated) so the phone mockup actually sells the product instead of a 2018-era App Store poster.</div>
+            </div>
+          </div>
+
+          <!-- ========== PALETTE ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">03 — The Palette</p>
+            <h3 class="wd-section-title">Extracted from a hero image.</h3>
+            <p style="font-size:13px;margin:0 0 8px;">First pass leaned all-green (pulled from Better Kids' brand). Felt monochrome. Pivoted: lifted a Gemini-generated hero illustration of the four kingdoms and pulled the palette from <em>that</em> — wine berries, golden sun, deep teal sky, rust-orange characters.</p>
+            <div class="wd-palette">
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#102C3A"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">INK</span><span class="wd-swatch-hex">#102C3A</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#F4E9D2"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">CREAM</span><span class="wd-swatch-hex">#F4E9D2</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#7A2E3F"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">BERRY</span><span class="wd-swatch-hex">#7A2E3F</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#D26336"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">RUST</span><span class="wd-swatch-hex">#D26336</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#F2C849"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">GOLD</span><span class="wd-swatch-hex">#F2C849</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#2A6F7F"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">TEAL</span><span class="wd-swatch-hex">#2A6F7F</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#133845"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">TEAL-DEEP</span><span class="wd-swatch-hex">#133845</span></div></div>
+              <div class="wd-swatch"><div class="wd-swatch-fill" style="background:#4D8A4A"></div><div class="wd-swatch-meta"><span class="wd-swatch-name">MOSS</span><span class="wd-swatch-hex">#4D8A4A</span></div></div>
+            </div>
+          </div>
+
+          <!-- ========== DECISIONS ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">04 — Design Moves</p>
+            <h3 class="wd-section-title">Six choices that did the heavy lifting.</h3>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">1</div>
+              <div class="wd-decision-body">
+                <h4>Editorial-brutalist, not toy-store.</h4>
+                <p>Archivo display, DM Sans body, Space Mono accents. Hard 4px shadows on cards. Magazine-style numbered sections. Warm enough for kids, confident enough for school district buyers.</p>
+              </div>
+            </div>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">2</div>
+              <div class="wd-decision-body">
+                <h4>One hero image. One promise.</h4>
+                <p>Replaced the 10-screenshot grid with a single painterly hero, headline highlighted with a rust marker mark, and the official App Store + Google Play badges side by side. No more scanning.</p>
+              </div>
+            </div>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">3</div>
+              <div class="wd-decision-body">
+                <h4>Phone mockup floating in the hero.</h4>
+                <p>Pure-CSS iPhone frame, real App Store screenshot inside, gentle 6s float loop. Sells the product without needing a video.</p>
+              </div>
+            </div>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">4</div>
+              <div class="wd-decision-body">
+                <h4>Trust strip directly under the hero.</h4>
+                <p>Real Apple / Common Sense / HundrED / CASEL marks on cream — no fakes, no text-only badges. First scroll-stop intentionally includes both hero <em>and</em> trust strip so visitors see the receipts before the pitch.</p>
+              </div>
+            </div>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">5</div>
+              <div class="wd-decision-body">
+                <h4>"Inside Wisdom" marquee.</h4>
+                <p>All ten App Store screenshots in CSS phone frames, slow-scrolling left at 60s/cycle with edge mask fades. Pauses on hover. The product, in motion, without a single video tag.</p>
+              </div>
+            </div>
+
+            <div class="wd-decision">
+              <div class="wd-decision-num">6</div>
+              <div class="wd-decision-body">
+                <h4>Split the audience, split the CTA.</h4>
+                <p>Rust panel for parents → free download. Ink panel for educators → request a demo. Each side gets its own eyebrow, list, and primary action. No more shared funnel.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== MECHANICS ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">05 — Conversion Mechanics</p>
+            <h3 class="wd-section-title">The JS that earns the next scroll.</h3>
+            <div class="wd-mechanics">
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Section-lock scroll.</strong>One wheel gesture = one section advance. 950ms cooldown. Each slide gets its moment.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Free-zone reveal.</strong>Lock releases on the final CTA so the footer scrolls naturally. Re-engages on scroll-up.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Sticky "Get the app".</strong>Pill appears after the hero, hides at the final CTA where it'd compete.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Animated stat counters.</strong>300, 50, 4, 5 count up from zero with easeOutCubic when the row enters view.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Exclusive FAQ accordion.</strong>Native <code>&lt;details name&gt;</code> keeps the slide height locked.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Hash-strip on refresh.</strong><code>scrollRestoration='manual'</code> + replaceState — page always lands at top.</span></div>
+            </div>
+          </div>
+
+          <!-- ========== STACK ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">06 — The Stack</p>
+            <h3 class="wd-section-title">No framework. No build step.</h3>
+            <p style="font-size:13px;margin:0 0 10px;">One HTML file. One inline stylesheet. One inline script. Loads instantly, runs offline, deploys anywhere.</p>
+            <div class="wd-stack">
+              <span class="wd-stack-chip">HTML</span>
+              <span class="wd-stack-chip">CSS</span>
+              <span class="wd-stack-chip">VANILLA JS</span>
+              <span class="wd-stack-chip">INLINE SVG</span>
+              <span class="wd-stack-chip">INTERSECTION OBSERVER</span>
+              <span class="wd-stack-chip">CSS GRID</span>
+              <span class="wd-stack-chip">SCROLL-SNAP-LITE</span>
+              <span class="wd-stack-chip">PREFERS-REDUCED-MOTION</span>
+            </div>
+          </div>
+
+          <!-- ========== COMPARISON ========== -->
+          <div class="wd-section">
+            <p class="wd-section-label">07 — Before / After</p>
+            <h3 class="wd-section-title">Side by side.</h3>
+            <div class="wd-comparison-grid">
+              <div class="wd-comparison-card">
+                <div class="wd-comparison-label wd-comparison-label--before">BEFORE</div>
+                <img src="images/wisdom/before-hero.png" alt="Before — original Better Kids site" />
+              </div>
+              <div class="wd-comparison-card">
+                <div class="wd-comparison-label wd-comparison-label--after">AFTER</div>
+                <img src="images/wisdom/after-hero.png" alt="After — redesigned Wisdom site" />
+              </div>
+            </div>
+          </div>
+
+          <!-- ========== CTA ========== -->
+          <div class="wd-cta-section">
+            <p class="wd-cta-eyebrow">▸ THE REAL THING</p>
+            <h3 class="wd-cta-title">Open the live redesign.</h3>
+            <p class="wd-cta-sub">Hover, scroll, click. The mockup runs in your actual browser — section snap, animated stats, sticky CTA, the whole thing.</p>
+            <button class="wd-cta-btn" type="button" data-wd-open>
+              View the redesigned site
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </button>
+            <span class="wd-cta-domain">wisdom.html · opens in a new tab</span>
+          </div>
+
+          <!-- ========== FOOTER ========== -->
+          <div class="wd-footer">
+            <span>case study by <a href="#" data-app="contact">woosqa</a> · may 2026</span>
+            <span>wisdom.doc · wookieOS</span>
+          </div>
+
+        </div>`
     },
     about: {
       chrome: 'notepad', icon: '✎', label: 'about.me', pinned: true,
@@ -456,12 +1171,12 @@
           <button class="start-menu-item" data-jump="consultly"><span class="start-menu-glyph">◐</span>consultly</button>
           <button class="start-menu-item" data-jump="frenzly"><span class="start-menu-glyph">◐</span>frenzly</button>
           <button class="start-menu-item" data-jump="storyloop"><span class="start-menu-glyph">◐</span>storyloop</button>
+          <button class="start-menu-item" data-jump="wisdom"><span class="start-menu-glyph">📖</span>wisdom</button>
         </div>
         <div class="start-divider"></div>
         <div class="start-section">
           <span class="start-section-label">// system</span>
           <button class="start-menu-item" data-jump="about"><span class="start-menu-glyph">✎</span>about.me</button>
-          <button class="start-menu-item" data-jump="more"><span class="start-menu-glyph">▤</span>more.work</button>
           <button class="start-menu-item" data-jump="contact"><span class="start-menu-glyph">✉</span>contact</button>
         </div>
         <div class="start-footer">
@@ -506,7 +1221,7 @@
       'loading fonts ... dotgothic · vt323 · pixelify',
       pick(),
       'found: 1 designer · slightly caffeinated',
-      'scanning portfolio ... 3 case studies · 1 sticky note',
+      'scanning portfolio ... 4 case studies · 1 sticky note',
       'trash: 1 item (not opening that back up)',
       'loading user: wookie',
       'ready.',
@@ -570,6 +1285,39 @@
       'images/consultly.png',
       'images/frenzly.png',
       'images/storyloop.png',
+      // Consultly case-study assets
+      'images/consultly/bg-master.png',
+      'images/consultly/sec-hero.png',
+      'images/consultly/phone-user.png',
+      'images/consultly/phone-expert.png',
+      'images/consultly/phone-business.png',
+      'images/consultly/sec-typo.svg',
+      'images/consultly/sec-gallery-outro.png',
+      'images/consultly/pill-registration.png',
+      'images/consultly/pill-discovery.png',
+      'images/consultly/pill-booking.png',
+      'images/consultly/pill-payments.png',
+      'images/consultly/pill-consultation.png',
+      'images/consultly/pill-profile.png',
+      'images/consultly/pill-expertmode.png',
+      'images/consultly/pill-reviews.png',
+      'images/consultly/pill-notifications.png',
+      'images/consultly/pill-admin.png',
+      'images/consultly/pill-hub.png',
+      // Storyloop case-study assets
+      'images/storyloop/bg-cover.png',
+      'images/storyloop/bg-auth-grid.png',
+      'images/storyloop/landing-hero-clusters.png',
+      'images/storyloop/cover-ipad.png',
+      'images/storyloop/story-04.jpg',
+      'images/storyloop/story-05.jpg',
+      'images/storyloop/story-06.jpg',
+      'images/storyloop/story-07.jpg',
+      'images/storyloop/story-08.jpg',
+      'images/storyloop/story-09.jpg',
+      'images/storyloop/story-10.jpg',
+      'images/storyloop/story-11.jpg',
+      'images/storyloop/story-12.jpg',
     ];
     const resTotal = imgs.length + preloadUrls.length + 1;
 
@@ -785,6 +1533,11 @@
     return `<div class="window-menubar">${items}</div>`;
   }
 
+  function buildToolbar(def) {
+    if (!def.toolbar) return '';
+    return `<div class="window-toolbar">${def.toolbar}</div>`;
+  }
+
   /* ---------- Open / focus / minimize / restore / close ---------- */
   function openWindow(key, triggerEl) {
     const def = WINDOWS[key];
@@ -814,6 +1567,7 @@
       ${def.chrome !== 'start' ? buildTitlebar(def) : ''}
       ${buildMenubar(def)}
       ${buildUrlbar(def)}
+      ${buildToolbar(def)}
       <div class="window-body">${def.body}</div>
     `;
 
@@ -943,6 +1697,22 @@
             compose.querySelectorAll('input').forEach(i => i.value = '');
           }, 1500);
         }, 1500);
+      });
+    }
+
+    /* ---- Wisdom CTA wiring ---- */
+    if (key === 'wisdom') {
+      win.querySelectorAll('[data-wd-open]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          window.open('wisdom.html', '_blank', 'noopener');
+        });
+      });
+      win.querySelectorAll('[data-app]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = link.getAttribute('data-app');
+          if (target) openWindow(target, link);
+        });
       });
     }
 
@@ -1293,6 +2063,675 @@
       kickDarkAnim();
     }
 
+    // Consultly case study: scale-to-fit canvas (Phase 1 — static, no scroll hijack yet)
+    if (key === 'consultly') {
+      const viewport = win.querySelector('.cs-viewport');
+      const canvas = win.querySelector('.cs-canvas');
+      const body = win.querySelector('.window-body');
+      const CANVAS_W = 1440;
+      let currentScale = 1;
+      let lastFitW = 0;
+
+      function fitCanvas() {
+        const containerW = viewport.clientWidth || body.clientWidth;
+        if (!containerW) return;
+        if (Math.abs(containerW - lastFitW) < 1) return;
+        lastFitW = containerW;
+        currentScale = containerW / CANVAS_W;
+        canvas.style.transform = `scale(${currentScale})`;
+        canvas.style.width = `${CANVAS_W}px`;
+        canvas.style.transformOrigin = 'top left';
+        requestAnimationFrame(() => {
+          const naturalH = canvas.offsetHeight;
+          viewport.style.height = `${naturalH * currentScale}px`;
+          drawArchLines();
+        });
+      }
+
+      // Architecture: draw curved bezier paths from each module pill to the center hub
+      function drawArchLines() {
+        const svg = canvas.querySelector('.cs-arch-lines');
+        const stage = canvas.querySelector('.cs-arch-stage');
+        const hub = canvas.querySelector('.cs-arch-hub');
+        if (!svg || !stage || !hub || !currentScale) return;
+        const pills = canvas.querySelectorAll('.cs-arch-pill');
+        if (!pills.length) return;
+
+        const stageRect = stage.getBoundingClientRect();
+        const hubRect = hub.getBoundingClientRect();
+        const stageW = stageRect.width / currentScale;
+        const stageH = stageRect.height / currentScale;
+        svg.setAttribute('viewBox', `0 0 ${stageW} ${stageH}`);
+
+        const pos = (r) => ({
+          left:   (r.left   - stageRect.left) / currentScale,
+          right:  (r.right  - stageRect.left) / currentScale,
+          cx:     ((r.left + r.right) / 2 - stageRect.left) / currentScale,
+          cy:     ((r.top + r.bottom) / 2 - stageRect.top)  / currentScale,
+        });
+
+        const hubP = pos(hubRect);
+        let paths = '';
+        pills.forEach(pill => {
+          const p = pos(pill.getBoundingClientRect());
+          const isLeft = p.cx < hubP.cx;
+          const start = { x: isLeft ? p.right : p.left, y: p.cy };
+          const end   = { x: isLeft ? hubP.left : hubP.right, y: hubP.cy };
+          const dx = end.x - start.x;
+          const dy = end.y - start.y;
+          // Control points create a smooth S-curve that connects cleanly
+          const cp1 = { x: start.x + dx * 0.4, y: start.y };
+          const cp2 = { x: end.x - dx * 0.4, y: end.y };
+          paths += `<path d="M ${start.x},${start.y} C ${cp1.x},${cp1.y} ${cp2.x},${cp2.y} ${end.x},${end.y}" />`;
+        });
+        svg.innerHTML = paths;
+      }
+
+      // ── Utility ──
+      const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+      const remap = (v, a, b) => b === a ? 0 : clamp01((v - a) / (b - a));
+      const easeOut = x => 1 - Math.pow(1 - x, 3);
+      const easeInOut = x => x < 0.5 ? 4*x*x*x : 1 - Math.pow(-2*x+2, 3)/2;
+
+      // ── Hero scroll hijack ──
+      const heroEl = canvas.querySelector('.cs-hero');
+      const heroImg = canvas.querySelector('.cs-hero-img');
+      const HERO_ANIM_PX = 1800;
+      const LERP = 0.09;
+      let heroTarget = 0;
+      let heroCurrent = 0;
+      let heroAnimRunning = false;
+
+      function applyHeroProgress(p) {
+        if (!heroEl) return;
+        heroEl.style.setProperty('--hp', p);
+        heroEl.style.setProperty('--p-phone',   easeOut(remap(p, 0.00, 0.35)));
+        heroEl.style.setProperty('--p-settled',  easeInOut(remap(p, 0.70, 1.00)));
+      }
+
+      function heroAnimLoop() {
+        const diff = heroTarget - heroCurrent;
+        if (Math.abs(diff) > 0.0005) {
+          heroCurrent += diff * LERP;
+          applyHeroProgress(heroCurrent);
+          heroAnimRunning = true;
+          requestAnimationFrame(heroAnimLoop);
+        } else {
+          heroCurrent = heroTarget;
+          applyHeroProgress(heroCurrent);
+          heroAnimRunning = false;
+        }
+      }
+      function kickHeroAnim() {
+        if (!heroAnimRunning) {
+          heroAnimRunning = true;
+          requestAnimationFrame(heroAnimLoop);
+        }
+      }
+
+      body.addEventListener('wheel', (e) => {
+        const atTop = body.scrollTop <= 2;
+        const dy = e.deltaY;
+        if (atTop && heroTarget < 1 && dy > 0) {
+          e.preventDefault();
+          heroTarget = clamp01(heroTarget + dy / HERO_ANIM_PX);
+          kickHeroAnim();
+          return;
+        }
+        if (atTop && heroTarget > 0 && dy < 0) {
+          e.preventDefault();
+          heroTarget = clamp01(heroTarget + dy / HERO_ANIM_PX);
+          kickHeroAnim();
+          return;
+        }
+      }, { passive: false });
+
+      // ── Mouse parallax on hero ──
+      let mxTarget = 0, myTarget = 0, mxCurrent = 0, myCurrent = 0;
+      let parallaxRunning = false;
+
+      if (heroEl) {
+        heroEl.addEventListener('mousemove', (e) => {
+          if (heroCurrent < 0.7) return;
+          const rect = heroEl.getBoundingClientRect();
+          mxTarget = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+          myTarget = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+          if (!parallaxRunning) {
+            parallaxRunning = true;
+            requestAnimationFrame(parallaxLoop);
+          }
+        });
+        heroEl.addEventListener('mouseleave', () => {
+          mxTarget = 0; myTarget = 0;
+          if (!parallaxRunning) {
+            parallaxRunning = true;
+            requestAnimationFrame(parallaxLoop);
+          }
+        });
+      }
+
+      function parallaxLoop() {
+        const dx = mxTarget - mxCurrent;
+        const dy = myTarget - myCurrent;
+        if (Math.abs(dx) > 0.001 || Math.abs(dy) > 0.001) {
+          mxCurrent += dx * 0.06;
+          myCurrent += dy * 0.06;
+          if (heroEl) {
+            heroEl.style.setProperty('--mx', `${mxCurrent * 20}px`);
+            heroEl.style.setProperty('--my', `${myCurrent * 14}px`);
+          }
+          parallaxRunning = true;
+          requestAnimationFrame(parallaxLoop);
+        } else {
+          mxCurrent = mxTarget; myCurrent = myTarget;
+          if (heroEl) {
+            heroEl.style.setProperty('--mx', `${mxCurrent * 20}px`);
+            heroEl.style.setProperty('--my', `${myCurrent * 14}px`);
+          }
+          parallaxRunning = false;
+        }
+      }
+
+      // ── Section scroll reveals ──
+      const stageEls = canvas.querySelectorAll('[data-cs-stage]:not([data-cs-stage="hero"])');
+      const sectionTargets = new Map();
+      const sectionCurrents = new Map();
+      let darkAnimRunning = false;
+
+      function computeSectionTargets() {
+        const bodyRect = body.getBoundingClientRect();
+        const viewportH = body.clientHeight;
+        stageEls.forEach(sec => {
+          const r = sec.getBoundingClientRect();
+          const topRel = r.top - bodyRect.top;
+          const enterStart = viewportH * 0.95;
+          const enterEnd   = viewportH * 0.25;
+          const pEnter = easeOut(clamp01((enterStart - topRel) / (enterStart - enterEnd)));
+          const exitStart = viewportH * 0.05;
+          const exitEnd   = -r.height * 0.4;
+          const pExit = easeInOut(clamp01((exitStart - topRel) / (exitStart - exitEnd)));
+          const pVis = Math.max(0, Math.min(pEnter, 1 - pExit));
+          sectionTargets.set(sec, { enter: pEnter, exit: pExit, vis: pVis });
+          if (!sectionCurrents.has(sec)) sectionCurrents.set(sec, { enter: 0, exit: 0, vis: 0 });
+        });
+      }
+
+      function darkAnimLoop() {
+        let moving = false;
+        sectionCurrents.forEach((cur, sec) => {
+          const t = sectionTargets.get(sec);
+          if (!t) return;
+          const dl = 0.1;
+          const de = t.enter - cur.enter;
+          const dx = t.exit - cur.exit;
+          const dv = t.vis - cur.vis;
+          if (Math.abs(de) > 0.001 || Math.abs(dx) > 0.001 || Math.abs(dv) > 0.001) {
+            cur.enter += de * dl;
+            cur.exit += dx * dl;
+            cur.vis += dv * dl;
+            moving = true;
+          } else {
+            cur.enter = t.enter; cur.exit = t.exit; cur.vis = t.vis;
+          }
+          sec.style.setProperty('--p-enter', cur.enter);
+          sec.style.setProperty('--p-exit', cur.exit);
+          sec.style.setProperty('--p-vis', cur.vis);
+        });
+        if (moving) {
+          darkAnimRunning = true;
+          requestAnimationFrame(darkAnimLoop);
+        } else {
+          darkAnimRunning = false;
+        }
+      }
+      function kickDarkAnim() {
+        if (!darkAnimRunning) {
+          darkAnimRunning = true;
+          requestAnimationFrame(darkAnimLoop);
+        }
+      }
+
+      let scrollRAF = null;
+      body.addEventListener('scroll', () => {
+        if (scrollRAF) return;
+        scrollRAF = requestAnimationFrame(() => {
+          computeSectionTargets();
+          kickDarkAnim();
+          requestAnimationFrame(drawArchLines);
+          scrollRAF = null;
+        });
+      }, { passive: true });
+
+      // ── Init ──
+      applyHeroProgress(0);
+      fitCanvas();
+
+      // Refit after all images load (heights change)
+      const imgs = canvas.querySelectorAll('img');
+      let pending = imgs.length;
+      const onImg = () => {
+        if (--pending <= 0) {
+          lastFitW = 0;
+          fitCanvas();
+          computeSectionTargets();
+          kickDarkAnim();
+        }
+      };
+      imgs.forEach(img => {
+        if (img.complete) onImg();
+        else { img.addEventListener('load', onImg); img.addEventListener('error', onImg); }
+      });
+
+      // Refit on window resize/drag (debounced)
+      let resizeTimer;
+      const ro = new ResizeObserver(() => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          lastFitW = 0;
+          fitCanvas();
+          computeSectionTargets();
+          kickDarkAnim();
+        }, 50);
+      });
+      ro.observe(body);
+
+      // Initial section computation
+      computeSectionTargets();
+      kickDarkAnim();
+    }
+
+    // Storyloop case study: three-mode interactive demo
+    if (key === 'storyloop') {
+      const root = win.querySelector('.sl-root');
+      const urlPill = win.querySelector('.urlbar-pill');
+      if (!root) { /* template missing */ }
+
+      // Tour order inside admin mode
+      const TOUR = ['signin', 'dashboard', 'addstory', 'featured', 'settings', 'done'];
+      // Map admin step → URL hint
+      const URL_MAP = {
+        cover:    'storyloop.work',
+        landing:  'storyloop.work',
+        signin:   'app.storyloop.work/auth/sign-in',
+        dashboard:'app.storyloop.work/admin/stories',
+        addstory: 'app.storyloop.work/admin/stories/new',
+        featured: 'app.storyloop.work/admin/featured',
+        settings: 'app.storyloop.work/admin/settings',
+        done:     'app.storyloop.work/admin/done',
+      };
+
+      let mode = 'cover';     // cover | landing | admin
+      let adminStep = 'signin';
+
+      const $$ = sel => root.querySelectorAll(sel);
+      const $ = sel => root.querySelector(sel);
+
+      function updateUrl(stepKey) {
+        if (urlPill && URL_MAP[stepKey]) urlPill.textContent = URL_MAP[stepKey];
+      }
+
+      const entered = new Set();
+      function setMode(next) {
+        mode = next;
+        root.dataset.mode = next;
+        $$('.sl-mode').forEach(el => {
+          el.classList.toggle('is-active', el.dataset.modePane === next);
+          el.scrollTop = 0;
+        });
+        // First-time entrance: stagger the inside elements once
+        if (!entered.has(next)) {
+          entered.add(next);
+          const pane = $(`.sl-mode[data-mode-pane="${next}"]`);
+          if (pane) requestAnimationFrame(() => pane.classList.add('has-entered'));
+        }
+        if (next !== 'admin') updateUrl(next);
+        else updateUrl(adminStep);
+        updateChrome();
+      }
+
+      function setAdminStep(step) {
+        if (!TOUR.includes(step)) return;
+        adminStep = step;
+        updateUrl(step);
+
+        const auth = $('.sl-admin-auth-screen');
+        const shell = $('.sl-admin-shell');
+        const done = $('.sl-admin-done-screen');
+
+        const inShell = step !== 'signin' && step !== 'done';
+        auth.style.display = step === 'signin' ? '' : 'none';
+        shell.style.display = inShell ? '' : 'none';
+        done.style.display = step === 'done' ? '' : 'none';
+
+        if (inShell) {
+          $$('[data-screen]').forEach(s => s.classList.toggle('is-active', s.dataset.screen === step));
+          $$('.sl-sidebar-item').forEach(item => {
+            item.classList.toggle('is-active', item.dataset.screenTarget === step);
+          });
+          updateTopbar(step);
+        }
+        updateChrome();
+      }
+
+      function updateTopbar(step) {
+        const titleEl = $('[data-sl-screen-title]');
+        const crumbEl = $('[data-sl-screen-crumb]');
+        const map = {
+          dashboard: ['All Stories', 'Manage all published, draft, and suspended stories.'],
+          addstory:  ['Add New Story', 'Author a new long-form piece for the reader landing.'],
+          featured:  ['Featured Stories', 'Curate the homepage carousel.'],
+          settings:  ['Settings & Profile', 'Account, preferences, and editor profile.'],
+        };
+        const entry = map[step];
+        if (entry && titleEl && crumbEl) { titleEl.textContent = entry[0]; crumbEl.textContent = entry[1]; }
+      }
+
+      function updateChrome() {
+        const indicator = $('[data-sl-chrome-indicator]');
+        const prev = $('[data-sl-chrome="prev"]');
+        const next = $('[data-sl-chrome="next"]');
+        if (mode !== 'admin') return;
+        const idx = TOUR.indexOf(adminStep);
+        if (indicator) indicator.textContent = `step ${idx + 1} of ${TOUR.length}`;
+        if (prev) prev.toggleAttribute('disabled', idx <= 0);
+        if (next) {
+          next.toggleAttribute('disabled', idx >= TOUR.length - 1);
+          next.textContent = idx >= TOUR.length - 1 ? 'finished ›' : 'next ›';
+        }
+      }
+
+      // ── Toast helper ──
+      const toastEl = $('[data-sl-toast]');
+      const toastTextEl = $('[data-sl-toast-text]');
+      let toastTimer;
+      function showToast(text, variant) {
+        if (!toastEl) return;
+        toastTextEl.textContent = text;
+        toastEl.classList.remove('sl-toast--danger', 'sl-toast--warning');
+        if (variant === 'danger') toastEl.classList.add('sl-toast--danger');
+        if (variant === 'warning') toastEl.classList.add('sl-toast--warning');
+        toastEl.classList.add('is-open');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toastEl.classList.remove('is-open'), 2400);
+      }
+
+      // ── Modal helpers ──
+      function openModal(name) {
+        const m = $(`[data-modal="${name}"]`);
+        if (m) m.classList.add('is-open');
+      }
+      function closeModal(el) {
+        if (!el) {
+          $$('.sl-modal-backdrop.is-open').forEach(m => m.classList.remove('is-open'));
+        } else {
+          el.classList.remove('is-open');
+        }
+      }
+      root.addEventListener('click', (e) => {
+        if (e.target.matches('[data-sl-modal-close]')) {
+          closeModal(e.target.closest('.sl-modal-backdrop'));
+        }
+        // backdrop click (outside the modal box)
+        if (e.target.classList.contains('sl-modal-backdrop')) {
+          closeModal(e.target);
+        }
+      });
+
+      // ── Goto links (CTAs that jump between modes/steps) ──
+      root.addEventListener('click', (e) => {
+        const goto = e.target.closest('[data-sl-goto]');
+        if (!goto) return;
+        const target = goto.dataset.slGoto;
+        if (target === 'cover') { adminStep = 'signin'; setMode('cover'); }
+        else if (target === 'landing') { setMode('landing'); }
+        else if (target === 'signin') { setMode('admin'); setAdminStep('signin'); }
+        else if (target === 'reset') { showToast('Reset password flow — static screens only in this demo.', 'warning'); }
+      });
+
+      // ── Landing CTA → smooth-scroll to grid ──
+      const heroBtn = $('[data-sl-scroll-to="grid"]');
+      if (heroBtn) {
+        heroBtn.addEventListener('click', () => {
+          const section = $('[data-sl-grid-section]');
+          const landing = $('.sl-mode--landing');
+          if (section && landing) {
+            const top = section.offsetTop - 12;
+            landing.scrollTo({ top, behavior: 'smooth' });
+          }
+        });
+      }
+
+      // ── Landing category filter ──
+      $$('.sl-filter-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          const cat = tab.dataset.cat;
+          $$('.sl-filter-tab').forEach(t => t.classList.toggle('is-active', t === tab));
+          $$('.sl-grid .sl-card').forEach(card => {
+            const match = cat === 'all' || card.dataset.cat === cat;
+            card.classList.toggle('is-hidden', !match);
+          });
+        });
+      });
+
+      // ── Sign-in form ──
+      const signinForm = $('[data-sl-form="signin"]');
+      if (signinForm) {
+        signinForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const pw = $('#sl-pw').value;
+          const email = $('#sl-email').value.trim();
+          if (!email || pw === 'wrong') {
+            openModal('login-warn');
+            return;
+          }
+          showToast('Welcome back, Wookie.');
+          setAdminStep('dashboard');
+        });
+      }
+
+      // ── Sidebar navigation + cross-screen jump buttons ──
+      root.addEventListener('click', (e) => {
+        const t = e.target.closest('[data-screen-target]');
+        if (!t) return;
+        const next = t.dataset.screenTarget;
+        if (mode !== 'admin') setMode('admin');
+        setAdminStep(next);
+      });
+
+      // ── Row action dropdown menu ──
+      root.addEventListener('click', (e) => {
+        const trigger = e.target.closest('[data-sl-row-menu]');
+        const insideMenu = e.target.closest('.sl-row-menu');
+        // close other open menus
+        if (!insideMenu) $$('.sl-row-menu.is-open').forEach(m => { if (m !== trigger?.nextElementSibling) m.classList.remove('is-open'); });
+        if (trigger) {
+          const menu = trigger.nextElementSibling;
+          if (menu) menu.classList.toggle('is-open');
+          e.stopPropagation();
+        }
+      });
+      // close menus on outside click
+      root.addEventListener('click', (e) => {
+        if (!e.target.closest('.sl-row-actions')) {
+          $$('.sl-row-menu.is-open').forEach(m => m.classList.remove('is-open'));
+        }
+      });
+
+      // ── Row actions → modals ──
+      let pendingRow = null;
+      let pendingAction = null;
+      root.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-sl-row-action]');
+        if (!btn) return;
+        const action = btn.dataset.slRowAction;
+        pendingRow = btn.closest('tr');
+        pendingAction = action;
+        if (action === 'publish') openModal('publish-confirm');
+        else if (action === 'suspend') openModal('suspend-confirm');
+        else if (action === 'delete') openModal('delete-confirm');
+        // close the dropdown
+        $$('.sl-row-menu.is-open').forEach(m => m.classList.remove('is-open'));
+      });
+
+      // ── Modal confirms ──
+      root.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-sl-modal-confirm]');
+        if (!btn) return;
+        const which = btn.dataset.slModalConfirm;
+        if (!pendingRow) {
+          // featured publish (no row)
+          if (which === 'publish') showToast('Featured story published.');
+          closeModal(btn.closest('.sl-modal-backdrop'));
+          return;
+        }
+        if (which === 'publish') {
+          const cell = pendingRow.children[3];
+          if (cell) cell.innerHTML = '<span class="sl-status sl-status--published">Published</span>';
+          pendingRow.dataset.rowStatus = 'published';
+          showToast('Story published.');
+        } else if (which === 'suspend') {
+          const cell = pendingRow.children[3];
+          if (cell) cell.innerHTML = '<span class="sl-status sl-status--suspended">Suspended</span>';
+          pendingRow.dataset.rowStatus = 'suspended';
+          showToast('Story suspended.', 'warning');
+        } else if (which === 'delete') {
+          pendingRow.style.transition = 'opacity 200ms ease, transform 200ms ease';
+          pendingRow.style.opacity = '0';
+          pendingRow.style.transform = 'translateX(-12px)';
+          setTimeout(() => pendingRow.remove(), 220);
+          showToast('Story deleted.', 'danger');
+        }
+        pendingRow = null;
+        pendingAction = null;
+        closeModal(btn.closest('.sl-modal-backdrop'));
+      });
+
+      // ── Featured publish button (static screen) ──
+      root.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-sl-action="publish-featured"]');
+        if (!btn) return;
+        openModal('publish-confirm');
+      });
+
+      // ── Add-story form ──
+      const addForm = $('[data-sl-form="addstory"]');
+      if (addForm) {
+        addForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const title = $('#sl-story-title').value.trim();
+          if (!title) { showToast('Title is required.', 'warning'); return; }
+          const cat = $('#sl-story-cat').value;
+          const author = $('#sl-story-author').value.trim() || 'Wookie K.';
+          // prepend a row to the dashboard table
+          const tbody = $('[data-sl-stories-body]');
+          if (tbody) {
+            const tr = document.createElement('tr');
+            tr.dataset.rowStatus = 'published';
+            tr.innerHTML = `<td>${escapeHtml(title)}</td><td>${escapeHtml(cat)}</td><td>${escapeHtml(author)}</td><td><span class="sl-status sl-status--published">Published</span></td><td>just now</td><td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>`;
+            tbody.prepend(tr);
+          }
+          addForm.reset();
+          const up = addForm.querySelector('.sl-upload');
+          if (up) up.classList.remove('is-filled');
+          showToast('Story published.');
+          setAdminStep('dashboard');
+        });
+        addForm.querySelector('[data-sl-action="savedraft"]').addEventListener('click', () => {
+          const title = $('#sl-story-title').value.trim();
+          if (!title) { showToast('Title is required.', 'warning'); return; }
+          const cat = $('#sl-story-cat').value;
+          const author = $('#sl-story-author').value.trim() || 'Wookie K.';
+          const tbody = $('[data-sl-stories-body]');
+          if (tbody) {
+            const tr = document.createElement('tr');
+            tr.dataset.rowStatus = 'draft';
+            tr.innerHTML = `<td>${escapeHtml(title)}</td><td>${escapeHtml(cat)}</td><td>${escapeHtml(author)}</td><td><span class="sl-status sl-status--draft">Draft</span></td><td>just now</td><td><div class="sl-row-actions"><button class="sl-row-actions-btn" type="button" data-sl-row-menu>⋮</button><div class="sl-row-menu"><button data-sl-row-action="publish" type="button">Publish</button><button data-sl-row-action="suspend" type="button">Suspend</button><button data-sl-row-action="delete" class="is-danger" type="button">Delete</button></div></div></td>`;
+            tbody.prepend(tr);
+          }
+          addForm.reset();
+          const up = addForm.querySelector('.sl-upload');
+          if (up) up.classList.remove('is-filled');
+          showToast('Draft saved.');
+          setAdminStep('dashboard');
+        });
+        // File upload affordance
+        const upload = addForm.querySelector('[data-sl-upload]');
+        const fileInput = upload?.querySelector('input[type="file"]');
+        if (fileInput) {
+          fileInput.addEventListener('change', () => {
+            const name = fileInput.files?.[0]?.name;
+            if (name) {
+              upload.classList.add('is-filled');
+              upload.querySelector('.sl-upload-text').innerHTML = `<strong>${escapeHtml(name)}</strong> ready to upload<br/><span style="opacity:0.6">click to replace</span>`;
+            }
+          });
+        }
+      }
+
+      // ── Profile save ──
+      const profileForm = $('[data-sl-form="profile"]');
+      if (profileForm) {
+        profileForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          showToast('Profile saved.');
+        });
+      }
+
+      // ── Chrome prev/next ──
+      $('[data-sl-chrome="prev"]')?.addEventListener('click', () => {
+        const idx = TOUR.indexOf(adminStep);
+        if (idx > 0) setAdminStep(TOUR[idx - 1]);
+      });
+      $('[data-sl-chrome="next"]')?.addEventListener('click', () => {
+        const idx = TOUR.indexOf(adminStep);
+        if (idx < TOUR.length - 1) setAdminStep(TOUR[idx + 1]);
+      });
+
+      // ── Helpers ──
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+      }
+
+      // ── ESC closes any open modal or row menu ──
+      function onKey(e) {
+        if (e.key !== 'Escape') return;
+        const open = root.querySelector('.sl-modal-backdrop.is-open');
+        if (open) { closeModal(open); e.stopPropagation(); return; }
+        const menu = root.querySelector('.sl-row-menu.is-open');
+        if (menu) { menu.classList.remove('is-open'); e.stopPropagation(); }
+      }
+      document.addEventListener('keydown', onKey);
+      // Cleanup when window is removed from DOM
+      const cleanupObserver = new MutationObserver(() => {
+        if (!document.body.contains(win)) {
+          document.removeEventListener('keydown', onKey);
+          cleanupObserver.disconnect();
+        }
+      });
+      cleanupObserver.observe(stage, { childList: true });
+
+      // ── Demo-only tooltip on inert search buttons ──
+      $$('.sl-nav-search, .sl-filter-search').forEach(btn => {
+        // ensure relative positioning context exists on the parent
+        const host = btn.classList.contains('sl-nav-search') ? btn.parentElement : btn;
+        host.style.position = host.style.position || 'relative';
+        const hint = document.createElement('div');
+        hint.className = 'sl-search-hint';
+        hint.textContent = 'search is demo-only';
+        host.appendChild(hint);
+        let hintTimer;
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          hint.classList.add('is-open');
+          clearTimeout(hintTimer);
+          hintTimer = setTimeout(() => hint.classList.remove('is-open'), 1800);
+        });
+      });
+
+      // Init: cover mode, fresh state
+      setMode('cover');
+    }
+
     // Focus on mousedown anywhere in window
     win.addEventListener('mousedown', () => focusWindow(key));
 
@@ -1612,6 +3051,7 @@
       (def.chrome !== 'start' ? buildTitlebar(def) : '') +
       buildMenubar(def) +
       buildUrlbar(def) +
+      buildToolbar(def) +
       `<div class="window-body">${def.body}</div>`;
 
     // Disable interaction in preview
@@ -1981,6 +3421,145 @@
     dateEl.textContent = `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
   }
 
+  /* ---------- Desktop icon drag + position persistence ---------- */
+  const ICON_POS_KEY = 'wookie-icon-positions';
+  const ICON_W = 92, ICON_H = 108, ICON_GAP_X = 28, ICON_GAP_Y = 24;
+  const ICON_RIGHT_MARGIN = 36, ICON_TOP_MARGIN = 44;
+
+  let iconPositions = (() => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(ICON_POS_KEY));
+      return (saved && typeof saved === 'object') ? saved : {};
+    } catch { return {}; }
+  })();
+
+  function saveIconPositions() {
+    try { localStorage.setItem(ICON_POS_KEY, JSON.stringify(iconPositions)); } catch {}
+  }
+
+  function defaultIconPositions() {
+    const container = document.querySelector('.desktop-icons');
+    if (!container) return {};
+    const cw = container.clientWidth;
+    const col1Left = Math.max(8, cw - ICON_RIGHT_MARGIN - ICON_W);
+    const col0Left = Math.max(8, col1Left - ICON_GAP_X - ICON_W);
+    const icons = container.querySelectorAll('.desktop-icon');
+    const pos = {};
+    icons.forEach((icon, i) => {
+      const key = icon.dataset.window;
+      if (!key) return;
+      const col = i % 2;
+      const row = Math.floor(i / 2);
+      pos[key] = {
+        x: col === 0 ? col0Left : col1Left,
+        y: ICON_TOP_MARGIN + row * (ICON_H + ICON_GAP_Y)
+      };
+    });
+    return pos;
+  }
+
+  function clampIconPos(x, y) {
+    const container = document.querySelector('.desktop-icons');
+    if (!container) return { x, y };
+    const cw = container.clientWidth, ch = container.clientHeight;
+    const maxX = Math.max(0, cw - ICON_W - 4);
+    const maxY = Math.max(0, ch - ICON_H - 4);
+    return {
+      x: Math.max(4, Math.min(maxX, Math.round(x))),
+      y: Math.max(4, Math.min(maxY, Math.round(y)))
+    };
+  }
+
+  function applyIconPositions() {
+    const defaults = defaultIconPositions();
+    document.querySelectorAll('.desktop-icon').forEach(icon => {
+      const key = icon.dataset.window;
+      if (!key) return;
+      const stored = iconPositions[key];
+      const base = stored || defaults[key] || { x: 0, y: 0 };
+      const pos = clampIconPos(base.x, base.y);
+      icon.style.left = pos.x + 'px';
+      icon.style.top = pos.y + 'px';
+    });
+  }
+
+  function wireIconDrag() {
+    document.querySelectorAll('.desktop-icon').forEach(icon => {
+      let startX = 0, startY = 0, originX = 0, originY = 0;
+      let dragging = false, suppressClick = false;
+      const THRESHOLD = 5;
+
+      icon.addEventListener('pointerdown', (e) => {
+        if (e.button !== 0) return;
+        startX = e.clientX; startY = e.clientY;
+        originX = parseFloat(icon.style.left) || 0;
+        originY = parseFloat(icon.style.top) || 0;
+        dragging = false;
+        suppressClick = false;
+        try { icon.setPointerCapture(e.pointerId); } catch {}
+      });
+
+      icon.addEventListener('pointermove', (e) => {
+        if (!icon.hasPointerCapture || !icon.hasPointerCapture(e.pointerId)) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        if (!dragging && Math.hypot(dx, dy) < THRESHOLD) return;
+        if (!dragging) {
+          dragging = true;
+          icon.classList.add('dragging');
+        }
+        const { x, y } = clampIconPos(originX + dx, originY + dy);
+        icon.style.left = x + 'px';
+        icon.style.top = y + 'px';
+      });
+
+      const endDrag = (e) => {
+        try { if (icon.hasPointerCapture(e.pointerId)) icon.releasePointerCapture(e.pointerId); } catch {}
+        if (dragging) {
+          icon.classList.remove('dragging');
+          const key = icon.dataset.window;
+          if (key) {
+            iconPositions[key] = {
+              x: parseFloat(icon.style.left) || 0,
+              y: parseFloat(icon.style.top) || 0
+            };
+            saveIconPositions();
+          }
+          suppressClick = true;
+        }
+        dragging = false;
+      };
+      icon.addEventListener('pointerup', endDrag);
+      icon.addEventListener('pointercancel', endDrag);
+
+      icon.addEventListener('click', (e) => {
+        if (suppressClick) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+          suppressClick = false;
+        }
+      }, true);
+    });
+  }
+
+  applyIconPositions();
+  wireIconDrag();
+  window.addEventListener('resize', applyIconPositions);
+
+  // After the boot entry animation finishes, freeze the icon's animation
+  // property so future class toggles can't re-trigger icon-in (which would
+  // replay the translateY + blur glitch). Must pin opacity inline first —
+  // the base rule sets opacity:0 and `forwards` only holds while the
+  // animation is applied.
+  document.querySelectorAll('.desktop-icon').forEach(icon => {
+    icon.addEventListener('animationend', function onceIn(e) {
+      if (e.animationName !== 'icon-in') return;
+      icon.style.opacity = '1';
+      icon.style.animation = 'none';
+      icon.removeEventListener('animationend', onceIn);
+    });
+  });
+
   /* ---------- Event wiring ---------- */
   const loginBtn = document.getElementById('login-btn');
   if (loginBtn) loginBtn.addEventListener('click', doLogin);
@@ -2055,6 +3634,24 @@
           void desktopEl.offsetWidth;
           desktopEl.classList.add('refreshing');
           desktopEl.addEventListener('animationend', () => desktopEl.classList.remove('refreshing'), { once: true });
+
+          // Reset icon positions and blink them in place — inline animation
+          // avoids re-triggering the base icon-in keyframes via cascade.
+          iconPositions = {};
+          saveIconPositions();
+          applyIconPositions();
+          document.querySelectorAll('.desktop-icon').forEach(icon => {
+            icon.style.opacity = '1';
+            icon.style.animation = 'none';
+            void icon.offsetWidth;
+            icon.style.animation = 'icon-refresh-blink 0.12s steps(2, end) 1';
+            icon.addEventListener('animationend', function done(e) {
+              if (e.animationName !== 'icon-refresh-blink') return;
+              icon.style.opacity = '1';
+              icon.style.animation = 'none';
+              icon.removeEventListener('animationend', done);
+            });
+          });
         } else if (action === 'about') {
           openWindow('about');
         } else if (action === 'settings') {

@@ -681,16 +681,21 @@ body.no-crt .crt-vignette {
   to   { opacity: 1; transform: scale(1); }
 }
 
-/* Desktop refresh glitch */
+/* Desktop refresh — quick blink */
 .desktop.refreshing {
-  animation: refresh-glitch 0.4s ease-out;
+  animation: refresh-blink 0.12s steps(2, end) 1;
 }
-@keyframes refresh-glitch {
-  0%  { filter: brightness(1); }
-  10% { filter: brightness(2.5) contrast(0.4); }
-  25% { filter: brightness(0.4) contrast(2); }
-  50% { filter: brightness(1.6); }
-  100%{ filter: brightness(1); }
+@keyframes refresh-blink {
+  0%   { filter: brightness(1); }
+  50%  { filter: brightness(0.4); }
+  100% { filter: brightness(1); }
+}
+
+/* Icon refresh — just blink off/on, no motion (applied inline via JS) */
+@keyframes icon-refresh-blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 /* =============================================================
@@ -698,15 +703,14 @@ body.no-crt .crt-vignette {
    ============================================================= */
 .desktop-icons {
   position: absolute;
-  top: 44px;
-  right: 36px;
-  display: grid;
-  grid-template-columns: repeat(2, 92px);
-  gap: 24px 28px;
+  inset: 0;
   z-index: 10;
+  pointer-events: none;
 }
 
 .desktop-icon {
+  position: absolute;
+  width: 92px;
   display: flex; flex-direction: column;
   align-items: center;
   gap: 4px;
@@ -715,10 +719,23 @@ body.no-crt .crt-vignette {
   border: 1px solid transparent;
   border-radius: var(--r-sm);
   transition: background 0.15s ease, border-color 0.15s ease;
-  position: relative;
   opacity: 0;
   animation: icon-in 0.45s ease-out forwards;
+  pointer-events: auto;
+  touch-action: none;
+  cursor: grab;
 }
+
+.desktop-icon.dragging {
+  cursor: grabbing;
+  z-index: 50;
+  transition: none;
+  background: rgba(20, 8, 38, 0.55);
+  border-color: rgba(156, 125, 240, 0.55);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.desktop-icon.dragging .icon-pixel { animation: none; }
 .desktop-icon.stagger-1 { animation-delay: 1.85s; }
 .desktop-icon.stagger-2 { animation-delay: 1.95s; }
 .desktop-icon.stagger-3 { animation-delay: 2.05s; }
@@ -1733,6 +1750,23 @@ body.no-crt .crt-vignette {
 .window--settings .window-titlebar::before { background: var(--cyber); }
 .window--settings .window-body { padding: 0; background: var(--cream-100); }
 
+/* ---------- Wordpad chrome ---------- */
+.window--wordpad .window-titlebar::before { background: #FFD700; }
+.window--wordpad .window-menubar {
+  display: flex; gap: 14px;
+  padding: 4px 12px;
+  background: var(--cream-100);
+  border-bottom: 1px solid var(--cream-300);
+  font-family: var(--fnt-pixel);
+  font-size: 13px;
+  color: var(--plum-700);
+}
+.window--wordpad .window-body {
+  padding: 0;
+  background: #FEFCF3;
+  overflow-y: auto;
+}
+
 .settings-pane { display: flex; flex-direction: column; }
 .settings-section {
   padding: 14px 18px;
@@ -2132,7 +2166,6 @@ body.no-crt .crt-vignette {
 /* Narrow desktop fallback */
 @media (max-width: 1100px) and (min-width: 901px) {
   .terminal-widget { width: 250px; }
-  .desktop-icons { grid-template-columns: repeat(2, 86px); gap: 20px 22px; right: 24px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

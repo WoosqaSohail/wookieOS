@@ -1,0 +1,485 @@
+/* =================================================================
+   WISDOM CASE STUDY — WordPad document viewer
+   Clean document typography, cream background, wd-* prefix
+   ================================================================= */
+
+/* Window-body override for wordpad */
+.window--wordpad .window-body:has(.wd-root),
+.window-body:has(.wd-root) {
+  padding: 0;
+  background: #FEFCF3;
+  scroll-behavior: smooth;
+}
+
+.wd-root {
+  --wd-yellow:      #FFD700;
+  --wd-yellow-soft: #FFF3B0;
+  --wd-yellow-dark: #E6C200;
+  --wd-blue:        #1E90FF;
+  --wd-blue-dark:   #1565C0;
+  --wd-blue-soft:   #E3F2FD;
+  --wd-bg:          #FEFCF3;
+  --wd-bg-alt:      #FFF9E6;
+  --wd-text:        #2D2D2D;
+  --wd-text-muted:  #666666;
+  --wd-border:      #E8DFC8;
+  --wd-red:         #E53935;
+  --wd-green:       #43A047;
+  --wd-radius:      8px;
+
+  font-family: 'Urbanist', system-ui, sans-serif;
+  color: var(--wd-text);
+  line-height: 1.6;
+  max-width: 100%;
+}
+
+/* ============== COVER ============== */
+.wd-cover {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA000 50%, #1E90FF 100%);
+  padding: 40px 36px 36px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.wd-cover::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 160px; height: 160px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+}
+.wd-cover::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; left: 20%;
+  width: 100px; height: 100px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+.wd-cover-tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(4px);
+}
+.wd-cover h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  line-height: 1.2;
+  position: relative;
+}
+.wd-cover-sub {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  position: relative;
+}
+
+/* ============== SECTIONS ============== */
+.wd-section {
+  padding: 28px 36px;
+  border-bottom: 1px solid var(--wd-border);
+}
+.wd-section:last-of-type { border-bottom: none; }
+
+.wd-section-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--wd-blue);
+  margin: 0 0 10px;
+}
+.wd-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: var(--wd-text);
+}
+
+/* ============== PROBLEM ============== */
+.wd-problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+.wd-problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  background: #FFF0F0;
+  border-left: 3px solid var(--wd-red);
+  border-radius: 0 var(--wd-radius) var(--wd-radius) 0;
+  font-size: 13px;
+}
+.wd-problem-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--wd-red);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+.wd-screenshot {
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  overflow: hidden;
+  margin: 12px 0;
+}
+.wd-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.wd-screenshot-caption {
+  font-size: 11px;
+  color: var(--wd-text-muted);
+  padding: 6px 12px;
+  background: #F5F0E5;
+  border-top: 1px solid var(--wd-border);
+  margin: 0;
+}
+
+/* ============== BADGES ============== */
+.wd-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+}
+.wd-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--wd-blue-soft);
+  border: 1px solid var(--wd-blue);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--wd-blue-dark);
+}
+.wd-badge-icon {
+  font-size: 14px;
+}
+
+/* ============== DECISIONS ============== */
+.wd-decision {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+.wd-decision-num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--wd-yellow);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+}
+.wd-decision-body h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.wd-decision-body p {
+  font-size: 12.5px;
+  color: var(--wd-text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============== COMPARISON ============== */
+.wd-comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.wd-comparison-card {
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  overflow: hidden;
+}
+.wd-comparison-label {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  text-align: center;
+}
+.wd-comparison-label--before {
+  background: #FFEBEE;
+  color: var(--wd-red);
+}
+.wd-comparison-label--after {
+  background: #E8F5E9;
+  color: var(--wd-green);
+}
+.wd-comparison-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ============== WIP CALLOUT ============== */
+.wd-wip {
+  margin: 12px 0 0;
+  padding: 14px 16px;
+  background: #FFFBEB;
+  border: 1px dashed var(--wd-yellow-dark);
+  border-radius: var(--wd-radius);
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--wd-text);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.wd-wip-tag {
+  flex-shrink: 0;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: 1px;
+  padding: 4px 8px;
+  background: var(--wd-yellow);
+  color: var(--wd-text);
+  border-radius: 3px;
+  margin-top: 1px;
+}
+.wd-wip strong { font-weight: 700; }
+
+/* ============== PALETTE SWATCHES ============== */
+.wd-palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+.wd-swatch {
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  overflow: hidden;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  line-height: 1.4;
+}
+.wd-swatch-fill {
+  height: 44px;
+  border-bottom: 1px solid var(--wd-border);
+}
+.wd-swatch-meta {
+  padding: 6px 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wd-swatch-name {
+  color: var(--wd-text);
+  letter-spacing: 0.5px;
+}
+.wd-swatch-hex {
+  color: var(--wd-text-muted);
+  font-size: 7px;
+}
+
+/* ============== MECHANICS CHIPS ============== */
+.wd-mechanics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 8px 0 0;
+}
+.wd-mechanic {
+  display: flex;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--wd-border);
+  border-radius: var(--wd-radius);
+  background: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.wd-mechanic-dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wd-blue);
+  margin-top: 4px;
+}
+.wd-mechanic strong {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: var(--wd-text);
+  margin-bottom: 2px;
+}
+.wd-mechanic span {
+  color: var(--wd-text-muted);
+  font-size: 11.5px;
+}
+
+/* ============== STACK CHIPS ============== */
+.wd-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 0;
+}
+.wd-stack-chip {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  padding: 6px 10px;
+  background: var(--wd-bg-alt);
+  color: var(--wd-text);
+  border: 1px solid var(--wd-border);
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+
+/* ============== PULL QUOTE ============== */
+.wd-pull {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border-left: 4px solid var(--wd-yellow);
+  background: var(--wd-bg-alt);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--wd-text);
+  border-radius: 0 var(--wd-radius) var(--wd-radius) 0;
+}
+
+/* ============== CTA ============== */
+.wd-cta-section {
+  padding: 40px 36px 44px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(30,144,255,0.08) 0, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,215,0,0.18) 0, transparent 45%),
+    linear-gradient(180deg, var(--wd-bg-alt), var(--wd-bg));
+  border-top: 1px dashed var(--wd-border);
+  border-bottom: 1px dashed var(--wd-border);
+  position: relative;
+}
+.wd-cta-eyebrow {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  color: var(--wd-blue);
+  margin: 0 0 12px;
+}
+.wd-cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  letter-spacing: -0.3px;
+}
+.wd-cta-sub {
+  font-size: 13px;
+  color: var(--wd-text-muted);
+  margin: 0 0 22px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wd-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px 14px 26px;
+  background: var(--wd-text);
+  color: #fff;
+  border: 2px solid var(--wd-text);
+  border-radius: var(--wd-radius);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 4px 4px 0 var(--wd-yellow);
+}
+.wd-cta-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--wd-yellow);
+}
+.wd-cta-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--wd-yellow);
+}
+.wd-cta-btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s ease;
+}
+.wd-cta-btn:hover svg {
+  transform: translate(2px, -2px);
+}
+.wd-cta-domain {
+  display: block;
+  margin-top: 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--wd-text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* ============== FOOTER ============== */
+.wd-footer {
+  padding: 16px 36px;
+  border-top: 1px solid var(--wd-border);
+  font-size: 11px;
+  color: var(--wd-text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wd-footer a {
+  color: var(--wd-blue);
+  text-decoration: none;
+}
+.wd-footer a:hover { text-decoration: underline; }
+
+/* ============== REDUCED MOTION ============== */
+@media (prefers-reduced-motion: reduce) {
+  .wd-cta-btn { transition: none; }
+  .wd-cta-btn:hover { transform: none; }
+  .wd-cta-btn-arrow { transition: none; }
+}

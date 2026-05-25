@@ -1,0 +1,496 @@
+/* =================================================================
+   CONSULTLY CASE STUDY — scale-to-fit canvas, hybrid HTML + Figma PNGs
+   - Hero, typography, gallery+outro: single composite PNGs
+   - Project intro, goal sections, architecture: HTML + PNG parts
+   - Master page background is the Figma bg-master.png (1440 × 5477)
+   Prefix: cs-*
+   ================================================================= */
+
+/* Window-body override */
+.window--browser .window-body:has(.cs-root),
+.window-body:has(.cs-root) {
+  padding: 0;
+  background: #0b2628;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.cs-root {
+  --cs-teal-100:   #D7F2F4;
+  --cs-teal-300:   #86D9DF;
+  --cs-teal-brand: #00D5BE;
+  --cs-bg:         #0B2628;
+  --cs-tag-bg:     rgba(0, 213, 190, 0.2);
+  --cs-tag-border: #86D9DF;
+  --cs-disp-font:  'Urbanist', system-ui, sans-serif;
+  --cs-body-font:  'Urbanist', system-ui, sans-serif;
+  --cs-mono-font:  Consolas, ui-monospace, 'Courier New', monospace;
+  width: 100%;
+  background: var(--cs-bg);
+}
+.cs-viewport {
+  width: 100%;
+  position: relative;
+}
+.cs-canvas {
+  position: relative;
+  width: 1440px;
+  background: url('../images/consultly/bg-master.png') top left / 1440px auto no-repeat, var(--cs-bg);
+  transform-origin: top left;
+  font-family: var(--cs-body-font);
+  color: var(--cs-teal-100);
+  user-select: none;
+  -webkit-user-select: none;
+}
+.cs-canvas img {
+  display: block;
+  max-width: none;
+}
+
+/* ============== HERO ============== */
+.cs-hero {
+  position: relative;
+  width: 1440px;
+  padding: 52px 60px 0;
+  box-sizing: border-box;
+  --hp: 0;
+  --p-phone: 0;
+  --p-settled: 0;
+  --mx: 0px;
+  --my: 0px;
+}
+.cs-hero-img {
+  width: 1320px;
+  height: auto;
+  border-radius: 56px;
+  opacity: var(--p-phone);
+  transform: translateY(calc((1 - var(--p-phone)) * 280px))
+             scale(calc(0.96 + var(--p-phone) * 0.04))
+             translate(var(--mx), var(--my));
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+.cs-hero-hint {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  z-index: 9;
+  color: rgba(255, 255, 255, 0.6);
+  opacity: calc(1 - var(--hp));
+  pointer-events: none;
+  font-family: var(--cs-body-font);
+  font-size: 20px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+}
+.cs-hero-hint-arrow {
+  font-size: 32px;
+  animation: cs-hint-bounce 1.8s ease-in-out infinite;
+}
+@keyframes cs-hint-bounce {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50%      { transform: translateY(10px); opacity: 1; }
+}
+
+/* ============== PROJECT INTRO (text) ============== */
+.cs-intro {
+  position: relative;
+  padding: 68px 75px 60px;
+  z-index: 1;
+}
+.cs-intro-row {
+  display: flex;
+  gap: 87px;
+  align-items: center;
+}
+.cs-intro-left {
+  display: flex; flex-direction: column;
+  gap: 6px;
+  width: 508px;
+  flex-shrink: 0;
+}
+.cs-intro-label {
+  font-family: var(--cs-mono-font);
+  font-size: 24px;
+  color: var(--cs-teal-brand);
+  letter-spacing: 0.037em;
+  margin: 0;
+  text-transform: uppercase;
+}
+.cs-intro-title {
+  font-family: var(--cs-disp-font);
+  font-weight: 700;
+  font-size: 122px;
+  line-height: 1;
+  color: white;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.cs-intro-tagline {
+  font-family: var(--cs-body-font);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.63;
+  color: var(--cs-teal-100);
+  margin: 0;
+  flex: 1;
+}
+.cs-intro-tags {
+  margin-top: 56px;
+  display: flex; gap: 20px;
+  align-items: center;
+}
+.cs-tag {
+  background: var(--cs-tag-bg);
+  border: 1px solid var(--cs-tag-border);
+  border-radius: 999px;
+  padding: 9px 21px;
+  color: white;
+  font-family: var(--cs-body-font);
+  font-size: 18px;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+/* ============== GOAL SECTIONS (HTML + phone PNG) ============== */
+.cs-goal {
+  position: relative;
+  padding: 40px 96px;
+  z-index: 1;
+}
+.cs-goal-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cs-goal-row--reverse { flex-direction: row-reverse; }
+
+.cs-goal-card {
+  width: 579px;
+  height: 407px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #0b2628;
+  flex-shrink: 0;
+  position: relative;
+}
+.cs-goal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-goal-text {
+  flex: 1;
+  padding: 0 16px;
+  min-width: 0;
+}
+.cs-goal-title {
+  font-family: var(--cs-disp-font);
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 28px;
+  padding-left: 35px;
+  white-space: nowrap;
+}
+.cs-goal-dot { color: var(--cs-teal-300); }
+
+.cs-goal-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex; flex-direction: column;
+  gap: 6px;
+}
+.cs-goal-list li {
+  position: relative;
+  padding-left: 70px;
+  font-family: var(--cs-body-font);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.63;
+  color: var(--cs-teal-100);
+}
+.cs-goal-list li::before {
+  content: '';
+  position: absolute;
+  left: 38px;
+  top: 0.85em;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--cs-teal-300);
+}
+
+/* ============== APP ARCHITECTURE (HTML + per-pill PNGs) ============== */
+.cs-arch {
+  position: relative;
+  padding: 80px 60px 60px;
+  z-index: 1;
+}
+.cs-arch-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.cs-arch-title {
+  font-family: var(--cs-disp-font);
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 12px;
+}
+.cs-arch-sub {
+  font-family: var(--cs-body-font);
+  font-size: 28px;
+  color: var(--cs-teal-100);
+  margin: 0;
+}
+
+.cs-arch-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 48px;
+  width: 1180px;
+  margin: 0 auto;
+  min-height: 800px;
+}
+.cs-arch-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+.cs-arch-lines path {
+  fill: none;
+  stroke: var(--cs-teal-300);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 6;
+  opacity: 0.5;
+}
+
+.cs-arch-col {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  position: relative;
+  z-index: 1;
+}
+.cs-arch-mod {
+  display: grid;
+  grid-template-columns: 1fr 224px;
+  align-items: center;
+  gap: 18px;
+  will-change: transform, opacity;
+}
+.cs-arch-col--left .cs-arch-mod { grid-template-columns: 1fr 224px; gap: 56px; }
+.cs-arch-col--right .cs-arch-mod { grid-template-columns: 224px 1fr; gap: 28px; }
+
+.cs-arch-pill {
+  width: auto;
+  height: 20px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(0, 213, 190, 0.35));
+}
+
+.cs-arch-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; flex-direction: column;
+  gap: 1px;
+}
+.cs-arch-col--left .cs-arch-list { text-align: right; }
+.cs-arch-col--right .cs-arch-list { text-align: left; }
+.cs-arch-list li {
+  position: relative;
+  font-family: var(--cs-body-font);
+  font-size: 19px;
+  color: var(--cs-teal-100);
+  opacity: 0.78;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+.cs-arch-col--left .cs-arch-list li { padding-right: 18px; }
+.cs-arch-col--right .cs-arch-list li { padding-left: 18px; }
+.cs-arch-list li::before {
+  content: '';
+  position: absolute;
+  top: 0.55em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--cs-teal-300);
+}
+.cs-arch-col--left .cs-arch-list li::before { right: 0; }
+.cs-arch-col--right .cs-arch-list li::before { left: 0; }
+
+.cs-arch-hub {
+  width: auto;
+  height: 56px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 12px rgba(0, 213, 190, 0.5));
+}
+
+/* ============== TYPOGRAPHY (heading text + composite Poppins PNG) ============== */
+.cs-typo {
+  position: relative;
+  padding: 80px 0 60px;
+  z-index: 1;
+  text-align: center;
+}
+.cs-typo-title {
+  font-family: var(--cs-disp-font);
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 1;
+  color: white;
+  margin: 0 0 56px;
+}
+.cs-typo-img {
+  width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* ============== PHONE GALLERY + OUTRO (combined composite) ============== */
+.cs-gallery {
+  position: relative;
+  padding: 60px 64px 80px;
+  z-index: 1;
+}
+.cs-gallery-img {
+  width: 1312px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 56px;
+}
+
+/* =============================================================
+   SCROLL-DRIVEN REVEALS — driven from JS via CSS custom props
+   ============================================================= */
+[data-cs-stage] {
+  --p-enter: 0;
+  --p-vis: 0;
+  --p-exit: 0;
+}
+
+/* --- Intro --- */
+[data-cs-stage="intro"] .cs-intro-left {
+  opacity: var(--p-enter);
+  transform: translateY(calc((1 - var(--p-enter)) * 40px));
+}
+[data-cs-stage="intro"] .cs-intro-tagline {
+  opacity: calc(max(0, var(--p-enter) * 1.4 - 0.3));
+  transform: translateY(calc((1 - var(--p-enter)) * 30px));
+}
+[data-cs-stage="intro"] .cs-intro-tags {
+  opacity: calc(max(0, var(--p-enter) * 1.6 - 0.5));
+  transform: translateY(calc((1 - var(--p-enter)) * 20px));
+}
+
+/* --- Goal sections (shared) --- */
+[data-cs-stage^="goal-"] .cs-goal-title {
+  opacity: var(--p-enter);
+  transform: translateY(calc((1 - var(--p-enter)) * 30px));
+}
+[data-cs-stage^="goal-"] .cs-goal-list {
+  opacity: calc(max(0, var(--p-enter) * 1.4 - 0.3));
+  transform: translateY(calc((1 - var(--p-enter)) * 30px));
+}
+
+/* --- User/Business Goals: card from left, text from right --- */
+[data-cs-stage="goal-user"] .cs-goal-card,
+[data-cs-stage="goal-business"] .cs-goal-card {
+  opacity: var(--p-enter);
+  transform: translateX(calc((var(--p-enter) - 1) * 100px))
+             rotate(calc((1 - var(--p-enter)) * -2deg));
+}
+[data-cs-stage="goal-user"] .cs-goal-text,
+[data-cs-stage="goal-business"] .cs-goal-text {
+  opacity: calc(max(0, var(--p-enter) * 1.4 - 0.2));
+  transform: translateX(calc((1 - var(--p-enter)) * 60px));
+}
+
+/* --- Expert Goals: card from right, text from left --- */
+[data-cs-stage="goal-expert"] .cs-goal-card {
+  opacity: var(--p-enter);
+  transform: translateX(calc((1 - var(--p-enter)) * 100px))
+             rotate(calc((1 - var(--p-enter)) * 2deg));
+}
+[data-cs-stage="goal-expert"] .cs-goal-text {
+  opacity: calc(max(0, var(--p-enter) * 1.4 - 0.2));
+  transform: translateX(calc((var(--p-enter) - 1) * 60px));
+}
+
+/* --- Architecture --- */
+[data-cs-stage="arch"] .cs-arch-head {
+  opacity: var(--p-enter);
+  transform: translateY(calc((1 - var(--p-enter)) * 40px));
+}
+[data-cs-stage="arch"] .cs-arch-mod:nth-of-type(1) { --mod-delay: 0; }
+[data-cs-stage="arch"] .cs-arch-mod:nth-of-type(2) { --mod-delay: 0.1; }
+[data-cs-stage="arch"] .cs-arch-mod:nth-of-type(3) { --mod-delay: 0.2; }
+[data-cs-stage="arch"] .cs-arch-mod:nth-of-type(4) { --mod-delay: 0.3; }
+[data-cs-stage="arch"] .cs-arch-mod:nth-of-type(5) { --mod-delay: 0.4; }
+
+[data-cs-stage="arch"] .cs-arch-mod {
+  --mp: max(0, var(--p-enter) * 2 - var(--mod-delay, 0) - 0.3);
+  opacity: var(--mp);
+  transform: translateY(calc((1 - var(--mp)) * 30px))
+             scale(calc(0.92 + var(--mp) * 0.08));
+}
+[data-cs-stage="arch"] .cs-arch-col--left .cs-arch-mod {
+  transform: translateX(calc((1 - var(--mp)) * -40px))
+             translateY(calc((1 - var(--mp)) * 30px))
+             scale(calc(0.92 + var(--mp) * 0.08));
+}
+[data-cs-stage="arch"] .cs-arch-col--right .cs-arch-mod {
+  transform: translateX(calc((1 - var(--mp)) * 40px))
+             translateY(calc((1 - var(--mp)) * 30px))
+             scale(calc(0.92 + var(--mp) * 0.08));
+}
+[data-cs-stage="arch"] .cs-arch-hub {
+  --hp: max(0, var(--p-enter) * 2.5 - 0.6);
+  opacity: var(--hp);
+  transform: scale(calc(0.6 + var(--hp) * 0.4));
+}
+
+/* --- Typography --- */
+[data-cs-stage="typo"] .cs-typo-title {
+  opacity: var(--p-enter);
+  transform: translateY(calc((1 - var(--p-enter)) * 40px));
+}
+[data-cs-stage="typo"] .cs-typo-img {
+  opacity: var(--p-enter);
+  transform: translateY(calc((1 - var(--p-enter)) * 60px))
+             scale(calc(0.95 + var(--p-enter) * 0.05));
+}
+
+/* --- Gallery + Outro --- */
+[data-cs-stage="gallery"] .cs-gallery-img {
+  opacity: calc(max(0, var(--p-enter) * 1.4 - 0.3));
+  transform: translateY(calc((1 - var(--p-enter)) * 60px));
+}
+
+/* --- Floating pill animation (typo SVG pills) --- */
+@keyframes cs-pill-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cs-hero { --hp: 1; --p-phone: 1; --p-settled: 1; }
+  .cs-hero-hint { display: none; }
+  .cs-hero-hint-arrow { animation: none; }
+  [data-cs-stage] { --p-enter: 1; --p-vis: 1; --p-exit: 0; }
+}
