@@ -3,7 +3,7 @@
 **woosqa (Woosqa Sohail) · designer-developer (product) · Jun 1 – Oct 13, 2026**
 Repo: `usmankaiz/wondertree-website` · my commits land under `WoosqaSohail` and inside `arkhamkxd`'s branches (I researched, decided, designed and specced; he merged — I was part-time and couldn't commit to main directly).
 
-> How to read this: everything below is reconstructed from the git history (commits, branches, PRs), the live site, and GSC/Clarity data. All interpretations confirmed by woosqa (Oct 13, 2026).
+> How to read this: everything below is reconstructed from the git history (commits, branches, PRs), the live site, and GSC/Clarity data. Items marked **[confirm]** are my interpretation — check them and correct.
 
 ---
 
@@ -12,7 +12,7 @@ Repo: `usmankaiz/wondertree-website` · my commits land under `WoosqaSohail` and
 | # | workstream | status | the one-line |
 |---|---|---|---|
 | 1 | **Autism landing page (v1 → v2)** | shipped | high-traffic, blog-looking pages rebuilt into a product-intent page that converts |
-| 2 | **Pricing page v2 (EN + AR + institutions)** | 95% done (Oct 13), shipping soon | individual-vs-institution confusion was selling the wrong license; rebuilt with DataCamp as reference |
+| 2 | **Pricing page v2 (EN + AR + institutions)** | in pipeline (branch live, ~shipping) | individual-vs-institution confusion was selling the wrong license; rebuilt with DataCamp as reference |
 | 3 | **Content & SEO consolidation** | shipped | 20 competing pages → 4 canonical ones; spam recovery; WordPress migration |
 | 4 | **Site-wide systems** | shipped | freemium rollout, tawk.to, Talk-to-Us funnel, performance, Arabic program |
 
@@ -20,7 +20,7 @@ Repo: `usmankaiz/wondertree-website` · my commits land under `WoosqaSohail` and
 
 ## The story in one paragraph
 
-The landing pages got plenty of traffic but converted terribly — they read like blog pages, not product pages. I rebuilt the autism landing page around actual product intent: real evidence figures, a progress-report mockup, skills reframed to what parents actually search for, a hero video (the 45-second muted loop I scripted and cut), and game cards that say why each game matters for a child with autism. Same underlying fix for pricing: interviews with OTs, real customers and institutions-package buyers showed people couldn't tell individual and institution pricing apart, so they bought the wrong license — the new pricing page (DataCamp as reference, ChatGPT-style plan framing) leads with a comparison grouped by Play/Progress/Support and a therapy-cost calculator that makes the value math unmissable. Underneath all of it: 20 cannibalizing content pages consolidated into 4, the 14-day trial replaced with freemium because the trial wasn't converting, and an EN/AR SEO program to hold it all together.
+The landing pages got plenty of traffic but converted terribly — they read like blog pages, not product pages. I rebuilt the autism landing page around actual product intent: real evidence figures, a progress-report mockup, skills reframed to what parents actually search for, a hero video (the 45-second muted loop I scripted and cut), and game cards that say why each game matters for a child with autism. Same underlying fix for pricing: interviews with OTs, real customers and institutions-package buyers showed people couldn't tell individual and institution pricing apart, so they bought the wrong license — the new pricing page (DataCamp as reference, ChatGPT-style plan framing) leads with a comparison grouped by Play/Progress/Support and a therapy-cost calculator that makes the value math unmissable. Underneath all of it: 20 cannibalizing content pages consolidated into 4, the 14-day trial replaced with freemium because the trial wasn't converting, and a Spanish of Arabic (EN/AR) SEO program to hold it all together.
 
 ---
 
@@ -34,11 +34,11 @@ The landing pages got plenty of traffic but converted terribly — they read lik
 
 ### July 2026 — recovery + the autism page begins
 - PR #138 `hotfix/favicon-v2` — new favicon EN+AR
-- **Blog recovery** (`4cc7cd2`, Jul 4): rewrote spam-update-hit pages, retired thin posts, added verified expert content. `29ea674` literally flags articles "for woosqa to clean AI stuff out of" — that was me doing the cleanup
+- **Blog recovery** (`4cc7cd2`, Jul 4): rewrote spam-update-hit pages, retired thin posts, added verified expert content. `29ea674` literally flags articles "for woosqa to clean AI stuff out of" **[yes it is confirmed — that was me doing the cleanup]** 
 - SPED who-we-help page + banner (`d8e0f80`)
 - Freemium banner redesign + the localStorage dismissal edge-case fix (`bc45ab1`, `43b7d4a` — "change localStorage key so old dismissals don't block redesigned banner")
 - **Pricing research & first build**: DataCamp-inspired rebuild starts (`259795f` Jul 16), institutions page EN/AR (`77fc89d`), TM logo + T&C (`fe451cb`)
-- my commit `0249281` (Jul 27): "woosqa changes"
+- my commit `0249281` (Jul 27): "woosqa changes" **[yes it is confirmed scope]**
 
 ### August 2026 — autism page v1 + pricing
 - **Autism (ASD) page v1 → v1.1 → v1.2** (`9f1e066` → `f2ed431` → `c77d9c5`, Aug 24–27)
@@ -69,7 +69,7 @@ The landing pages got plenty of traffic but converted terribly — they read lik
 - Perf batches (PRs #155/#156): self-hosted fonts w/ preload (CLS fix), self-hosted Bootstrap/Swiper/AOS — no third-party CSS blocking
 - **Talk-to-Us funnel** (PR #157, Oct 12): retired /book-a-demo, top-bar CTA → contact, role dropdown (parent/teacher/school) baked into the message, book-a-call → Microsoft Bookings (`7515d78`, `c041930`)
 - VideoObject schema on webinar articles + sticky nav (`ca96876`, PR #158)
-- **Pricing page v2** (branch `feat/pricing-page-v2`, 9 commits, 44 files, +5,736/−2,630 — **95% done as of Oct 13, shipping soon**):
+- **Pricing page v2** (branch `feat/pricing-page-v2`, 9 commits, 44 files, +5,736/−2,630 — merging now):
   - comparison table grouped **Play / Progress / Support** with icon tiles, billing switch mirrored into the table, CTAs repeated in footer row (`b6a2fe1`)
   - **therapy cost calculator** replaces "Better Together": sessions + cost-per-session sliders → "A whole month of WonderTree costs less than one session" (`b6a2fe1`)
   - sections reordered **by intent**, uniform 72px rhythm from the autism design system (`888047f`)
@@ -80,7 +80,7 @@ The landing pages got plenty of traffic but converted terribly — they read lik
 
 ## The research behind the decisions
 
-**Autism landing page.** The page had traffic but converted like a blog post. Rebuilt around: evidence figures from the actual product claims, a progress-report mockup (what a parent actually buys), skills sections reordered to match what parents search (not clinical taxonomy), and per-game "who it helps / skills developed" framing. Research inputs: Clarity behavior data, tawk.to conversations, competitor scans.
+**Autism landing page.** The page had traffic but converted like a blog post. Rebuilt around: evidence figures from the actual product claims, a progress-report mockup (what a parent actually buys), skills sections reordered to match what parents search (not clinical taxonomy), and per-game "who it helps / skills developed" framing. **[yes it is confirmed the research specifics: Clarity sessions, tawk transcripts, competitor scans you did]**
 
 **Pricing (v2, in pipeline).** Inputs: occupational therapists using the product; customer stories from real users (internal authority, not invented personas); interviews with institutions-package buyers and new customers. The finding: visitors couldn't tell whether WonderTree offered individual or institution pricing at all — so many bought individual licenses because the purpose of the institution package (better reporting, multi-user, etc.) never got said out loud. Decision: follow the DataCamp page structure (with a ChatGPT-style plan framing we discussed as a team), default to yearly, group the comparison by value theme (Play/Progress/Support), and let the therapy-cost calculator do the selling.
 
@@ -127,8 +127,9 @@ The landing pages got plenty of traffic but converted terribly — they read lik
 
 ---
 
-## Status notes (Oct 13, 2026)
+## Checklist for you
 
-- All interpretations above confirmed by woosqa.
-- Pricing v2 is ~95% complete and ships soon — when it merges, update: the TL;DR status, the October section, and the portfolio's pricing tab (flip "in pipeline" → shipped, add post-launch numbers).
-- Homepage redesign (`feat/home-redesign`, WIP since Jun 29) remains started-but-not-shipped; the homepage PRD in the portfolio is positioned as a proposal, scope open to revision.
+- [ ] Confirm the **[confirm]** flags above
+- [ ] Fill in any research numbers you remember (Clarity before/afters, tawk conversation themes, interview counts)
+- [ ] Tell me when pricing v2 actually merges — I'll update the timeline + the portfolio window
+- [ ] Correct anything in "The story in one paragraph" — that's the version the portfolio tells
