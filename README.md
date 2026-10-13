@@ -51,14 +51,18 @@ npx serve .
 
 | icon | window | type | description |
 |:----:|--------|------|-------------|
+| ◐ | wondertree | browser | case study · b2b healthtech, real metrics |
+| 💛 | hopencope | wordpad | case study · 4 months as PM at an NPO |
+| ◐ | sprout | browser | case study · AI agent, hackathon build |
+| 📄 | prd.doc | wordpad | a real PRD — stories, ACs, events, metrics |
 | ◐ | consultly | browser | case study |
 | ◐ | frenzly | browser | case study |
-| ◐ | storyloop | browser | case study stub |
-| ▤ | more.work | folder | project archive |
+| ◐ | storyloop | browser | interactive case study |
+| 📖 | wisdom | wordpad | case study + live redesign |
 | ✎ | about.me | notepad | bio + skills |
 | ✉ | contact | mail | email client |
 | ⚙ | settings | control panel | customize everything |
-| ▤ | trash | — | you know what this is |
+| ▤ | trash | — | decisions i made out loud (cut list) |
 
 ## stack
 

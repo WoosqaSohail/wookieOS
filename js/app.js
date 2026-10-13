@@ -998,6 +998,561 @@
 
         </div>`
     },
+    wondertree: {
+      chrome: 'browser', icon: '◐', label: 'wondertree',
+      title: 'wondertree — case study',
+      width: 980, height: 720,
+      urlbar: 'wondertree.co · case study',
+      body: `
+        <div class="wtr2-root" data-wtr2>
+
+          <nav class="wtr2-nav">
+            <button class="wtr2-navtab is-active" data-page="overview" type="button">overview</button>
+            <button class="wtr2-navtab" data-page="autism" type="button">autism page</button>
+            <button class="wtr2-navtab" data-page="pricing" type="button">pricing</button>
+            <button class="wtr2-navtab" data-page="other" type="button">other work</button>
+          </nav>
+
+          <!-- ================= PAGE: OVERVIEW ================= -->
+          <div class="wtr2-page is-active" data-wtr2-page="overview">
+            <div class="wtr2-hero">
+              <p class="wtr2-kicker">wondertree.co &middot; b2b healthtech &middot; designer-developer &middot; jun–oct 2026</p>
+              <h1 class="wtr2-h1">Their pages got plenty of traffic. <span class="hl-blue">Now they convert it.</span></h1>
+              <p class="wtr2-hero-sub">WonderTree makes webcam AR games that double as therapy for kids with special needs — parents, therapists and schools buy it, kids just play it, in two languages. I took the pages that matter from research to decision to spec to shipped, then went back and checked the numbers.</p>
+              <div class="wtr2-cta-row">
+                <a class="wtr2-btn wtr2-btn--yellow" href="https://www.wondertree.co/who-we-help/autism" target="_blank" rel="noopener">see the live page
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </a>
+                <a class="wtr2-btn wtr2-btn--ghost" href="https://www.wondertree.co/" target="_blank" rel="noopener">wondertree.co</a>
+              </div>
+              <div class="wtr2-chips">
+                <div class="wtr2-chip"><b>7,655</b><span>clicks / mo</span><em>&uarr; 10.8%</em></div>
+                <div class="wtr2-chip"><b>2.70%</b><span>CTR &middot; was 2.25%</span><em>&uarr; 20%</em></div>
+                <div class="wtr2-chip"><b>8.5</b><span>avg position &middot; was 11.7</span><em>&uarr; 3 spots</em></div>
+                <div class="wtr2-chip"><b>14,270</b><span>sessions / mo</span><em>clarity</em></div>
+              </div>
+            </div>
+
+            <div class="wtr2-sec">
+              <div class="wtr2-sec-head">
+                <h2 class="wtr2-sec-title">What's inside</h2>
+              </div>
+              <p class="wtr2-lede" data-anim>Three pieces of work. Each one has the page itself, and the case study behind it.</p>
+              <div class="wtr2-what">
+                <button class="wtr2-gocard wtr2-gocard--blue" data-goto="autism" type="button" data-anim style="--d:.05s">
+                  <span class="st st--live">live</span>
+                  <span class="tone-dot"></span>
+                  <h4>The autism landing page</h4>
+                  <p>Traffic that wouldn't convert, because the page read like a blog post. Rebuilt as a product-intent page.</p>
+                  <span class="go">open &rarr;</span>
+                </button>
+                <button class="wtr2-gocard wtr2-gocard--yellow" data-goto="pricing" type="button" data-anim style="--d:.12s">
+                  <span class="st st--wip">95% · ships this week</span>
+                  <span class="tone-dot"></span>
+                  <h4>Pricing, rebuilt</h4>
+                  <p>Institutions were buying individual licenses because the page never said the institution package existed.</p>
+                  <span class="go">open &rarr;</span>
+                </button>
+                <button class="wtr2-gocard wtr2-gocard--green" data-goto="other" type="button" data-anim style="--d:.19s">
+                  <span class="st st--live">shipped</span>
+                  <span class="tone-dot"></span>
+                  <h4>The unglamorous wins</h4>
+                  <p>Twenty cannibalizing pages became four. The trial died. The funnel got simpler. The numbers moved.</p>
+                  <span class="go">open &rarr;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= PAGE: AUTISM ================= -->
+          <div class="wtr2-page" data-wtr2-page="autism">
+            <div class="wtr2-sec">
+              <div class="wtr2-sec-head">
+                <span class="wtr2-num">01</span>
+                <h2 class="wtr2-sec-title">The autism landing page</h2>
+                <span class="wtr2-sec-status wtr2-sec-status--live">live</span>
+              </div>
+              <p class="wtr2-lede">It had an audience and a leak: real traffic, converting terribly, because it read like a blog post. A parent searching at 11pm wants three things — what is this, does it work, can we try it tonight.</p>
+              <div class="wtr2-subnav">
+                <button class="wtr2-subtab is-active" data-sub="page" type="button">the page</button>
+                <button class="wtr2-subtab" data-sub="study" type="button">the case study</button>
+              </div>
+
+              <div class="wtr2-subpage is-active" data-sub="page">
+                <div class="wtr2-frame" data-anim>
+                  <div class="wtr2-frame-bar">
+                    <span class="wtr2-frame-dot wtr2-frame-dot--r"></span>
+                    <span class="wtr2-frame-dot wtr2-frame-dot--y"></span>
+                    <span class="wtr2-frame-dot wtr2-frame-dot--g"></span>
+                    <span class="wtr2-frame-url">wondertree.co/who-we-help/autism</span>
+                  </div>
+                  <img src="images/autism-page.png" alt="wondertree.co/who-we-help/autism — live" />
+                </div>
+                <p class="wtr2-fine" style="text-align:center;">hero video of a real kid playing &middot; dual CTA &middot; checkable trust logos &middot; full Arabic version</p>
+                <div class="wtr2-beats" style="margin-top:14px;">
+                  <div class="wtr2-beat" data-anim><b>Real proof, surfaced.</b>Actual evidence figures and a progress-report mockup — what a parent is really buying.<span class="ref">pr #152 · #153</span></div>
+                  <div class="wtr2-beat" data-anim style="--d:.08s"><b>Skills in the parent's words.</b>Re-ordered from clinical taxonomy to what parents actually search for.</div>
+                  <div class="wtr2-beat" data-anim style="--d:.16s"><b>Every game earns its place.</b>"Who it helps · skills developed" taglines — carried to all landing pages by a shared system I wrote.</div>
+                  <div class="wtr2-beat" data-anim style="--d:.24s"><b>Proof you can check.</b>Partner logos linked to real sources, age range corrected to 4–14, correct hreflang.</div>
+                </div>
+              </div>
+
+              <div class="wtr2-subpage" data-sub="study">
+                <div class="wtr2-pull" data-anim>Plenty of traffic. Converting for nothing — the page read like a blog post, not a product.</div>
+                <ul class="wtr2-moves">
+                  <li data-anim><b>Surfaced the real evidence.</b> <span>Research figures + a progress-report mockup above the fold — the report is what a parent is actually buying.</span></li>
+                  <li data-anim style="--d:.07s"><b>Re-aligned skills to parent intent.</b> <span>Clinical taxonomy out; the words parents search with, in.</span></li>
+                  <li data-anim style="--d:.14s"><b>Made every game relevant.</b> <span>"Who it helps · skills developed" on every card, sitewide via wwh-landing.js.</span><span class="ref">my commit · oct 7</span></li>
+                  <li data-anim style="--d:.21s"><b>Made the proof checkable.</b> <span>Partner logos linked to real sources, age corrected to 4–14, CTR metas fixed, Arabic version shipped.</span><span class="ref">pr #152 · #153</span></li>
+                </ul>
+                <div class="wtr2-result" data-anim>
+                  <span class="r-chip">clicks &uarr;</span>
+                  <span class="r-chip">intent traffic &uarr;</span>
+                  <span class="r-chip r-chip--blue">EN + AR live</span>
+                  <button class="r-open" type="button" data-goto-open="https://www.wondertree.co/who-we-help/autism">the page is the receipt — open it &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= PAGE: PRICING ================= -->
+          <div class="wtr2-page" data-wtr2-page="pricing">
+            <div class="wtr2-sec">
+              <div class="wtr2-sec-head">
+                <span class="wtr2-num wtr2-num--yellow">02</span>
+                <h2 class="wtr2-sec-title">Pricing, rebuilt</h2>
+                <span class="wtr2-sec-status wtr2-sec-status--wip">95% · ships this week</span>
+              </div>
+              <p class="wtr2-lede">Research from occupational therapists, real customer stories, and interviews with institutions-package buyers — all pointing at one failure.</p>
+              <div class="wtr2-subnav">
+                <button class="wtr2-subtab is-active" data-sub="page" type="button">the page</button>
+                <button class="wtr2-subtab" data-sub="study" type="button">the case study</button>
+              </div>
+
+              <div class="wtr2-subpage is-active" data-sub="page">
+                <div class="wtr2-plans">
+                  <div class="wtr2-plan" data-anim>
+                    <h4>Free</h4>
+                    <p class="who">try it tonight</p>
+                    <ul><li>the 14-day trial is gone — it wasn't converting</li><li>free plan, no credit card</li></ul>
+                  </div>
+                  <div class="wtr2-plan wtr2-plan--pop" data-anim style="--d:.08s">
+                    <span class="wtr2-plan-tag">rebuilt</span>
+                    <h4>Individual</h4>
+                    <p class="who">parents at home</p>
+                    <ul><li>games + progress reports</li><li>yearly billing as the default path</li></ul>
+                  </div>
+                  <div class="wtr2-plan wtr2-plan--pop" data-anim style="--d:.16s">
+                    <span class="wtr2-plan-tag">rebuilt</span>
+                    <h4>Institutions</h4>
+                    <p class="who">schools &amp; clinics</p>
+                    <ul><li>said out loud now: better reporting, multi-user</li><li>its own page, EN + AR</li></ul>
+                  </div>
+                </div>
+                <div class="wtr2-calc" data-anim style="--d:.2s"><span>the new calculator's punchline:</span> <span class="big">a whole month of wondertree &lt; one therapy session</span></div>
+                <p class="wtr2-fine" style="text-align:center;">rebuilt preview &middot; the live page replaces this when it ships — 44 files, +5,736/−2,630 lines, EN + AR</p>
+              </div>
+
+              <div class="wtr2-subpage" data-sub="study">
+                <div class="wtr2-pull" data-anim>People couldn't tell individual and institution pricing apart. So schools and clinics bought the wrong license — the institution package's point was never said out loud.</div>
+                <ul class="wtr2-moves">
+                  <li data-anim><b>Proven structure over invention.</b> <span>DataCamp's pricing architecture + ChatGPT-style plan framing — a team call I was part of.</span></li>
+                  <li data-anim style="--d:.07s"><b>Grouped the comparison by value.</b> <span>Play / Progress / Support with icon tiles, billing switch mirrored in, CTAs repeated.</span></li>
+                  <li data-anim style="--d:.14s"><b>Let the math sell it.</b> <span>Two sliders — sessions, cost per session — ending on the one-line punchline above.</span></li>
+                  <li data-anim style="--d:.21s"><b>Killed the trial.</b> <span>The 14-day trial wasn't converting; freemium went sitewide Oct 1, including one same-day revert and a stale-banner localStorage fix.</span></li>
+                </ul>
+                <div class="wtr2-result" data-anim>
+                  <span class="r-chip r-chip--blue">95% done</span>
+                  <span class="r-chip">ships this week</span>
+                  <span class="r-chip r-chip--blue">EN + AR</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= PAGE: OTHER WORK ================= -->
+          <div class="wtr2-page" data-wtr2-page="other">
+            <div class="wtr2-sec">
+              <div class="wtr2-sec-head">
+                <span class="wtr2-num wtr2-num--green">03</span>
+                <h2 class="wtr2-sec-title">Other work that moved the numbers</h2>
+              </div>
+              <p class="wtr2-lede" data-anim>The unglamorous stuff — none of it is a screen, all of it shows up in search.</p>
+              <div class="wtr2-ow">
+                <div class="wtr2-owcard wtr2-owcard--blue" data-anim>
+                  <h4>20 pages &rarr; 4</h4>
+                  <p>Near-identical pages were cannibalizing each other — the motor-skills cluster ranked 7, 47 and 93 for the same queries. Consolidated into canonical pages, 301 the rest.</p>
+                  <span class="r">CTR 2.25% &rarr; 2.70%</span>
+                </div>
+                <div class="wtr2-owcard wtr2-owcard--yellow" data-anim style="--d:.08s">
+                  <h4>Freemium rollout</h4>
+                  <p>14-day trial &rarr; free plan, sitewide. Shipped, reverted same day, re-shipped right — including a fix for stale banner dismissals blocking the new funnel.</p>
+                  <span class="r">live since oct 1</span>
+                </div>
+                <div class="wtr2-owcard wtr2-owcard--green" data-anim style="--d:.16s">
+                  <h4>Talk-to-Us funnel</h4>
+                  <p>Retired book-a-demo. Contact form now asks who you are — parent, teacher, school — and bookings go to Microsoft Books.</p>
+                  <span class="r">live since oct 12</span>
+                </div>
+              </div>
+              <div class="wtr2-stats">
+                <div class="wtr2-stat" data-anim><span class="was">6,912</span><span class="now">7,655</span><span class="lbl">clicks / mo</span><span class="up">&uarr; 10.8%</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.06s"><span class="was">11.7</span><span class="now">8.5</span><span class="lbl">avg position</span><span class="up">&uarr; 3 spots</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.12s"><span class="was">2.25%</span><span class="now">2.70%</span><span class="lbl">CTR</span><span class="up">&uarr; 20% rel</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.18s"><span class="was">&nbsp;</span><span class="now">14,270</span><span class="lbl">sessions / mo</span><span class="up">clarity</span></div>
+              </div>
+              <p class="wtr2-fine">Source: Google Search Console API + Microsoft Clarity, Oct 2026. Impressions fell 7.6% — on purpose: we stopped chasing low-intent blog traffic. <b>Still broken, kept here on purpose:</b> the ASD Level 2 guide ranks ~5 for its top query at 0.11% CTR — the title answers the wrong question. Next card on the board.</p>
+              <p class="wtr2-fine" style="margin-top:10px;">The whole commit-level timeline lives in <b>notes/wondertree-timeline.md</b>.</p>
+            </div>
+          </div>
+
+          <!-- ================= FOOTER ================= -->
+          <div class="wtr2-foot">
+            <h3>Everything above is in production.</h3>
+            <p>Landing pages, consolidation 301s, the freemium funnel, the Talk-to-Us intake — live and measurable. Pricing ships this week and this page gets its numbers.</p>
+            <div class="wtr2-cta-row">
+              <a class="wtr2-btn wtr2-btn--yellow" href="https://www.wondertree.co/" target="_blank" rel="noopener">open wondertree.co
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+              <button class="wtr2-btn wtr2-btn--ghost" type="button" data-app="contact" style="color:#fff;border-color:#fff;">questions? mail me</button>
+            </div>
+            <span class="wtr2-foot-meta">case study by <a href="#" data-app="contact">woosqa</a> · wookieOS</span>
+          </div>
+
+        </div>`
+    },
+    hopencope: {
+      chrome: 'wordpad', icon: '\u{1F49B}', label: 'hopencope',
+      title: 'hopencope.doc — WordPad',
+      width: 860, height: 660,
+      menubar: ['file', 'edit', 'view', 'format', 'help'],
+      toolbar: '<span>💛 Hope &amp; Cope — PM case study</span><span class="toolbar-status">hopencope.doc</span>',
+      body: `
+        <div class="hc-root">
+          <div class="wd-root" style="background:transparent;max-width:none;">
+
+            <!-- ========== COVER ========== -->
+            <div class="hc-cover">
+              <span class="wd-cover-tag">CASE STUDY · PRODUCT MANAGER · JUN–SEP 2026</span>
+              <h1>Hope &amp; Cope: four months as PM.</h1>
+              <p class="hc-cover-role">Pakistan's pioneer community mental health NPO. I owned the product: a website where every spec decision had a budget of roughly zero.</p>
+              <span class="hc-cover-meta">hopencope.com · react + vite · team of volunteers · shipped &amp; live</span>
+            </div>
+
+            <!-- ========== SITUATION ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">00 — The situation</p>
+              <h3 class="wd-section-title">Real constraints, no clean slate.</h3>
+              <p>A mental health services center in Karachi needed a digital front door: therapy services, corporate wellness, community camps, 61 archived events. No product team existed. My job was to be that team — frame the problems, decide what gets built, write the specs, keep a volunteer engineering team unblocked.</p>
+              <p>One rule shaped everything: <strong>zero recurring cost.</strong> No backend, no form service, no database. Every product decision below is a consequence of that constraint — and the interesting part is making a spec that treats it as a design material, not a limitation to apologize for.</p>
+              <div class="wd-pull">The most PM-flavored thing I shipped here wasn't a feature. It was deciding what the website should never pretend to be.</div>
+            </div>
+
+            <!-- ========== THE SPEC ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">01 — The spec that shipped</p>
+              <h3 class="wd-section-title">Every state a user can end up in, written down before build.</h3>
+              <p>The contact form was the most complex surface — it's the only doorway a stranger has to actual help. I specified it as a state machine before anyone touched code:</p>
+              <div class="state-flow"><span class="sf-ok">IDLE</span> → <span class="sf-hot">DIRTY</span> → <span class="sf-hot">VALIDATING</span> → <span class="sf-ok">VALID</span> / <span class="sf-bad">INVALID</span>
+     valid ↓ submit ↓            <span class="sf-bad">↺ re-validate on change</span>
+  <span class="sf-hot">SUBMITTING</span> → <span class="sf-ok">SUCCESS</span> (auto-reset 5s)
+       ↓ fail
+    <span class="sf-bad">ERROR</span> → retry → SUBMITTING
+       
+  guards: <span class="sf-bad">RATE-LIMITED</span> (3 per 5 min) · <span class="sf-bad">COOLDOWN</span> (30s)
+  drafts: autosaved to localStorage, cleared on success</div>
+              <p style="margin-top:12px;">The spec defined <strong>14 validation rules</strong> (VR-01 → VR-14), <strong>12 business rules</strong> (BR-01 → BR-12), an error-recovery matrix, and WCAG 2.1 AA behavior: <code>aria-live</code> toasts, focus-first-error-field, escape-dismisses, contrast ≥4.5:1, color never the only signal.</p>
+              <div class="fact-grid">
+                <div class="fact"><b>why rate-limit a therapy inbox?</b><span>an NPO email address is a spam magnet. 3 submissions / 5 min + 30s cooldown with a visible countdown protects the humans reading it — without a CAPTCHA tax on distressed users.</span></div>
+                <div class="fact"><b>why mailto instead of a form API?</b><span>zero-recurring-cost constraint. Tradeoff, said out loud: we can't measure submissions server-side. Accepted, because a paid form service was the entire monthly budget.</span></div>
+              </div>
+            </div>
+
+            <!-- ========== USER STORIES ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">02 — User stories &amp; acceptance criteria</p>
+              <h3 class="wd-section-title">Written before build. QA'd against after.</h3>
+              <div class="user-story">
+                <span class="user-story-id">HC-04 · CONTACT FORM</span>
+                <p class="user-story-as"><strong>As a</strong> visitor in distress, <strong>I want</strong> the form to catch my mistakes before submitting, <strong>so that</strong> my message actually reaches someone on the first try.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — invalid submit focuses the first error field and announces it via <code>role="alert"</code></li>
+                  <li><span class="ac-tag">AC2</span> — validation runs on blur + debounced on change (300ms), never blocks typing</li>
+                  <li><span class="ac-tag">AC3</span> — draft persists through refresh and browser restart; cleared on success</li>
+                  <li><span class="ac-tag">AC4</span> — 4th submission within 5 min shows a countdown, not a silent failure</li>
+                </ul>
+              </div>
+              <div class="user-story">
+                <span class="user-story-id">HC-11 · EVENTS ARCHIVE</span>
+                <p class="user-story-as"><strong>As a</strong> partner evaluating the org, <strong>I want</strong> to filter 61 past events by category and year, <strong>so that</strong> I can verify their track record in my sector in under a minute.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — category + year filters compose (AND), empty state explains itself</li>
+                  <li><span class="ac-tag">AC2</span> — upcoming events auto-advance by real current date, no manual curation</li>
+                  <li><span class="ac-tag">AC3</span> — duplicate entries dedupe at the data layer, not by eye</li>
+                </ul>
+              </div>
+              <div class="user-story">
+                <span class="user-story-id">HC-17 · CONTACT CARD</span>
+                <p class="user-story-as"><strong>As a</strong> someone on a phone, <strong>I want</strong> to copy the office phone number with one tap, <strong>so that</strong> I don't transcribe digits wrong.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — copy-to-clipboard with toast confirm; clipboard failure logs and degrades silently</li>
+                  <li><span class="ac-tag">AC2</span> — touch target ≥48px, labelled icon (never icon-only)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ========== AWKWARD EDGE CASES ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">03 — The awkward edge cases</p>
+              <h3 class="wd-section-title">The states you hope nobody hits, specified anyway.</h3>
+              <div class="wd-mechanics">
+                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>localStorage unavailable</strong> (private mode) — drafts and rate limits silently skip persistence; the form still works. Graceful degradation over an error wall.</span></div>
+                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Toast pile-up</strong> — toasts queue through their own state machine (ADDING → VISIBLE → DISMISSING → REMOVING); escape key dismisses; screen readers get one polite announcement, not five.</span></div>
+                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Success-then-regret</strong> — auto-reset after 5s wipes the form, so a second message starts clean instead of appending to the mailto body.</span></div>
+                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>XSS via message field</strong> — input sanitization strips HTML before the mailto is composed. Trusting the reader of the inbox means not trusting the writer of the form.</span></div>
+              </div>
+            </div>
+
+            <!-- ========== V2/V3 ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">04 — What shipped next</p>
+              <h3 class="wd-section-title">V1 (June) → V2/V3 (July–Sept): the redesign pass.</h3>
+              <p>After launch, iteration moved to brand and conversion surface: exact palette enforcement (two brand hexes only, no off-palette gradients), a typography system upgrade, the affiliations page rebuilt as a clickable stats grid (45+ orgs, 19 corporate clients, 13 academic collaborations — click-to-scroll), and the CTA banners standardized. Same product logic: every redesign pass starts from "what does this page's job actually refuse to do," not from a moodboard.</p>
+            </div>
+
+            <!-- ========== OUTCOME ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">05 — Outcome &amp; honesty</p>
+              <h3 class="wd-section-title">Shipped, live, still running.</h3>
+              <p>The site launched and survived contact with real users; the org still runs on it today. What I'd do differently: the mailto form trades measurement for budget — if they ever get hosting money, a real form endpoint with submission analytics is the first upgrade, and the state machine stays exactly the same. Specs outlive implementations.</p>
+            </div>
+
+            <!-- ========== CTA ========== -->
+            <div class="wd-cta-section">
+              <p class="wd-cta-eyebrow">▸ THE LIVE SITE</p>
+              <h3 class="wd-cta-title">Open the thing I spec'd.</h3>
+              <p class="wd-cta-sub">hopencope.com — the contact form, events archive, and stats grid are all as-specified.</p>
+              <div class="linkbtn-row" style="justify-content:center;">
+                <a class="linkbtn" href="https://hopencope.com/" target="_blank" rel="noopener">open hopencope.com
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- ========== FOOTER ========== -->
+            <div class="wd-footer">
+              <span>case study by <a href="#" data-app="contact">woosqa</a> · jun–sep 2026</span>
+              <span>hopencope.doc · wookieOS</span>
+            </div>
+
+          </div>
+        </div>`
+    },
+    prd: {
+      chrome: 'wordpad', icon: '\u{1F4C4}', label: 'prd.doc',
+      title: 'prd.doc — WordPad',
+      width: 880, height: 680,
+      menubar: ['file', 'edit', 'view', 'format', 'help'],
+      toolbar: '<span>📄 PRD — WonderTree homepage</span><span class="toolbar-status">prd.doc · v1.2 · proposal</span>',
+      body: `
+        <div class="prd-root">
+          <div class="wd-root" style="background:transparent;max-width:none;">
+
+            <!-- ========== COVER ========== -->
+            <div class="prd-cover">
+              <span class="wd-cover-tag" style="background:rgba(156,125,240,0.25);border-color:rgba(196,181,253,0.5);">PRD · RESEARCH-BACKED PROPOSAL</span>
+              <h1>Homepage redesign — turn playtime into progress.</h1>
+              <p class="prd-cover-role">A real PRD from my WonderTree research: problem framing, the cut list, user stories with acceptance criteria, the events to fire, and how we'd know it worked.</p>
+              <span class="prd-cover-meta">owner: woosqa · status: proposal from live research · scope open to revision before build</span>
+            </div>
+
+            <!-- ========== PROBLEM ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">01 — Problem &amp; decision</p>
+              <h3 class="wd-section-title">Not a prettier homepage. A homepage that explains the product.</h3>
+              <p>A visitor can land on wondertree.co, scroll everything, and still ask: <em>"what exactly is WonderTree, and what am I supposed to do here?"</em> The current page leads with a game catalogue; the product's actual story — play + movement + skills + measurable progress — is never the spine.</p>
+              <div class="wd-pull">Decision: reorder the homepage as a conversion journey — Understand → Trust → Explore → Try — and cut everything that doesn't serve one of those four verbs.</div>
+            </div>
+
+            <!-- ========== GOALS / NON-GOALS ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">02 — Goals / non-goals</p>
+              <h3 class="wd-section-title">What we're building — and loudly, what we're not.</h3>
+              <div class="fact-grid">
+                <div class="fact"><b>goals</b><span>· a first-time parent can say what WonderTree is within one scroll-stop<br/>· three audiences self-select (parents / therapists / institutions)<br/>· progress tracking visible as a differentiator, not buried<br/>· free-tier entry point reachable from every scroll-stop</span></div>
+                <div class="fact"><b>non-goals (cut, sayable out loud)</b><span>· no autism primer on the homepage — deeper pages own it<br/>· no 20-game wall — 4–6 exemplars + catalogue link<br/>· no full pricing tables — entry-point teaser only<br/>· no AR tech explainer — buy the progress, not the tech<br/>· no blog wall — lowest-intent content, highest scroll cost</span></div>
+              </div>
+            </div>
+
+            <!-- ========== USER STORIES ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">03 — User stories &amp; acceptance criteria</p>
+              <h3 class="wd-section-title">QA can test every line below.</h3>
+              <div class="user-story">
+                <span class="user-story-id">WT-H1 · HERO</span>
+                <p class="user-story-as"><strong>As a</strong> first-time visitor, <strong>I want</strong> the hero to tell me what changed for my child, <strong>so that</strong> I decide in seconds whether this is for us.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — hero states an outcome ("Turn playtime into progress"), not a category greeting</li>
+                  <li><span class="ac-tag">AC2</span> — primary CTA = free entry point; secondary = "see how it works"; trial terms legible under buttons</li>
+                  <li><span class="ac-tag">AC3</span> — hero shows a child doing the product, not an illustration of a school</li>
+                </ul>
+              </div>
+              <div class="user-story">
+                <span class="user-story-id">WT-H2 · AUDIENCE SPLIT</span>
+                <p class="user-story-as"><strong>As a</strong> therapist, <strong>I want</strong> to enter a path written for me, <strong>so that</strong> I don't wade through parent content to find reporting.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — three cards above the fold's second scroll-stop; each routes to its own page</li>
+                  <li><span class="ac-tag">AC2</span> — copy per card names that audience's outcome, not the product's features</li>
+                </ul>
+              </div>
+              <div class="user-story">
+                <span class="user-story-id">WT-H3 · PROGRESS STACK</span>
+                <p class="user-story-as"><strong>As a</strong> parent considering paying, <strong>I want</strong> to see how progress is tracked, <strong>so that</strong> play looks like more than play.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — real dashboard screenshot, not a mockup</li>
+                  <li><span class="ac-tag">AC2</span> — section names what the dashboard reports in parent language (balance, memory, coordination)</li>
+                </ul>
+              </div>
+              <div class="user-story">
+                <span class="user-story-id">WT-H4 · FAQ</span>
+                <p class="user-story-as"><strong>As a</strong> skeptical buyer, <strong>I want</strong> my actual objection answered, <strong>so that</strong> I don't leave to ask a forum.</p>
+                <ul class="user-story-ac">
+                  <li><span class="ac-tag">AC1</span> — 5–6 questions max: the ones that stop conversion (age fit, diagnosis needed?, equipment, replaces therapy?, tracking, free trial)</li>
+                  <li><span class="ac-tag">AC2</span> — answers link to deeper pages; FAQ is a bridge, not a library</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- ========== EVENTS ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">04 — Analytics spec</p>
+              <h3 class="wd-section-title">Fire these, so a month after launch we can tell whether it worked.</h3>
+              <table class="ev-table">
+                <thead><tr><th>event</th><th>properties</th><th>answers</th></tr></thead>
+                <tbody>
+                  <tr><td><code>hero_cta_click</code></td><td class="mut">cta_variant, audience_ref</td><td class="mut">does the outcome-first hero move anyone?</td></tr>
+                  <tr><td><code>audience_selected</code></td><td class="mut">path: parent|therapist|institution</td><td class="mut">is the split real or decorative?</td></tr>
+                  <tr><td><code>game_card_click</code></td><td class="mut">game_id, position_in_carousel</td><td class="mut">do 4–6 exemplars beat the 20-card wall?</td></tr>
+                  <tr><td><code>progress_section_view</code></td><td class="mut">scroll_depth_pct</td><td class="mut">is the differentiator actually being seen?</td></tr>
+                  <tr><td><code>faq_open</code></td><td class="mut">question_id</td><td class="mut">which objection blocks conversion most?</td></tr>
+                  <tr><td><code>signup_start</code></td><td class="mut">referrer_section</td><td class="mut">which scroll-stop converts?</td></tr>
+                </tbody>
+              </table>
+              <p class="wtr-note" style="margin-top:8px;"><strong>Success metric:</strong> signup_start / session +15% within 30 days of ship. <strong>Guardrail:</strong> homepage bounce &lt;= prior 28-day baseline. <strong>If it fails:</strong> read hero_cta_click vs audience_selected before touching copy — the funnel's shape tells you which verb is broken.</p>
+            </div>
+
+            <!-- ========== STATUS ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">05 — Status</p>
+              <div class="wd-comparison-grid" style="grid-template-columns:1fr;">
+                <div class="wd-comparison-card" style="padding:12px 14px;">
+                  <span class="wd-comparison-label" style="background:#E8F5E9;color:#2E7D32;display:block;border-radius:4px;">SHIPPED (SEPARATE WORKSTREAMS)</span>
+                  <p style="font-size:12.5px;margin:10px 0 0;">Content consolidation (11→3, 9→1) · freemium entry point sitewide · autism landing page rebuild. Site CTR 2.25% → 2.70%, position 11.7 → 8.5 in the first measured month.</p>
+                </div>
+                <div class="wd-comparison-card" style="padding:12px 14px;margin-top:8px;">
+                  <span class="wd-comparison-label" style="background:#FFF8E1;color:#B28900;display:block;border-radius:4px;">THIS PRD — PROPOSAL, NOT YET BUILT</span>
+                  <p style="font-size:12.5px;margin:10px 0 0;">Journey reorder · audience split cards · proof stack (real dashboard section) · hero visual refresh · FAQ trim · event instrumentation. Scope gets revised against the shipping pricing work before this starts.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ========== FOOTER ========== -->
+            <div class="wd-footer">
+              <span>PRD by <a href="#" data-app="contact">woosqa</a> · referenced by <a href="#" data-app="wondertree">wondertree.exe</a></span>
+              <span>prd.doc · wookieOS</span>
+            </div>
+
+          </div>
+        </div>`
+    },
+    sprout: {
+      chrome: 'browser', icon: '◐', label: 'sprout',
+      title: 'sprout — case study',
+      width: 960, height: 700,
+      urlbar: 'boho-myrtle-16249936.figma.site',
+      body: `
+        <div class="sp-root">
+          <div class="wd-root" style="background:transparent;max-width:none;">
+
+            <!-- ========== COVER ========== -->
+            <div class="sp-cover">
+              <span class="wd-cover-tag">CASE STUDY · AI AGENT · 3-HOUR HACKATHON · OCT 2026</span>
+              <h1>Sprout: a first step she can undo.</h1>
+              <p class="sp-cover-role">an AI agent that helps a 24-year-old make her first investment decision — designed, prompted and shipped solo in one sitting at the TechQuest design makeathon.</p>
+              <span class="sp-cover-meta">figma make · one moment, not an app · 6 screens · mobile 390×844</span>
+            </div>
+
+            <!-- ========== BRIEF ========== -->
+            <div class="wd-section">
+              <p class="wd-section-label">00 — The brief</p>
+              <h3 class="wd-section-title">One moment. Done well.</h3>
+              <p>The prompt: design one AI-powered experience that helps Ayesha — 24, first salary (Rs 140,000/month), savings idling in a current account, family to contribute to — through <strong>one stage of her financial journey</strong>. Not a whole app. Judged on thinking as much as screens: how you framed the problem, how you directed the AI, and whether the agent earns trust.</p>
+              <p>Three journeys were offered: spending, investing, long-term goals. I picked investing — because her stated fears weren't about money at all: <em>losing what she worked for, looking naive, committing to something she can't get out of, finding out in five years she wasted these years.</em></p>
+              <div class="wd-pull">The insight: Ayesha's blocker isn't knowledge, it's irreversibility. Every budgeting app gave her more information. None gave her a safe first move.</div>
+            </div>
+
+            <!-- ========== THE DECISION ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">01 — The product decision</p>
+              <h3 class="wd-section-title">Optimize for the undo, not the advice.</h3>
+              <p>Sprout's core promise became one line: <strong>a first step she can UNDO and EXPLAIN.</strong> Every recommendation shows how reversible it is (a 5-block pixel reversibility meter, plus words — never color alone). The AI always shows its reasoning, never touches her bank, and says "this one needs a human" when it should. Her brother said "just start" and named three things she didn't understand — Sprout flips each of those into plain language <em>using her numbers</em>.</p>
+              <div class="sp-states">
+                <div class="sp-state">
+                  <span class="sp-state-title">STATE — SHE PICKS ANOTHER</span>
+                  She overrides the recommendation. No guilt copy: "Your call. Here's what changes." "Continue with my choice" is exactly as prominent as "Back to Sprout's pick." Her agency is the product.
+                </div>
+                <div class="sp-state sp-state--trust">
+                  <span class="sp-state-title">STATE — SHE DOESN'T TRUST IT</span>
+                  A "show your work" window: the exact inputs used, the assumptions, what Sprout does <em>not</em> know (family plans, employer benefits), and a confidence level. Reasoning is a surface, not a black box.
+                </div>
+                <div class="sp-state sp-state--human">
+                  <span class="sp-state-title">STATE — BEYOND ITS LIMITS</span>
+                  Type "should I put all 300,000 in?" and Sprout doesn't improvise: "This one needs a human." → free session with a licensed advisor + three questions to ask them. The agent knows where it stops.
+                </div>
+                <div class="sp-state sp-state--exit">
+                  <span class="sp-state-title">STATE — SHE LEAVES</span>
+                  A "what I remember" screen lists everything stored — each row deletable, plus delete-everything with confirm. "Nothing was ever connected to your bank." Consent is a screen, not a checkbox.
+                </div>
+              </div>
+            </div>
+
+            <!-- ========== SPEC AS PROMPT ========== -->
+            <div class="wd-section compact">
+              <p class="wd-section-label">02 — Directing the AI</p>
+              <h3 class="wd-section-title">I wrote the spec first, then made the prompt carry it.</h3>
+              <p>Figma Make built the prototype, but the quality came from prompt discipline: a complete design system up front — exact hex tokens, card anatomy (3px ink border, notched corners, header strips), typography rules (pixel font for labels only, never body or numbers), a full accessibility budget (≥4.5:1 contrast, ≥48px targets, text labels on every icon, reduced-motion respected), and all six screens with their states — <em>before</em> asking for a single pixel.</p>
+              <div class="promptbox"><span class="pb-label">EXCERPT — THE GOVERNING PROMPT</span>CORE IDEA: Sprout helps her take a first step she can UNDO and EXPLAIN. Every option shows how reversible it is. The AI always shows its reasoning, never touches her bank, and says when a human is needed.
+
+Cards = "app windows": 3px solid ink border, pixel-notched corners, a 40px header strip with an ALL-CAPS pixel-font title... Buttons: min 48px tall... pressed state shifts 2px down and removes the shadow.
+
+Accessibility: all text >=4.5:1 contrast on its surface, touch targets >=48px, every icon has a text label, never use colour alone (reversibility also shown as text + pixel bars), plain language, no jargon without an inline "what's this?" tap.</div>
+              <p>Iteration happened in second-person edits, not re-rolls: animate the mascot so it bounces every 3–4s; let her type her own confusion and have Sprout break it into flip-cards; a shine on the selection step because it "looks dull"; stop there — "don't add a lot of stuff." The hackathon scored AI process documentation at 15%: prompts, outputs, what got rejected and why. Mine shows both rounds of refinement and the things I chose not to add.</p>
+            </div>
+
+            <!-- ========== CTA ========== -->
+            <div class="wd-cta-section" style="background:radial-gradient(circle at 20% 30%, rgba(249,184,212,0.25) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(207,203,247,0.3) 0, transparent 45%), linear-gradient(180deg, #EFF0E2, #F7F5EE);border-color:#DDE8D3;">
+              <p class="wd-cta-eyebrow" style="color:#3E5641;">▸ TRY THE PROTOTYPE</p>
+              <h3 class="wd-cta-title">Click through the whole flow.</h3>
+              <p class="wd-cta-sub">Live prototype + the full working file, prompts included.</p>
+              <div class="linkbtn-row" style="justify-content:center;">
+                <a class="linkbtn" style="background:#3E5641;border-color:#3E5641;box-shadow:4px 4px 0 #F9B8D4;" href="https://boho-myrtle-16249936.figma.site" target="_blank" rel="noopener">open live prototype
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </a>
+                <a class="linkbtn linkbtn--ghost" style="box-shadow:4px 4px 0 #CFCBF7;" href="https://www.figma.com/make/dIAq6wvIYups9rNvU3ebTn/Clickable-Mobile-Prototype-for-Sprout" target="_blank" rel="noopener">figma working file
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- ========== FOOTER ========== -->
+            <div class="wd-footer" style="border-color:#DDE8D3;">
+              <span>case study by <a href="#" data-app="contact">woosqa</a> · oct 2026</span>
+              <span>sprout.exe · wookieOS</span>
+            </div>
+
+          </div>
+        </div>`
+    },
     about: {
       chrome: 'notepad', icon: '✎', label: 'about.me', pinned: true,
       title: 'about.me — notepad',
@@ -1005,14 +1560,14 @@
       menubar: ['file', 'edit', 'format', 'view', 'help'],
       body: `
         <h2>// hi, i'm wookie</h2>
-        <p><span class="notepad-tag">designer</span><span class="notepad-tag">illustrator</span><span class="notepad-tag">→ product</span></p>
-        <p>i make things that are pretty <em>and</em> work. recent design grad, painting/illustration background, now pivoting toward shipping product design that engineers can actually build.</p>
+        <p><span class="notepad-tag">product</span><span class="notepad-tag">design</span><span class="notepad-tag">code</span></p>
+        <p>designer-developer at wondertree (b2b healthtech) &middot; product manager at hope &amp; cope. i take vague problems, find out what's actually true (clarity, search console, a lot of reading), decide what to build &mdash; and write it down well enough that engineers can start on monday.</p>
         <p><strong>what i care about:</strong></p>
-        <p>· figuring out <em>why</em> people don't convert before pushing pixels<br/>
-        · designing with implementation in mind — components, states, real responsive thinking<br/>
-        · building toward product management over the next few years</p>
-        <p><strong>tools:</strong> figma · figma · also figma · pen + paper · increasingly, code</p>
-        <p style="opacity: 0.55; font-size: 12px; margin-top: 24px;">[last saved 2026 · wookie]</p>
+        <p>· asking questions before writing the spec<br/>
+        · naming the tradeoff, not just the upside<br/>
+        · going back to the numbers after launch &mdash; did it actually work?</p>
+        <p><strong>tools:</strong> figma &middot; microsoft clarity &middot; search console &middot; html/css/js &middot; pen + paper</p>
+        <p style="opacity: 0.55; font-size: 12px; margin-top: 24px;">[last saved oct 2026 · wookie]</p>
       `
     },
     contact: {
@@ -1072,12 +1627,15 @@
     trash: {
       chrome: 'trash', icon: '▤', label: 'trash',
       title: 'trash',
-      width: 380, height: 240,
+      width: 430, height: 300,
       body: `
-        <h3>1 item</h3>
-        <p>files i'm not opening back up.</p>
-        <div class="trash-file">▢ illustrator-career-2018-2025.txt</div>
-        <p style="margin-top: 16px; font-size: 12px; opacity: 0.55;">// empty? never. for the archive.</p>
+        <h3>4 items</h3>
+        <p>decisions i made out loud. deleted on purpose.</p>
+        <div class="trash-file">▢ 14-day-free-trial.txt <span style="opacity:.5">// cut: wasn't converting — freemium instead</span></div>
+        <div class="trash-file">▢ book-a-demo-flow.txt <span style="opacity:.5">// cut: Talk to Us + role dropdown instead</span></div>
+        <div class="trash-file">▢ 11-autism-cluster-pages.txt <span style="opacity:.5">// cut: 3 canonical pages, 301 the rest</span></div>
+        <div class="trash-file">▢ better-together-section.txt <span style="opacity:.5">// cut: therapy-cost calculator sells it better</span></div>
+        <p style="margin-top: 16px; font-size: 12px; opacity: 0.55;">// empty? never. deciding what not to build is the job.</p>
       `
     },
     settings: {
@@ -1168,6 +1726,9 @@
         <div class="start-divider"></div>
         <div class="start-section">
           <span class="start-section-label">// pinned</span>
+          <button class="start-menu-item" data-jump="wondertree"><span class="start-menu-glyph">◐</span>wondertree</button>
+          <button class="start-menu-item" data-jump="hopencope"><span class="start-menu-glyph">💛</span>hopencope</button>
+          <button class="start-menu-item" data-jump="sprout"><span class="start-menu-glyph">◐</span>sprout</button>
           <button class="start-menu-item" data-jump="consultly"><span class="start-menu-glyph">◐</span>consultly</button>
           <button class="start-menu-item" data-jump="frenzly"><span class="start-menu-glyph">◐</span>frenzly</button>
           <button class="start-menu-item" data-jump="storyloop"><span class="start-menu-glyph">◐</span>storyloop</button>
@@ -1220,8 +1781,8 @@
       'checking display.sys ... ok',
       'loading fonts ... dotgothic · vt323 · pixelify',
       pick(),
-      'found: 1 designer · slightly caffeinated',
-      'scanning portfolio ... 4 case studies · 1 sticky note',
+      'found: 1 product person · slightly caffeinated',
+      'scanning portfolio ... 7 case studies · 1 sticky note',
       'trash: 1 item (not opening that back up)',
       'loading user: wookie',
       'ready.',
@@ -1612,6 +2173,60 @@
         closeWindow(key);
         playShutdown();
       });
+    }
+
+    // WonderTree window: tab shell + sub-tabs + scroll animations
+    if (key === 'wondertree') {
+      const root = win.querySelector('[data-wtr2]');
+      const body = win.querySelector('.window-body');
+      const pages = [...root.querySelectorAll('[data-wtr2-page]')];
+      const navtabs = [...root.querySelectorAll('.wtr2-navtab')];
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const io = reduce ? null : new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { root: body, threshold: 0.12 });
+
+      const animateIn = (scope) => {
+        const els = scope.querySelectorAll('[data-anim]:not(.in)');
+        if (!els.length) return;
+        if (reduce || !io) { els.forEach(el => el.classList.add('in')); return; }
+        els.forEach(el => io.observe(el));
+      };
+
+      const showPage = (name) => {
+        pages.forEach(p => p.classList.toggle('is-active', p.dataset.wtr2Page === name));
+        navtabs.forEach(t => t.classList.toggle('is-active', t.dataset.page === name));
+        body.scrollTop = 0;
+        const page = root.querySelector(`[data-wtr2-page="${name}"]`);
+        if (page) animateIn(page);
+      };
+
+      navtabs.forEach(t => t.addEventListener('click', () => showPage(t.dataset.page)));
+
+      root.querySelectorAll('[data-goto]').forEach(b => {
+        b.addEventListener('click', () => showPage(b.dataset.goto));
+      });
+
+      root.querySelectorAll('[data-goto-open]').forEach(b => {
+        b.addEventListener('click', () => window.open(b.dataset.gotoOpen, '_blank', 'noopener'));
+      });
+
+      root.querySelectorAll('.wtr2-subtab').forEach(t => {
+        t.addEventListener('click', () => {
+          const page = t.closest('[data-wtr2-page]');
+          page.querySelectorAll('.wtr2-subtab').forEach(x => x.classList.toggle('is-active', x === t));
+          page.querySelectorAll('.wtr2-subpage').forEach(sp => sp.classList.toggle('is-active', sp.dataset.sub === t.dataset.sub));
+          body.scrollTop = 0;
+          animateIn(page.querySelector('.wtr2-subpage.is-active'));
+        });
+      });
+
+      animateIn(root.querySelector('[data-wtr2-page="overview"]'));
     }
 
     // Contact window: inbox / compose / read views

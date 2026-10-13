@@ -1,0 +1,9 @@
+{
+  "name": "wookieos",
+  "version": "0.3.0",
+  "private": true,
+  "description": "a portfolio disguised as an operating system",
+  "scripts": {
+    "start": "npx -y serve -l 3000 ."
+  }
+}
