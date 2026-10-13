@@ -1080,7 +1080,7 @@
 
               <div class="wtr2-subpage is-active" data-sub="page">
                 <div class="wtr2-cols">
-                  <div>
+                  <div class="wtr2-col-text">
                     <div class="wtr2-beats">
                       <div class="wtr2-beat" data-anim><b>Real proof, surfaced.</b>Actual evidence figures and a progress-report mockup — what a parent is really buying.</div>
                       <div class="wtr2-beat" data-anim style="--d:.08s"><b>Skills in the parent's words.</b>Re-ordered from clinical taxonomy to what parents actually search for.</div>
@@ -1088,13 +1088,14 @@
                       <div class="wtr2-beat" data-anim style="--d:.24s"><b>Proof you can check.</b>Partner logos linked to real sources, age range corrected to 4–14, correct hreflang.</div>
                     </div>
                   </div>
-                  <div>
-                    <!-- media slot: drop the scroll video as images/autism-scroll.mp4 and swap this block for a looping <video muted loop playsinline> -->
-                    <a class="wtr2-media" data-anim href="https://www.wondertree.co/who-we-help/autism" target="_blank" rel="noopener">
-                      <img src="images/autism-page.png" alt="wondertree.co/who-we-help/autism" />
-                      <span class="wtr2-media-cap">click to open the live page &rarr;</span>
-                    </a>
-                  </div>
+                  <a class="wtr2-media" data-anim href="https://www.wondertree.co/who-we-help/autism" target="_blank" rel="noopener">
+                    <video autoplay muted loop playsinline poster="images/autism-page.png">
+                      <source src="images/autism-scroll.webm" type="video/webm">
+                    </video>
+                    <span class="wtr2-media-cta">open the live page
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                    </span>
+                  </a>
                 </div>
               </div>
 
@@ -1131,37 +1132,34 @@
               </div>
 
               <div class="wtr2-subpage is-active" data-sub="page">
-                <div class="wtr2-plans">
-                  <div class="wtr2-plan" data-anim>
-                    <h4>Free</h4>
-                    <p class="who">try it tonight</p>
-                    <ul><li>the 14-day trial is gone — it wasn't converting</li><li>free plan, no credit card</li></ul>
+                <div class="wtr2-cols">
+                  <div class="wtr2-col-text">
+                    <div class="wtr2-beats">
+                      <div class="wtr2-beat" data-anim><b>One account, whole class.</b>Institutions were running every child through a single individual account — because no page told them there was another way.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.08s"><b>Two pages, two doors.</b>Individual and institution pricing split cleanly, each page saying exactly who it's for.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.16s"><b>Free at the door.</b>The trial made way for a free plan — play first, upgrade when they want reports.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.24s"><b>The value math up front.</b>A built-in calculator: a month of WonderTree against a single therapy session.</div>
+                    </div>
                   </div>
-                  <div class="wtr2-plan wtr2-plan--pop" data-anim style="--d:.08s">
-                    <span class="wtr2-plan-tag">rebuilt</span>
-                    <h4>Individual</h4>
-                    <p class="who">parents at home</p>
-                    <ul><li>games + progress reports</li><li>yearly billing as the default path</li></ul>
-                  </div>
-                  <div class="wtr2-plan wtr2-plan--pop" data-anim style="--d:.16s">
-                    <span class="wtr2-plan-tag">rebuilt</span>
-                    <h4>Institutions</h4>
-                    <p class="who">schools &amp; clinics</p>
-                    <ul><li>said out loud now: better reporting, multi-user</li><li>its own page, EN + AR</li></ul>
-                  </div>
+                  <a class="wtr2-media" data-anim href="https://www.wondertree.co/pricing" target="_blank" rel="noopener">
+                    <video autoplay muted loop playsinline poster="images/pricing-v2.png">
+                      <source src="images/pricing-scroll.mp4" type="video/mp4">
+                    </video>
+                    <span class="wtr2-media-cta">open the live page
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                    </span>
+                  </a>
                 </div>
-                <div class="wtr2-calc" data-anim style="--d:.2s"><span>the new calculator's punchline:</span> <span class="big">a whole month of wondertree &lt; one therapy session</span></div>
-                <p class="wtr2-fine" style="text-align:center;">rebuild preview &middot; real screenshots land when it ships &middot; EN + AR</p>
               </div>
 
               <div class="wtr2-subpage" data-sub="study">
                 <div class="wtr2-study">
                   <div class="wtr2-pull" data-anim>People couldn't tell individual and institution pricing apart — so schools and clinics were buying the wrong license.</div>
                   <ul class="wtr2-moves">
-                    <li data-anim><b>We asked the people already using it.</b> <span>Occupational therapists, real customer stories, and interviews with institutions-package buyers — all pointed at the same gap.</span></li>
-                    <li data-anim style="--d:.07s"><b>Say the package's purpose out loud.</b> <span>Better reporting, multi-user — the institution plan now explains itself instead of assuming you know.</span></li>
-                    <li data-anim style="--d:.14s"><b>Borrowed structure that works.</b> <span>DataCamp's pricing architecture, plans grouped by value, yearly billing as the default path.</span></li>
-                    <li data-anim style="--d:.21s"><b>Let the math sell it.</b> <span>Two sliders — sessions and cost per session — ending on the punchline above. And the 14-day trial made way for a free plan, because it wasn't converting.</span></li>
+                    <li data-anim><b>Free, indefinitely — with limits.</b> <span>Free play stays free; a session timer and no reports make upgrading feel like a choice, not a paywall. Families were already paying for a month or three, pausing, and coming back — the free plan keeps them in the product during the pause.</span></li>
+                    <li data-anim style="--d:.07s"><b>We asked the people already using it.</b> <span>Occupational therapists, real customer stories, and interviews with institutions-package buyers — all pointed at the same gap.</span></li>
+                    <li data-anim style="--d:.14s"><b>Say the package's purpose out loud.</b> <span>Better reporting, multi-child dashboards, licenses parents can use at home — the institution plan explains itself instead of assuming you know.</span></li>
+                    <li data-anim style="--d:.21s"><b>DataCamp for the design.</b> <span>Their pricing page nails fold structure and trust signals — we borrowed that discipline: plans grouped by value, yearly billing as the default path.</span></li>
                   </ul>
                   <div class="wtr2-result" data-anim>
                     <span class="r-chip r-chip--blue">in progress</span>
@@ -1182,7 +1180,7 @@
               <p class="wtr2-lede" data-anim>The work behind the pages — none of it is a screen, all of it shows up in the numbers.</p>
               <div class="wtr2-ow">
                 <div class="wtr2-owcard wtr2-owcard--blue" data-anim>
-                  <h4>20 pages &rarr; 4</h4>
+                  <h4>Content cleanup</h4>
                   <p>We were getting clicks — from the wrong people. Celebrity listicles pulled readers who'd never buy, and near-identical pages were cannibalizing each other. We consolidated into 4 canonical pages and pointed the site at intent traffic instead. That shift led to the autism page rebuild, then pricing.</p>
                   <span class="r">live</span>
                 </div>
@@ -1211,12 +1209,11 @@
           <!-- ================= FOOTER ================= -->
           <div class="wtr2-foot">
             <h3>Everything above is in production.</h3>
-            <p>Landing pages, consolidation 301s, the freemium funnel, the Talk-to-Us intake — live and measurable. Pricing ships this week and this page gets its numbers.</p>
+            <p>Landing pages, consolidation 301s, the freemium funnel, the Talk-to-Us intake — live and measurable. The pricing rebuild is next in line.</p>
             <div class="wtr2-cta-row">
               <a class="wtr2-btn wtr2-btn--yellow" href="https://www.wondertree.co/" target="_blank" rel="noopener">open wondertree.co
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
               </a>
-              <button class="wtr2-btn wtr2-btn--blue" type="button" data-app="contact">questions? mail me</button>
             </div>
             <span class="wtr2-foot-meta">case study by <a href="#" data-app="contact">woosqa</a> · wookieOS</span>
           </div>
@@ -1224,130 +1221,78 @@
         </div>`
     },
     hopencope: {
-      chrome: 'wordpad', icon: '\u{1F49B}', label: 'hopencope',
-      title: 'hopencope.doc — WordPad',
-      width: 860, height: 660,
-      menubar: ['file', 'edit', 'view', 'format', 'help'],
-      toolbar: '<span>💛 Hope &amp; Cope — PM case study</span><span class="toolbar-status">hopencope.doc</span>',
+      chrome: 'browser', icon: '\u{1F49B}', label: 'hopencope',
+      title: 'hopencope — case study',
+      width: 980, height: 700,
+      urlbar: 'hopencope.com · case study',
       body: `
-        <div class="hc-root">
-          <div class="wd-root" style="background:transparent;max-width:none;">
+        <div class="hc2-root" data-hc2>
 
-            <!-- ========== COVER ========== -->
-            <div class="hc-cover">
-              <span class="wd-cover-tag">CASE STUDY · PRODUCT MANAGER · JUN–SEP 2026</span>
-              <h1>Hope &amp; Cope: four months as PM.</h1>
-              <p class="hc-cover-role">Pakistan's pioneer community mental health NPO. I owned the product: a website where every spec decision had a budget of roughly zero.</p>
-              <span class="hc-cover-meta">hopencope.com · react + vite · team of volunteers · shipped &amp; live</span>
+          <nav class="hc2-nav">
+            <button class="hc2-navtab is-active" data-page="site" type="button">the website</button>
+            <button class="hc2-navtab" data-page="study" type="button">the case study</button>
+          </nav>
+
+          <!-- ============ PAGE: THE WEBSITE ============ -->
+          <div class="hc2-page is-active" data-hc2-page="site">
+            <div class="hc2-hero">
+              <p class="kick">hopencope.com &middot; product manager &middot; jun–sep 2026</p>
+              <h1>Hope &amp; Cope — building their <em>digital front door.</em></h1>
+              <p>A psychological support network in Karachi providing evidence-based care for individuals, families, and the community. The team reached out through my Google Developer community and asked for help going digital. As their product manager, I owned what the site says, how it works, and what shipped.</p>
             </div>
 
-            <!-- ========== SITUATION ========== -->
-            <div class="wd-section">
-              <p class="wd-section-label">00 — The situation</p>
-              <h3 class="wd-section-title">Real constraints, no clean slate.</h3>
-              <p>A mental health services center in Karachi needed a digital front door: therapy services, corporate wellness, community camps, 61 archived events. No product team existed. My job was to be that team — frame the problems, decide what gets built, write the specs, keep a volunteer engineering team unblocked.</p>
-              <p>One rule shaped everything: <strong>zero recurring cost.</strong> No backend, no form service, no database. Every product decision below is a consequence of that constraint — and the interesting part is making a spec that treats it as a design material, not a limitation to apologize for.</p>
-              <div class="wd-pull">The most PM-flavored thing I shipped here wasn't a feature. It was deciding what the website should never pretend to be.</div>
-            </div>
-
-            <!-- ========== THE SPEC ========== -->
-            <div class="wd-section">
-              <p class="wd-section-label">01 — The spec that shipped</p>
-              <h3 class="wd-section-title">Every state a user can end up in, written down before build.</h3>
-              <p>The contact form was the most complex surface — it's the only doorway a stranger has to actual help. I specified it as a state machine before anyone touched code:</p>
-              <div class="state-flow"><span class="sf-ok">IDLE</span> → <span class="sf-hot">DIRTY</span> → <span class="sf-hot">VALIDATING</span> → <span class="sf-ok">VALID</span> / <span class="sf-bad">INVALID</span>
-     valid ↓ submit ↓            <span class="sf-bad">↺ re-validate on change</span>
-  <span class="sf-hot">SUBMITTING</span> → <span class="sf-ok">SUCCESS</span> (auto-reset 5s)
-       ↓ fail
-    <span class="sf-bad">ERROR</span> → retry → SUBMITTING
-       
-  guards: <span class="sf-bad">RATE-LIMITED</span> (3 per 5 min) · <span class="sf-bad">COOLDOWN</span> (30s)
-  drafts: autosaved to localStorage, cleared on success</div>
-              <p style="margin-top:12px;">The spec defined <strong>14 validation rules</strong> (VR-01 → VR-14), <strong>12 business rules</strong> (BR-01 → BR-12), an error-recovery matrix, and WCAG 2.1 AA behavior: <code>aria-live</code> toasts, focus-first-error-field, escape-dismisses, contrast ≥4.5:1, color never the only signal.</p>
-              <div class="fact-grid">
-                <div class="fact"><b>why rate-limit a therapy inbox?</b><span>an NPO email address is a spam magnet. 3 submissions / 5 min + 30s cooldown with a visible countdown protects the humans reading it — without a CAPTCHA tax on distressed users.</span></div>
-                <div class="fact"><b>why mailto instead of a form API?</b><span>zero-recurring-cost constraint. Tradeoff, said out loud: we can't measure submissions server-side. Accepted, because a paid form service was the entire monthly budget.</span></div>
+            <div class="hc2-sec">
+              <p class="hc2-kick">the website · what each page says</p>
+              <h2 class="hc2-sec-title">Every page earns its place.</h2>
+              <p class="hc2-lede">The site has one job: make a stranger trust a mental-health service enough to reach out. Four pages carry that job.</p>
+              <div class="hc2-grid">
+                <div class="hc2-shot">
+                  <img src="images/hopencope/home.png" alt="Hope & Cope home page" />
+                  <div class="hc2-shot-cap"><b>Home — who they help, proven.</b> <span>10,000+ lives impacted sits right under the fold, before any pitch.</span></div>
+                </div>
+                <div class="hc2-shot">
+                  <img src="images/hopencope/events.png" alt="Hope & Cope events page" />
+                  <div class="hc2-shot-cap"><b>Events — proof, filterable.</b> <span>61 past events by category and year; a partner can verify the track record in a minute.</span></div>
+                </div>
+                <div class="hc2-shot">
+                  <img src="images/hopencope/blogs.png" alt="Hope & Cope blogs page" />
+                  <div class="hc2-shot-cap"><b>Blogs — the front door for search.</b> <span>Plain-language articles answering the questions people actually type.</span></div>
+                </div>
+                <div class="hc2-shot">
+                  <img src="images/hopencope/contact.png" alt="Hope & Cope contact page" />
+                  <div class="hc2-shot-cap"><b>Contact — the only doorway.</b> <span>The one way a stranger reaches a real person, so it carries the deepest spec on the site.</span></div>
+                </div>
               </div>
             </div>
-
-            <!-- ========== USER STORIES ========== -->
-            <div class="wd-section">
-              <p class="wd-section-label">02 — User stories &amp; acceptance criteria</p>
-              <h3 class="wd-section-title">Written before build. QA'd against after.</h3>
-              <div class="user-story">
-                <span class="user-story-id">HC-04 · CONTACT FORM</span>
-                <p class="user-story-as"><strong>As a</strong> visitor in distress, <strong>I want</strong> the form to catch my mistakes before submitting, <strong>so that</strong> my message actually reaches someone on the first try.</p>
-                <ul class="user-story-ac">
-                  <li><span class="ac-tag">AC1</span> — invalid submit focuses the first error field and announces it via <code>role="alert"</code></li>
-                  <li><span class="ac-tag">AC2</span> — validation runs on blur + debounced on change (300ms), never blocks typing</li>
-                  <li><span class="ac-tag">AC3</span> — draft persists through refresh and browser restart; cleared on success</li>
-                  <li><span class="ac-tag">AC4</span> — 4th submission within 5 min shows a countdown, not a silent failure</li>
-                </ul>
-              </div>
-              <div class="user-story">
-                <span class="user-story-id">HC-11 · EVENTS ARCHIVE</span>
-                <p class="user-story-as"><strong>As a</strong> partner evaluating the org, <strong>I want</strong> to filter 61 past events by category and year, <strong>so that</strong> I can verify their track record in my sector in under a minute.</p>
-                <ul class="user-story-ac">
-                  <li><span class="ac-tag">AC1</span> — category + year filters compose (AND), empty state explains itself</li>
-                  <li><span class="ac-tag">AC2</span> — upcoming events auto-advance by real current date, no manual curation</li>
-                  <li><span class="ac-tag">AC3</span> — duplicate entries dedupe at the data layer, not by eye</li>
-                </ul>
-              </div>
-              <div class="user-story">
-                <span class="user-story-id">HC-17 · CONTACT CARD</span>
-                <p class="user-story-as"><strong>As a</strong> someone on a phone, <strong>I want</strong> to copy the office phone number with one tap, <strong>so that</strong> I don't transcribe digits wrong.</p>
-                <ul class="user-story-ac">
-                  <li><span class="ac-tag">AC1</span> — copy-to-clipboard with toast confirm; clipboard failure logs and degrades silently</li>
-                  <li><span class="ac-tag">AC2</span> — touch target ≥48px, labelled icon (never icon-only)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- ========== AWKWARD EDGE CASES ========== -->
-            <div class="wd-section compact">
-              <p class="wd-section-label">03 — The awkward edge cases</p>
-              <h3 class="wd-section-title">The states you hope nobody hits, specified anyway.</h3>
-              <div class="wd-mechanics">
-                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>localStorage unavailable</strong> (private mode) — drafts and rate limits silently skip persistence; the form still works. Graceful degradation over an error wall.</span></div>
-                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Toast pile-up</strong> — toasts queue through their own state machine (ADDING → VISIBLE → DISMISSING → REMOVING); escape key dismisses; screen readers get one polite announcement, not five.</span></div>
-                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Success-then-regret</strong> — auto-reset after 5s wipes the form, so a second message starts clean instead of appending to the mailto body.</span></div>
-                <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>XSS via message field</strong> — input sanitization strips HTML before the mailto is composed. Trusting the reader of the inbox means not trusting the writer of the form.</span></div>
-              </div>
-            </div>
-
-            <!-- ========== V2/V3 ========== -->
-            <div class="wd-section compact">
-              <p class="wd-section-label">04 — What shipped next</p>
-              <h3 class="wd-section-title">V1 (June) → V2/V3 (July–Sept): the redesign pass.</h3>
-              <p>After launch, iteration moved to brand and conversion surface: exact palette enforcement (two brand hexes only, no off-palette gradients), a typography system upgrade, the affiliations page rebuilt as a clickable stats grid (45+ orgs, 19 corporate clients, 13 academic collaborations — click-to-scroll), and the CTA banners standardized. Same product logic: every redesign pass starts from "what does this page's job actually refuse to do," not from a moodboard.</p>
-            </div>
-
-            <!-- ========== OUTCOME ========== -->
-            <div class="wd-section compact">
-              <p class="wd-section-label">05 — Outcome &amp; honesty</p>
-              <h3 class="wd-section-title">Shipped, live, still running.</h3>
-              <p>The site launched and survived contact with real users; the org still runs on it today. What I'd do differently: the mailto form trades measurement for budget — if they ever get hosting money, a real form endpoint with submission analytics is the first upgrade, and the state machine stays exactly the same. Specs outlive implementations.</p>
-            </div>
-
-            <!-- ========== CTA ========== -->
-            <div class="wd-cta-section">
-              <p class="wd-cta-eyebrow">▸ THE LIVE SITE</p>
-              <h3 class="wd-cta-title">Open the thing I spec'd.</h3>
-              <p class="wd-cta-sub">hopencope.com — the contact form, events archive, and stats grid are all as-specified.</p>
-              <div class="linkbtn-row" style="justify-content:center;">
-                <a class="linkbtn" href="https://hopencope.com/" target="_blank" rel="noopener">open hopencope.com
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- ========== FOOTER ========== -->
-            <div class="wd-footer">
-              <span>case study by <a href="#" data-app="contact">woosqa</a> · jun–sep 2026</span>
-              <span>hopencope.doc · wookieOS</span>
-            </div>
-
           </div>
+
+          <!-- ============ PAGE: THE CASE STUDY ============ -->
+          <div class="hc2-page" data-hc2-page="study">
+            <div class="hc2-sec">
+              <p class="hc2-kick">the case study</p>
+              <h2 class="hc2-sec-title">What I owned, plainly.</h2>
+              <p class="hc2-lede">A volunteer engineering team, a live mental-health service, and one hard rule that shaped everything: zero recurring cost. No backend, no form service, no database.</p>
+              <div class="hc2-pull">The contact form was the most important surface — it's the only way a stranger reaches a real person. So it got the deepest spec.</div>
+              <div class="hc2-point"><span class="hc2-point-dot">1</span><div><b>The contact form, specified end to end.</b><p>Real-time validation, drafts that survive a refresh, and a submission limit that protects the inbox from spam — without a CAPTCHA tax on people reaching out for help.</p></div></div>
+              <div class="hc2-point"><span class="hc2-point-dot">2</span><div><b>Events as evidence.</b><p>61 past events in a filterable archive, so partners and donors could verify the track record themselves instead of asking.</p></div></div>
+              <div class="hc2-point"><span class="hc2-point-dot">3</span><div><b>Accessible by default.</b><p>WCAG AA throughout — screen-reader announcements, keyboard paths, focus handling. The audience includes people at their worst moment.</p></div></div>
+              <div class="hc2-point"><span class="hc2-point-dot">4</span><div><b>The honest tradeoff.</b><p>No budget meant no form backend, so submissions go through the visitor's own mail app. We gave up submission analytics to keep the cost at zero — the first thing to change if funding allows.</p></div></div>
+              <div class="hc2-result">
+                <span class="r-chip">live &middot; still running</span>
+                <span class="r-chip r-chip--blue">two redesign passes after launch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hc2-foot">
+            <h3>Live, and still carrying the organization.</h3>
+            <p>The site runs on it today — contact form, events archive, and every page doing its one job.</p>
+            <a class="hc2-btn hc2-btn--teal" href="https://hopencope.com/" target="_blank" rel="noopener">open hopencope.com
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+            <span class="hc2-foot-meta">product manager · jun–sep 2026 · wookieOS</span>
+          </div>
+
         </div>`
     },
     prd: {
@@ -1473,86 +1418,67 @@
       width: 960, height: 700,
       urlbar: 'boho-myrtle-16249936.figma.site',
       body: `
-        <div class="sp-root">
-          <div class="wd-root" style="background:transparent;max-width:none;">
+        <div class="sp-root" data-sp2>
 
-            <!-- ========== COVER ========== -->
-            <div class="sp-cover">
-              <span class="wd-cover-tag">CASE STUDY · AI AGENT · 3-HOUR HACKATHON · OCT 2026</span>
-              <h1>Sprout: a first step she can undo.</h1>
-              <p class="sp-cover-role">an AI agent that helps a 24-year-old make her first investment decision — designed, prompted and shipped solo in one sitting at the TechQuest design makeathon.</p>
-              <span class="sp-cover-meta">figma make · one moment, not an app · 6 screens · mobile 390×844</span>
-            </div>
-
-            <!-- ========== BRIEF ========== -->
-            <div class="wd-section">
-              <p class="wd-section-label">00 — The brief</p>
-              <h3 class="wd-section-title">One moment. Done well.</h3>
-              <p>The prompt: design one AI-powered experience that helps Ayesha — 24, first salary (Rs 140,000/month), savings idling in a current account, family to contribute to — through <strong>one stage of her financial journey</strong>. Not a whole app. Judged on thinking as much as screens: how you framed the problem, how you directed the AI, and whether the agent earns trust.</p>
-              <p>Three journeys were offered: spending, investing, long-term goals. I picked investing — because her stated fears weren't about money at all: <em>losing what she worked for, looking naive, committing to something she can't get out of, finding out in five years she wasted these years.</em></p>
-              <div class="wd-pull">The insight: Ayesha's blocker isn't knowledge, it's irreversibility. Every budgeting app gave her more information. None gave her a safe first move.</div>
-            </div>
-
-            <!-- ========== THE DECISION ========== -->
-            <div class="wd-section compact">
-              <p class="wd-section-label">01 — The product decision</p>
-              <h3 class="wd-section-title">Optimize for the undo, not the advice.</h3>
-              <p>Sprout's core promise became one line: <strong>a first step she can UNDO and EXPLAIN.</strong> Every recommendation shows how reversible it is (a 5-block pixel reversibility meter, plus words — never color alone). The AI always shows its reasoning, never touches her bank, and says "this one needs a human" when it should. Her brother said "just start" and named three things she didn't understand — Sprout flips each of those into plain language <em>using her numbers</em>.</p>
-              <div class="sp-states">
-                <div class="sp-state">
-                  <span class="sp-state-title">STATE — SHE PICKS ANOTHER</span>
-                  She overrides the recommendation. No guilt copy: "Your call. Here's what changes." "Continue with my choice" is exactly as prominent as "Back to Sprout's pick." Her agency is the product.
-                </div>
-                <div class="sp-state sp-state--trust">
-                  <span class="sp-state-title">STATE — SHE DOESN'T TRUST IT</span>
-                  A "show your work" window: the exact inputs used, the assumptions, what Sprout does <em>not</em> know (family plans, employer benefits), and a confidence level. Reasoning is a surface, not a black box.
-                </div>
-                <div class="sp-state sp-state--human">
-                  <span class="sp-state-title">STATE — BEYOND ITS LIMITS</span>
-                  Type "should I put all 300,000 in?" and Sprout doesn't improvise: "This one needs a human." → free session with a licensed advisor + three questions to ask them. The agent knows where it stops.
-                </div>
-                <div class="sp-state sp-state--exit">
-                  <span class="sp-state-title">STATE — SHE LEAVES</span>
-                  A "what I remember" screen lists everything stored — each row deletable, plus delete-everything with confirm. "Nothing was ever connected to your bank." Consent is a screen, not a checkbox.
-                </div>
-              </div>
-            </div>
-
-            <!-- ========== SPEC AS PROMPT ========== -->
-            <div class="wd-section compact">
-              <p class="wd-section-label">02 — Directing the AI</p>
-              <h3 class="wd-section-title">I wrote the spec first, then made the prompt carry it.</h3>
-              <p>Figma Make built the prototype, but the quality came from prompt discipline: a complete design system up front — exact hex tokens, card anatomy (3px ink border, notched corners, header strips), typography rules (pixel font for labels only, never body or numbers), a full accessibility budget (≥4.5:1 contrast, ≥48px targets, text labels on every icon, reduced-motion respected), and all six screens with their states — <em>before</em> asking for a single pixel.</p>
-              <div class="promptbox"><span class="pb-label">EXCERPT — THE GOVERNING PROMPT</span>CORE IDEA: Sprout helps her take a first step she can UNDO and EXPLAIN. Every option shows how reversible it is. The AI always shows its reasoning, never touches her bank, and says when a human is needed.
-
-Cards = "app windows": 3px solid ink border, pixel-notched corners, a 40px header strip with an ALL-CAPS pixel-font title... Buttons: min 48px tall... pressed state shifts 2px down and removes the shadow.
-
-Accessibility: all text >=4.5:1 contrast on its surface, touch targets >=48px, every icon has a text label, never use colour alone (reversibility also shown as text + pixel bars), plain language, no jargon without an inline "what's this?" tap.</div>
-              <p>Iteration happened in second-person edits, not re-rolls: animate the mascot so it bounces every 3–4s; let her type her own confusion and have Sprout break it into flip-cards; a shine on the selection step because it "looks dull"; stop there — "don't add a lot of stuff." The hackathon scored AI process documentation at 15%: prompts, outputs, what got rejected and why. Mine shows both rounds of refinement and the things I chose not to add.</p>
-            </div>
-
-            <!-- ========== CTA ========== -->
-            <div class="wd-cta-section" style="background:radial-gradient(circle at 20% 30%, rgba(249,184,212,0.25) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(207,203,247,0.3) 0, transparent 45%), linear-gradient(180deg, #EFF0E2, #F7F5EE);border-color:#DDE8D3;">
-              <p class="wd-cta-eyebrow" style="color:#3E5641;">▸ TRY THE PROTOTYPE</p>
-              <h3 class="wd-cta-title">Click through the whole flow.</h3>
-              <p class="wd-cta-sub">Live prototype + the full working file, prompts included.</p>
-              <div class="linkbtn-row" style="justify-content:center;">
-                <a class="linkbtn" style="background:#3E5641;border-color:#3E5641;box-shadow:4px 4px 0 #F9B8D4;" href="https://boho-myrtle-16249936.figma.site" target="_blank" rel="noopener">open live prototype
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-                </a>
-                <a class="linkbtn linkbtn--ghost" style="box-shadow:4px 4px 0 #CFCBF7;" href="https://www.figma.com/make/dIAq6wvIYups9rNvU3ebTn/Clickable-Mobile-Prototype-for-Sprout" target="_blank" rel="noopener">figma working file
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-                </a>
-              </div>
-            </div>
-
-            <!-- ========== FOOTER ========== -->
-            <div class="wd-footer" style="border-color:#DDE8D3;">
-              <span>case study by <a href="#" data-app="contact">woosqa</a> · oct 2026</span>
-              <span>sprout.exe · wookieOS</span>
-            </div>
-
+          <!-- ============ HERO ============ -->
+          <div class="sp-cover">
+            <span class="wd-cover-tag">AI AGENT · 3-HOUR HACKATHON · OCT 2026</span>
+            <h1>Sprout: a first step she can undo.</h1>
+            <p class="sp-cover-role">an AI agent that helps a 24-year-old make her first investment decision — designed, prompted and shipped solo in one sitting at the TechQuest design makeathon. one moment, not an app.</p>
+            <span class="sp-cover-meta">figma make · 6 screens · mobile 390×844</span>
           </div>
+
+          <!-- ============ THE FLOW ============ -->
+          <div class="wd-section">
+            <p class="wd-section-label">00 — the flow</p>
+            <h3 class="wd-section-title">Six screens, one decision.</h3>
+            <p style="margin-bottom:14px;">Consent first, then her situation, the advice untangled into plain language, one recommendation with its reasoning, the disagreement paths, and the decision — with everything she told it listed and deletable at the end.</p>
+            <div class="sp2-phones">
+              <figure class="sp2-phone" data-anim><img src="images/sprout/s1.png" alt="Sprout — hello + consent" loading="lazy" /><figcaption>hello + consent</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.06s"><img src="images/sprout/s2.png" alt="Sprout — her situation" loading="lazy" /><figcaption>her situation</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.12s"><img src="images/sprout/s3.png" alt="Sprout — untangling the advice" loading="lazy" /><figcaption>the advice, untangled</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.18s"><img src="images/sprout/s4.png" alt="Sprout — the recommendation" loading="lazy" /><figcaption>the first step</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.24s"><img src="images/sprout/s5.png" alt="Sprout — the disagreement paths" loading="lazy" /><figcaption>when she disagrees</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.3s"><img src="images/sprout/s6.png" alt="Sprout — decide and next steps" loading="lazy" /><figcaption>decide + next</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.36s"><img src="images/sprout/s7.png" alt="Sprout — what I remember" loading="lazy" /><figcaption>what i remember</figcaption></figure>
+              <figure class="sp2-phone" data-anim style="--d:.42s"><img src="images/sprout/s8.png" alt="Sprout — the finish" loading="lazy" /><figcaption>the finish</figcaption></figure>
+            </div>
+          </div>
+
+          <!-- ============ THE IDEA ============ -->
+          <div class="wd-section compact">
+            <p class="wd-section-label">01 — the idea</p>
+            <h3 class="wd-section-title">Her blocker wasn't knowledge. It was irreversibility.</h3>
+            <p>Ayesha's fears weren't about money — losing what she worked for, looking naive, getting locked in, wasting these years. Every budgeting app gave her more information; none gave her a safe first move. So Sprout's whole promise became one line: <strong>a first step she can undo and explain.</strong></p>
+            <div class="wd-mechanics">
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Reversibility, visible.</strong>Every option shows how easy it is to exit — in words and a meter, never color alone.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Reasoning is a surface.</strong>Inputs, assumptions, confidence, and what Sprout doesn't know — shown before she has to trust it.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Knows where it stops.</strong>Push it past its limits and it says "this one needs a human" — with a licensed advisor and the questions to ask.</span></div>
+              <div class="wd-mechanic"><span class="wd-mechanic-dot"></span><span><strong>Directed, not rolled.</strong>The prompt carried a full design spec — tokens, an accessibility budget, every state — and iteration happened in second-person edits, not re-rolls.</span></div>
+            </div>
+          </div>
+
+          <!-- ============ CTA ============ -->
+          <div class="wd-cta-section" style="background:radial-gradient(circle at 20% 30%, rgba(249,184,212,0.25) 0, transparent 40%), radial-gradient(circle at 80% 70%, rgba(207,203,247,0.3) 0, transparent 45%), linear-gradient(180deg, #EFF0E2, #F7F5EE);border-color:#DDE8D3;">
+            <p class="wd-cta-eyebrow" style="color:#3E5641;">▸ TRY THE PROTOTYPE</p>
+            <h3 class="wd-cta-title">Click through the whole flow.</h3>
+            <p class="wd-cta-sub">Live prototype + the full working file, prompts included.</p>
+            <div class="linkbtn-row" style="justify-content:center;">
+              <a class="linkbtn" style="background:#3E5641;border-color:#3E5641;box-shadow:4px 4px 0 #F9B8D4;" href="https://boho-myrtle-16249936.figma.site" target="_blank" rel="noopener">open live prototype
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+              <a class="linkbtn linkbtn--ghost" style="box-shadow:4px 4px 0 #CFCBF7;" href="https://www.figma.com/make/dIAq6wvIYups9rNvU3ebTn/Clickable-Mobile-Prototype-for-Sprout" target="_blank" rel="noopener">figma working file
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- ============ FOOTER ========== -->
+          <div class="wd-footer" style="border-color:#DDE8D3;">
+            <span>case study by <a href="#" data-app="contact">woosqa</a> · oct 2026</span>
+            <span>sprout.exe · wookieOS</span>
+          </div>
+
         </div>`
     },
     about: {
@@ -2229,6 +2155,55 @@ Accessibility: all text >=4.5:1 contrast on its surface, touch targets >=48px, e
       });
 
       animateIn(root.querySelector('[data-wtr2-page="overview"]'));
+    }
+
+    // Hope & Cope window: tab shell + scroll animations
+    if (key === 'hopencope') {
+      const root = win.querySelector('[data-hc2]');
+      const body = win.querySelector('.window-body');
+      const pages = [...root.querySelectorAll('[data-hc2-page]')];
+      const navtabs = [...root.querySelectorAll('.hc2-navtab')];
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const io = reduce ? null : new IntersectionObserver((entries) => {
+        entries.forEach(en => {
+          if (en.isIntersecting) {
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { root: body, threshold: 0.12 });
+      const animateIn = (scope) => {
+        root.querySelectorAll('[data-anim]:not(.in)').forEach(el => {
+          if (reduce || !io) el.classList.add('in');
+          else io.observe(el);
+        });
+      };
+      navtabs.forEach(t => t.addEventListener('click', () => {
+        pages.forEach(p => p.classList.toggle('is-active', p.dataset.hc2Page === t.dataset.page));
+        navtabs.forEach(x => x.classList.toggle('is-active', x === t));
+        body.scrollTop = 0;
+      }));
+      animateIn(root);
+    }
+
+    // Sprout window: scroll animations
+    if (key === 'sprout') {
+      const root = win.querySelector('[data-sp2]');
+      const body = win.querySelector('.window-body');
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) {
+        root.querySelectorAll('[data-anim]').forEach(el => el.classList.add('in'));
+      } else {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(en => {
+            if (en.isIntersecting) {
+              en.target.classList.add('in');
+              io.unobserve(en.target);
+            }
+          });
+        }, { root: body, threshold: 0.1 });
+        root.querySelectorAll('[data-anim]').forEach(el => io.observe(el));
+      }
     }
 
     // Contact window: inbox / compose / read views
