@@ -1047,16 +1047,16 @@
                   <span class="go">open &rarr;</span>
                 </button>
                 <button class="wtr2-gocard wtr2-gocard--yellow" data-goto="pricing" type="button" data-anim style="--d:.12s">
-                  <span class="st st--wip">95% · ships this week</span>
+                  <span class="st st--wip">in progress</span>
                   <span class="tone-dot"></span>
                   <h4>Pricing, rebuilt</h4>
                   <p>Institutions were buying individual licenses because the page never said the institution package existed.</p>
                   <span class="go">open &rarr;</span>
                 </button>
                 <button class="wtr2-gocard wtr2-gocard--green" data-goto="other" type="button" data-anim style="--d:.19s">
-                  <span class="st st--live">shipped</span>
+                  <span class="st st--live">live</span>
                   <span class="tone-dot"></span>
-                  <h4>The unglamorous wins</h4>
+                  <h4>Other work</h4>
                   <p>Twenty cannibalizing pages became four. The trial died. The funnel got simpler. The numbers moved.</p>
                   <span class="go">open &rarr;</span>
                 </button>
@@ -1079,37 +1079,38 @@
               </div>
 
               <div class="wtr2-subpage is-active" data-sub="page">
-                <div class="wtr2-frame" data-anim>
-                  <div class="wtr2-frame-bar">
-                    <span class="wtr2-frame-dot wtr2-frame-dot--r"></span>
-                    <span class="wtr2-frame-dot wtr2-frame-dot--y"></span>
-                    <span class="wtr2-frame-dot wtr2-frame-dot--g"></span>
-                    <span class="wtr2-frame-url">wondertree.co/who-we-help/autism</span>
+                <div class="wtr2-cols">
+                  <div>
+                    <div class="wtr2-beats">
+                      <div class="wtr2-beat" data-anim><b>Real proof, surfaced.</b>Actual evidence figures and a progress-report mockup — what a parent is really buying.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.08s"><b>Skills in the parent's words.</b>Re-ordered from clinical taxonomy to what parents actually search for.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.16s"><b>Every game earns its place.</b>"Who it helps · skills developed" taglines — carried to all landing pages by a shared system I wrote.</div>
+                      <div class="wtr2-beat" data-anim style="--d:.24s"><b>Proof you can check.</b>Partner logos linked to real sources, age range corrected to 4–14, correct hreflang.</div>
+                    </div>
                   </div>
-                  <img src="images/autism-page.png" alt="wondertree.co/who-we-help/autism — live" />
-                </div>
-                <p class="wtr2-fine" style="text-align:center;">hero video of a real kid playing &middot; dual CTA &middot; checkable trust logos &middot; full Arabic version</p>
-                <div class="wtr2-beats" style="margin-top:14px;">
-                  <div class="wtr2-beat" data-anim><b>Real proof, surfaced.</b>Actual evidence figures and a progress-report mockup — what a parent is really buying.<span class="ref">pr #152 · #153</span></div>
-                  <div class="wtr2-beat" data-anim style="--d:.08s"><b>Skills in the parent's words.</b>Re-ordered from clinical taxonomy to what parents actually search for.</div>
-                  <div class="wtr2-beat" data-anim style="--d:.16s"><b>Every game earns its place.</b>"Who it helps · skills developed" taglines — carried to all landing pages by a shared system I wrote.</div>
-                  <div class="wtr2-beat" data-anim style="--d:.24s"><b>Proof you can check.</b>Partner logos linked to real sources, age range corrected to 4–14, correct hreflang.</div>
+                  <div>
+                    <!-- media slot: drop the scroll video as images/autism-scroll.mp4 and swap this block for a looping <video muted loop playsinline> -->
+                    <a class="wtr2-media" data-anim href="https://www.wondertree.co/who-we-help/autism" target="_blank" rel="noopener">
+                      <img src="images/autism-page.png" alt="wondertree.co/who-we-help/autism" />
+                      <span class="wtr2-media-cap">click to open the live page &rarr;</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div class="wtr2-subpage" data-sub="study">
-                <div class="wtr2-pull" data-anim>Plenty of traffic. Converting for nothing — the page read like a blog post, not a product.</div>
-                <ul class="wtr2-moves">
-                  <li data-anim><b>Surfaced the real evidence.</b> <span>Research figures + a progress-report mockup above the fold — the report is what a parent is actually buying.</span></li>
-                  <li data-anim style="--d:.07s"><b>Re-aligned skills to parent intent.</b> <span>Clinical taxonomy out; the words parents search with, in.</span></li>
-                  <li data-anim style="--d:.14s"><b>Made every game relevant.</b> <span>"Who it helps · skills developed" on every card, sitewide via wwh-landing.js.</span><span class="ref">my commit · oct 7</span></li>
-                  <li data-anim style="--d:.21s"><b>Made the proof checkable.</b> <span>Partner logos linked to real sources, age corrected to 4–14, CTR metas fixed, Arabic version shipped.</span><span class="ref">pr #152 · #153</span></li>
-                </ul>
-                <div class="wtr2-result" data-anim>
-                  <span class="r-chip">clicks &uarr;</span>
-                  <span class="r-chip">intent traffic &uarr;</span>
-                  <span class="r-chip r-chip--blue">EN + AR live</span>
-                  <button class="r-open" type="button" data-goto-open="https://www.wondertree.co/who-we-help/autism">the page is the receipt — open it &rarr;</button>
+                <div class="wtr2-study">
+                  <div class="wtr2-pull" data-anim>The page had trust buried under the fold. We rebuilt the first screen around proof — and gave almost every scroll a next step.</div>
+                  <ul class="wtr2-moves">
+                    <li data-anim><b>Trust first.</b> <span>The first fold carries the real evidence, the progress report, and the partner logos. Nothing else competes with it.</span></li>
+                    <li data-anim style="--d:.07s"><b>Written for people who read.</b> <span>Our audience is special-needs parents and clinicians — they know the subject, so the page is text-heavy on purpose.</span></li>
+                    <li data-anim style="--d:.14s"><b>A way forward on almost every scroll.</b> <span>A call to action after each section — with deliberate breaks so it never feels like a chase.</span></li>
+                    <li data-anim style="--d:.21s"><b>On-brand proof, twice.</b> <span>Testimonials stay illustration-heavy to keep the WonderTree feel, then published research lands as a second trust signal — and the pricing, FAQ, and a final CTA close the page.</span></li>
+                  </ul>
+                  <div class="wtr2-result" data-anim>
+                    <span class="r-chip">live in english + arabic</span>
+                    <button class="r-open" type="button" data-goto-open="https://www.wondertree.co/who-we-help/autism">open the page &rarr;</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1121,7 +1122,7 @@
               <div class="wtr2-sec-head">
                 <span class="wtr2-num wtr2-num--yellow">02</span>
                 <h2 class="wtr2-sec-title">Pricing, rebuilt</h2>
-                <span class="wtr2-sec-status wtr2-sec-status--wip">95% · ships this week</span>
+                <span class="wtr2-sec-status wtr2-sec-status--wip">in progress</span>
               </div>
               <p class="wtr2-lede">Research from occupational therapists, real customer stories, and interviews with institutions-package buyers — all pointing at one failure.</p>
               <div class="wtr2-subnav">
@@ -1150,21 +1151,22 @@
                   </div>
                 </div>
                 <div class="wtr2-calc" data-anim style="--d:.2s"><span>the new calculator's punchline:</span> <span class="big">a whole month of wondertree &lt; one therapy session</span></div>
-                <p class="wtr2-fine" style="text-align:center;">rebuilt preview &middot; the live page replaces this when it ships — 44 files, +5,736/−2,630 lines, EN + AR</p>
+                <p class="wtr2-fine" style="text-align:center;">rebuild preview &middot; real screenshots land when it ships &middot; EN + AR</p>
               </div>
 
               <div class="wtr2-subpage" data-sub="study">
-                <div class="wtr2-pull" data-anim>People couldn't tell individual and institution pricing apart. So schools and clinics bought the wrong license — the institution package's point was never said out loud.</div>
-                <ul class="wtr2-moves">
-                  <li data-anim><b>Proven structure over invention.</b> <span>DataCamp's pricing architecture + ChatGPT-style plan framing — a team call I was part of.</span></li>
-                  <li data-anim style="--d:.07s"><b>Grouped the comparison by value.</b> <span>Play / Progress / Support with icon tiles, billing switch mirrored in, CTAs repeated.</span></li>
-                  <li data-anim style="--d:.14s"><b>Let the math sell it.</b> <span>Two sliders — sessions, cost per session — ending on the one-line punchline above.</span></li>
-                  <li data-anim style="--d:.21s"><b>Killed the trial.</b> <span>The 14-day trial wasn't converting; freemium went sitewide Oct 1, including one same-day revert and a stale-banner localStorage fix.</span></li>
-                </ul>
-                <div class="wtr2-result" data-anim>
-                  <span class="r-chip r-chip--blue">95% done</span>
-                  <span class="r-chip">ships this week</span>
-                  <span class="r-chip r-chip--blue">EN + AR</span>
+                <div class="wtr2-study">
+                  <div class="wtr2-pull" data-anim>People couldn't tell individual and institution pricing apart — so schools and clinics were buying the wrong license.</div>
+                  <ul class="wtr2-moves">
+                    <li data-anim><b>We asked the people already using it.</b> <span>Occupational therapists, real customer stories, and interviews with institutions-package buyers — all pointed at the same gap.</span></li>
+                    <li data-anim style="--d:.07s"><b>Say the package's purpose out loud.</b> <span>Better reporting, multi-user — the institution plan now explains itself instead of assuming you know.</span></li>
+                    <li data-anim style="--d:.14s"><b>Borrowed structure that works.</b> <span>DataCamp's pricing architecture, plans grouped by value, yearly billing as the default path.</span></li>
+                    <li data-anim style="--d:.21s"><b>Let the math sell it.</b> <span>Two sliders — sessions and cost per session — ending on the punchline above. And the 14-day trial made way for a free plan, because it wasn't converting.</span></li>
+                  </ul>
+                  <div class="wtr2-result" data-anim>
+                    <span class="r-chip r-chip--blue">in progress</span>
+                    <span class="r-chip">EN + AR</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1177,31 +1179,31 @@
                 <span class="wtr2-num wtr2-num--green">03</span>
                 <h2 class="wtr2-sec-title">Other work that moved the numbers</h2>
               </div>
-              <p class="wtr2-lede" data-anim>The unglamorous stuff — none of it is a screen, all of it shows up in search.</p>
+              <p class="wtr2-lede" data-anim>The work behind the pages — none of it is a screen, all of it shows up in the numbers.</p>
               <div class="wtr2-ow">
                 <div class="wtr2-owcard wtr2-owcard--blue" data-anim>
                   <h4>20 pages &rarr; 4</h4>
-                  <p>Near-identical pages were cannibalizing each other — the motor-skills cluster ranked 7, 47 and 93 for the same queries. Consolidated into canonical pages, 301 the rest.</p>
-                  <span class="r">CTR 2.25% &rarr; 2.70%</span>
+                  <p>We were getting clicks — from the wrong people. Celebrity listicles pulled readers who'd never buy, and near-identical pages were cannibalizing each other. We consolidated into 4 canonical pages and pointed the site at intent traffic instead. That shift led to the autism page rebuild, then pricing.</p>
+                  <span class="r">live</span>
                 </div>
                 <div class="wtr2-owcard wtr2-owcard--yellow" data-anim style="--d:.08s">
                   <h4>Freemium rollout</h4>
-                  <p>14-day trial &rarr; free plan, sitewide. Shipped, reverted same day, re-shipped right — including a fix for stale banner dismissals blocking the new funnel.</p>
-                  <span class="r">live since oct 1</span>
+                  <p>The 14-day trial wasn't converting, so it made way for a free plan across the site — shipped, reverted same day, re-shipped right, including a fix for stale banner dismissals blocking the new funnel.</p>
+                  <span class="r r--wip">in progress</span>
                 </div>
                 <div class="wtr2-owcard wtr2-owcard--green" data-anim style="--d:.16s">
                   <h4>Talk-to-Us funnel</h4>
                   <p>Retired book-a-demo. Contact form now asks who you are — parent, teacher, school — and bookings go to Microsoft Books.</p>
-                  <span class="r">live since oct 12</span>
+                  <span class="r">live</span>
                 </div>
               </div>
               <div class="wtr2-stats">
-                <div class="wtr2-stat" data-anim><span class="was">6,912</span><span class="now">7,655</span><span class="lbl">clicks / mo</span><span class="up">&uarr; 10.8%</span></div>
-                <div class="wtr2-stat" data-anim style="--d:.06s"><span class="was">11.7</span><span class="now">8.5</span><span class="lbl">avg position</span><span class="up">&uarr; 3 spots</span></div>
-                <div class="wtr2-stat" data-anim style="--d:.12s"><span class="was">2.25%</span><span class="now">2.70%</span><span class="lbl">CTR</span><span class="up">&uarr; 20% rel</span></div>
-                <div class="wtr2-stat" data-anim style="--d:.18s"><span class="was">&nbsp;</span><span class="now">14,270</span><span class="lbl">sessions / mo</span><span class="up">clarity</span></div>
+                <div class="wtr2-stat" data-anim><i class="wtr2-info" tabindex="0"><span class="tip">Google Search Console + Microsoft Clarity. 28 days ending Oct 11, 2026, compared with the 28 days before.</span>&#8505;</i><span class="was">6,912</span><span class="now">7,655</span><span class="lbl">clicks / mo</span><span class="up">&uarr; 10.8%</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.06s"><i class="wtr2-info" tabindex="0"><span class="tip">Google Search Console. Same period: Sep 14 – Oct 11, 2026 vs the prior 28 days.</span>&#8505;</i><span class="was">11.7</span><span class="now">8.5</span><span class="lbl">avg position</span><span class="up">&uarr; 3 spots</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.12s"><i class="wtr2-info" tabindex="0"><span class="tip">Google Search Console. Same period: Sep 14 – Oct 11, 2026 vs the prior 28 days.</span>&#8505;</i><span class="was">2.25%</span><span class="now">2.70%</span><span class="lbl">CTR</span><span class="up">&uarr; 20% rel</span></div>
+                <div class="wtr2-stat" data-anim style="--d:.18s"><i class="wtr2-info" tabindex="0"><span class="tip">Microsoft Clarity. Total sessions in the 28 days ending Oct 12, 2026.</span>&#8505;</i><span class="was">&nbsp;</span><span class="now">14,270</span><span class="lbl">sessions / mo</span><span class="up">clarity</span></div>
               </div>
-              <p class="wtr2-fine">Source: Google Search Console API + Microsoft Clarity, Oct 2026. Impressions fell 7.6% — on purpose: we stopped chasing low-intent blog traffic. <b>Still broken, kept here on purpose:</b> the ASD Level 2 guide ranks ~5 for its top query at 0.11% CTR — the title answers the wrong question. Next card on the board.</p>
+              <p class="wtr2-fine">Impressions fell 7.6% over the same period — on purpose: we stopped chasing low-intent blog traffic. <b>Still broken, kept here on purpose:</b> the ASD Level 2 guide ranks ~5 for its top query at 0.11% CTR — the title answers the wrong question. Next card on the board.</p>
               <p class="wtr2-fine" style="margin-top:10px;">The whole commit-level timeline lives in <b>notes/wondertree-timeline.md</b>.</p>
             </div>
           </div>
@@ -1214,7 +1216,7 @@
               <a class="wtr2-btn wtr2-btn--yellow" href="https://www.wondertree.co/" target="_blank" rel="noopener">open wondertree.co
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
               </a>
-              <button class="wtr2-btn wtr2-btn--ghost" type="button" data-app="contact" style="color:#fff;border-color:#fff;">questions? mail me</button>
+              <button class="wtr2-btn wtr2-btn--blue" type="button" data-app="contact">questions? mail me</button>
             </div>
             <span class="wtr2-foot-meta">case study by <a href="#" data-app="contact">woosqa</a> · wookieOS</span>
           </div>

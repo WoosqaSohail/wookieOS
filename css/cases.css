@@ -564,6 +564,91 @@
 .wtr2-owcard h4 { font-family: 'Bebas Neue', 'Arial Narrow', sans-serif; font-size: 19px; letter-spacing: .5px; margin: 0 0 5px; color: var(--ink); }
 .wtr2-owcard p { font-size: 12px; margin: 0 0 9px; color: #444; line-height: 1.5; }
 .wtr2-owcard .r { font-size: 10.5px; font-weight: 800; color: #1d8a4a; background: #e2f5e8; display: inline-block; border-radius: 999px; padding: 3px 10px; }
+.wtr2-owcard .r--wip { background: var(--yellow); color: var(--amber); }
+
+/* solid blue button (footer default) */
+.wtr2-btn--blue { background: var(--blue); color: #fff; border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+.wtr2-btn--blue:hover { transform: translate(-1px,-1px); box-shadow: 5px 5px 0 var(--ink); }
+
+/* ---------- case study readability (bigger, calmer) ---------- */
+.wtr2-study .wtr2-pull { font-size: 27px; line-height: 1.2; }
+.wtr2-study .wtr2-moves li { font-size: 13.5px; line-height: 1.55; padding: 12px 14px 12px 52px; }
+.wtr2-study .wtr2-moves li::before { font-size: 19px; left: 12px; }
+.wtr2-study .wtr2-lede { font-size: 15px; }
+
+/* ---------- two-column page layout (text + media) ---------- */
+.wtr2-cols { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 18px; align-items: start; }
+.wtr2-cols .wtr2-beats { grid-template-columns: 1fr; margin: 0; }
+.wtr2-media {
+  position: sticky;
+  top: 66px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 5px 6px 0 var(--ink);
+  overflow: hidden;
+  display: block;
+}
+.wtr2-media img { display: block; width: 100%; height: auto; }
+.wtr2-media-cap {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  color: var(--blue);
+  padding: 9px 14px;
+  background: var(--paper2);
+  border-top: 1.5px solid var(--ink);
+}
+.wtr2-media a { display: block; }
+@media (max-width: 760px) {
+  .wtr2-cols { grid-template-columns: 1fr; }
+  .wtr2-media { position: static; }
+}
+
+/* ---------- ⓘ data tooltip ---------- */
+.wtr2-stat { position: relative; }
+.wtr2-info {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--paper2);
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 800;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: help;
+  font-family: 'Raleway', 'Segoe UI', sans-serif;
+}
+.wtr2-info:hover, .wtr2-info:focus { background: var(--navy); color: #fff; }
+.wtr2-info .tip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: -6px;
+  width: 200px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0;
+  z-index: 20;
+  pointer-events: none;
+}
+.wtr2-info:hover .tip, .wtr2-info:focus .tip { display: block; }
 
 /* ---------- shared: browser-chrome case windows (wondertree, sprout) ---------- */
 .window--browser .window-body:has(.wtr-root),
