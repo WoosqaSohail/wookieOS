@@ -1228,6 +1228,12 @@
       body: `
         <div class="hc2-root" data-hc2>
 
+          <div class="hc2-hero">
+            <p class="kick">hopencope.com &middot; product manager &middot; jun–sep 2026</p>
+            <h1>Hope &amp; Cope — building their <em>digital front door.</em></h1>
+            <p>A psychological support network in Karachi providing evidence-based care for individuals, families, and the community. The team reached out through my Google Developer community and asked for help going digital. As their product manager, I owned what the site says, how it works, and what shipped.</p>
+          </div>
+
           <nav class="hc2-nav">
             <button class="hc2-navtab is-active" data-page="site" type="button">the website</button>
             <button class="hc2-navtab" data-page="study" type="button">the case study</button>
@@ -1235,12 +1241,6 @@
 
           <!-- ============ PAGE: THE WEBSITE ============ -->
           <div class="hc2-page is-active" data-hc2-page="site">
-            <div class="hc2-hero">
-              <p class="kick">hopencope.com &middot; product manager &middot; jun–sep 2026</p>
-              <h1>Hope &amp; Cope — building their <em>digital front door.</em></h1>
-              <p>A psychological support network in Karachi providing evidence-based care for individuals, families, and the community. The team reached out through my Google Developer community and asked for help going digital. As their product manager, I owned what the site says, how it works, and what shipped.</p>
-            </div>
-
             <div class="hc2-sec">
               <p class="hc2-kick">the website · what each page says</p>
               <h2 class="hc2-sec-title">Every page earns its place.</h2>
@@ -2062,6 +2062,7 @@
 
     positionWindow(win, def);
     stage.appendChild(win);
+    syncMobileStage();
 
     // Taskbar button — reuse pinned button if one exists
     let btn = null;
@@ -3383,6 +3384,7 @@
       });
       if (topKey) focusWindow(topKey);
     }
+    syncMobileStage();
   }
 
   function restoreWindow(key) {
@@ -3392,6 +3394,7 @@
     entry.minimized = false;
     if (entry.btn) entry.btn.classList.remove('minimized');
     focusWindow(key);
+    syncMobileStage();
   }
 
   function closeWindow(key) {
@@ -3399,6 +3402,8 @@
     if (!entry) return;
     entry.el.classList.add('window--closing');
     entry.el.addEventListener('animationend', () => entry.el.remove(), { once: true });
+    // fallback: the animation never fires if the stage is hidden (mobile)
+    setTimeout(() => { if (entry.el.parentNode) entry.el.remove(); }, 500);
     if (entry.btn) {
       if (entry.def.pinned) {
         entry.btn.classList.remove('active', 'minimized', 'running');
@@ -3419,7 +3424,19 @@
       });
       if (topKey) focusWindow(topKey);
     }
+    syncMobileStage();
   }
+
+  /* ---------- Mobile: keep the stage overlay in sync ---------- */
+  function syncMobileStage() {
+    const anyVisible = !!document.querySelector('.window-stage .window:not(.window--minimized):not(.window--closing)');
+    document.body.classList.toggle('has-window', anyVisible && window.matchMedia('(max-width: 900px)').matches);
+  }
+  document.getElementById('window-stage')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget && window.matchMedia('(max-width: 900px)').matches) {
+      [...openWindows.keys()].forEach(k => closeWindow(k));
+    }
+  });
 
   /* ---------- Positioning ---------- */
   function positionWindow(win, def) {
@@ -3755,6 +3772,72 @@
     } else {
       initMusic();
     }
+    if (window.matchMedia('(max-width: 900px)').matches) startMobileHints();
+    else startDesktopHints();
+  }
+
+  /* ---------- First-run coach marks ---------- */
+  function buildCoach(step) {
+    const el = document.createElement('div');
+    el.className = `coach ${step.pos || ''}`;
+    el.innerHTML = `
+      <span class="coach-step">${step.label}</span>
+      ${step.text}
+      <div class="coach-actions">
+        <button class="coach-skip" type="button">skip</button>
+        <button class="coach-next" type="button">${step.last ? 'got it' : 'next'}</button>
+      </div>
+    `;
+    return el;
+  }
+
+  function runCoach(steps) {
+    document.querySelectorAll('.coach').forEach(el => el.remove());
+    let i = 0;
+    const show = () => {
+      document.querySelectorAll('.coach').forEach(el => el.remove());
+      if (i >= steps.length) return;
+      const el = buildCoach(steps[i]);
+      document.body.appendChild(el);
+      el.querySelector('.coach-next').addEventListener('click', () => { i += 1; show(); });
+      el.querySelector('.coach-skip').addEventListener('click', () => { i = steps.length; show(); });
+    };
+    show();
+  }
+
+  function startDesktopHints() {
+    runCoach([
+      { label: 'tip 1 of 3', pos: 'coach--center', text: 'right-click anywhere on the desktop to customize it — wallpaper, accent colors, night light and more.' },
+      { label: 'tip 2 of 3', pos: 'coach--br', text: 'the clock opens quick settings: the music player, a calendar, volume and display modes.' },
+      { label: 'tip 3 of 3', pos: 'coach--bl', text: 'the start menu launches everything on this system — including a proper shutdown.', last: true },
+    ]);
+  }
+
+  function startMobileHints() {
+    const hints = document.getElementById('m-hints');
+    const bubble = document.getElementById('m-hint-bubble');
+    if (!hints || !bubble) return;
+    const steps = [
+      { label: 'tip 1 of 3', text: 'tap any icon to open it — everything here opens like a window.' },
+      { label: 'tip 2 of 3', text: 'while the playlist plays, the track shows at the top. tap it to pause or play.' },
+      { label: 'tip 3 of 3', text: 'the dock stays put: contact, about, settings — and power locks the phone.', last: true },
+    ];
+    let i = 0;
+    hints.classList.remove('hidden');
+    const show = () => {
+      if (i >= steps.length) { hints.classList.add('hidden'); return; }
+      bubble.innerHTML = `
+        <span class="coach-step">${steps[i].label}</span>
+        ${steps[i].text}
+        <div class="coach-actions">
+          <button class="coach-skip" type="button">skip</button>
+          <button class="coach-next" type="button">${steps[i].last ? 'got it' : 'next'}</button>
+        </div>
+      `;
+      bubble.querySelector('.coach-next').addEventListener('click', () => { i += 1; show(); });
+      bubble.querySelector('.coach-skip').addEventListener('click', () => { i = steps.length; show(); });
+    };
+    show();
   }
 
   /* ---------- Music player (YouTube IFrame API) ---------- */
@@ -3881,7 +3964,12 @@
         <span class="np-toast-track">${trackName || '—'}</span>
         <span class="np-toast-hint">click the clock to control &rarr;</span>
       </div>
+      <button class="np-toast-pause" id="np-pause" type="button" aria-label="pause">&#10074;&#10074;</button>
     `;
+    toast.querySelector('.np-toast-pause').addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMusic();
+    });
     toast.addEventListener('click', (e) => {
       e.stopPropagation();
       toast.classList.add('out');
@@ -3895,18 +3983,19 @@
     });
     document.body.appendChild(toast);
 
-    // Auto-dismiss after 5s
+    // Auto-dismiss after 7s
     setTimeout(() => {
       if (toast.parentNode) {
         toast.classList.add('out');
         setTimeout(() => toast.remove(), 300);
       }
-    }, 5000);
+    }, 7000);
   }
 
   function onMusicState(e) {
     const btn = document.getElementById('music-play');
-    if (e.data === YT.PlayerState.PLAYING) {
+    const playing = e.data === YT.PlayerState.PLAYING;
+    if (playing) {
       btn.textContent = '||';
       const data = ytPlayer.getVideoData();
       const title = data.title || '—';
@@ -3921,6 +4010,16 @@
       btn.textContent = '▶';
       if (musicProgressTimer) { clearInterval(musicProgressTimer); musicProgressTimer = null; }
     }
+    // mobile music chip + toast pause label
+    const mMusic = document.getElementById('m-music');
+    if (mMusic) {
+      mMusic.classList.remove('hidden');
+      document.getElementById('m-music-track').textContent =
+        (ytPlayer && ytPlayer.getVideoData ? ytPlayer.getVideoData().title : '') || '—';
+      document.getElementById('m-music-state').textContent = playing ? '||' : '▶';
+    }
+    const npPause = document.getElementById('np-pause');
+    if (npPause) npPause.textContent = playing ? '||' : '▶';
   }
 
   function updateMusicProgress() {
@@ -4310,16 +4409,71 @@
   function tickClock() {
     if (!clockEl) return;
     const d = new Date();
-    clockEl.textContent = `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
+    const hhmm = `${d.getHours().toString().padStart(2, '0')}:${d.getMinutes().toString().padStart(2, '0')}`;
+    clockEl.textContent = hhmm;
+    const mClock = document.getElementById('m-clock');
+    if (mClock) mClock.textContent = hhmm;
+    const mLockClock = document.getElementById('m-lock-clock');
+    if (mLockClock) mLockClock.textContent = hhmm;
     updatePanelClock();
   }
   tickClock();
   setInterval(tickClock, 1000 * 20);
 
-  /* ---------- Mobile no-op ---------- */
-  document.querySelectorAll('[data-window-mobile]').forEach(el => {
-    el.addEventListener('click', (e) => e.preventDefault());
-  });
+  /* ---------- Mobile home screen ---------- */
+  const mGrid = document.getElementById('m-grid');
+  const mDock = document.getElementById('m-dock');
+  if (mGrid && mDock) {
+    const iconSvg = (key) => {
+      const src = document.querySelector(`.desktop-icon[data-window="${key}"] .icon-pixel`)
+        || document.querySelector(`.recycle-bin[data-window="${key}"] .icon-pixel`);
+      if (src) return src.innerHTML;
+      if (key === 'settings') {
+        return '<svg viewBox="0 0 16 16" class="px" shape-rendering="crispEdges"><rect x="6" y="2" width="4" height="2" fill="#9C7DF0"/><rect x="6" y="12" width="4" height="2" fill="#9C7DF0"/><rect x="2" y="6" width="2" height="4" fill="#9C7DF0"/><rect x="12" y="6" width="2" height="4" fill="#9C7DF0"/><rect x="6" y="6" width="4" height="4" fill="#C4B5FD"/><rect x="7" y="7" width="2" height="2" fill="#1F1430"/></svg>';
+      }
+      return '';
+    };
+    const gridOrder = ['wondertree', 'hopencope', 'sprout', 'consultly', 'frenzly', 'storyloop', 'wisdom', 'about', 'contact', 'settings', 'trash'];
+    gridOrder.forEach(key => {
+      const btn = document.createElement('button');
+      btn.className = 'm-app';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', key);
+      btn.innerHTML = `<span class="icon-pixel">${iconSvg(key)}</span><span class="m-app-label">${key === 'about' ? 'about' : key}</span>`;
+      btn.addEventListener('click', () => openWindow(key));
+      mGrid.appendChild(btn);
+    });
+    [
+      { key: 'contact', label: 'contact' },
+      { key: 'about', label: 'about' },
+      { key: 'settings', label: 'settings' },
+    ].forEach(d => {
+      const btn = document.createElement('button');
+      btn.className = 'm-app';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', d.label);
+      btn.innerHTML = `<span class="icon-pixel">${iconSvg(d.key)}</span>`;
+      btn.addEventListener('click', () => openWindow(d.key));
+      mDock.appendChild(btn);
+    });
+    const power = document.createElement('button');
+    power.className = 'm-app';
+    power.type = 'button';
+    power.setAttribute('aria-label', 'lock');
+    power.innerHTML = `<span class="icon-pixel"><svg viewBox="0 0 8 10" class="px" shape-rendering="crispEdges"><rect x="3" y="0" width="2" height="3" fill="currentColor"/><rect x="1" y="3" width="1" height="1" fill="currentColor"/><rect x="6" y="3" width="1" height="1" fill="currentColor"/><rect x="0" y="4" width="1" height="2" fill="currentColor"/><rect x="7" y="4" width="1" height="2" fill="currentColor"/><rect x="1" y="6" width="1" height="1" fill="currentColor"/><rect x="6" y="6" width="1" height="1" fill="currentColor"/><rect x="2" y="7" width="4" height="1" fill="currentColor"/><rect x="0" y="8" width="8" height="1" fill="currentColor"/></svg></span>`;
+    const mLock = document.getElementById('m-lock');
+    power.addEventListener('click', () => {
+      mLock.classList.remove('hidden');
+      const t = document.getElementById('m-lock-clock');
+      if (t) t.textContent = document.getElementById('m-clock')?.textContent || '';
+    });
+    mDock.appendChild(power);
+    document.getElementById('m-unlock')?.addEventListener('click', () => {
+      mLock.classList.add('hidden');
+    });
+    const mMusic = document.getElementById('m-music');
+    mMusic?.addEventListener('click', () => toggleMusic());
+  }
 
   /* ---------- Resize: update settings resolution ---------- */
   window.addEventListener('resize', () => {

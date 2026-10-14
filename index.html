@@ -459,79 +459,39 @@
   <div class="window-stage" id="window-stage" aria-live="polite"></div>
 
   <!-- ============================================================
-       MOBILE
+       MOBILE — phone home screen
        ============================================================ -->
   <main class="mobile-view" id="mobile-projects">
-    <header class="mobile-hero">
-      <span class="mobile-eyebrow">wookieOS v.0.2</span>
-      <h1 class="mobile-title">hi, i'm wookie.</h1>
-      <p class="mobile-tagline">designer &amp; developer &rarr; product.<br/>open to work, 2026.</p>
-      <p class="mobile-note">[desktop recommended for the full experience]</p>
+    <div class="m-status">
+      <span class="m-status-time" id="m-clock">12:00</span>
+      <button class="m-status-music hidden" id="m-music" type="button" aria-label="pause music">
+        <span class="m-music-icon" aria-hidden="true">&#9835;</span>
+        <span class="m-music-track" id="m-music-track">&mdash;</span>
+        <span class="m-music-state" id="m-music-state" aria-hidden="true">||</span>
+      </button>
+    </div>
+
+    <header class="m-head">
+      <span class="mobile-eyebrow">wookieOS</span>
+      <h1 class="m-title">hi, i'm wookie.</h1>
+      <p class="m-tag">designer &amp; developer &rarr; product</p>
     </header>
 
-    <section class="mobile-projects" aria-label="Projects">
-      <a href="#" class="mobile-card" data-window-mobile="wondertree">
-        <img src="images/wondertree.png" alt="WonderTree case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.co</span>
-          <h2>wondertree</h2>
-          <p>b2b healthtech website as a product — research, decisions, shipped work.</p>
-        </div>
-      </a>
-      <a href="#" class="mobile-card" data-window-mobile="hopencope">
-        <img src="images/hopencope.png" alt="Hope and Cope case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.org</span>
-          <h2>hopencope</h2>
-          <p>four months as product manager for a mental health NPO.</p>
-        </div>
-      </a>
-      <a href="#" class="mobile-card" data-window-mobile="sprout">
-        <img src="images/sprout.png" alt="Sprout case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.app</span>
-          <h2>sprout</h2>
-          <p>an AI agent for a first investment step — hackathon build.</p>
-        </div>
-      </a>
-      <a href="#" class="mobile-card" data-window-mobile="consultly">
-        <img src="images/consultly.png" alt="Consultly case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.app</span>
-          <h2>consultly</h2>
-          <p>consultancy mobile app — connecting experts with clients.</p>
-        </div>
-      </a>
-      <a href="#" class="mobile-card" data-window-mobile="frenzly">
-        <img src="images/frenzly.png" alt="Frenzly case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.app</span>
-          <h2>frenzly</h2>
-          <p>language learning app with an AI tutor companion.</p>
-        </div>
-      </a>
-      <a href="#" class="mobile-card" data-window-mobile="storyloop">
-        <img src="images/storyloop.png" alt="Storyloop case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.url</span>
-          <h2>storyloop</h2>
-          <p>curated scrollytelling platform for long-form storytelling.</p>
-        </div>
-      </a>
+    <nav class="m-grid" aria-label="apps" id="m-grid"><!-- app icons cloned from the desktop by app.js --></nav>
 
-      <a href="#" class="mobile-card" data-window-mobile="wisdom">
-        <img src="images/wisdom/hero.png" alt="Wisdom case study" />
-        <div class="mobile-card-body">
-          <span class="mobile-tag">.doc</span>
-          <h2>wisdom</h2>
-          <p>better kids — emotional learning app redesign case study.</p>
-        </div>
-      </a>
-    </section>
+    <div class="m-spacer" aria-hidden="true"></div>
 
-    <footer class="mobile-footer">
-      <p>wookieOS · v.0.2 '02 edition</p>
-    </footer>
+    <nav class="m-dock" aria-label="dock" id="m-dock"><!-- dock icons cloned by app.js --></nav>
+
+    <div class="m-lock hidden" id="m-lock" role="dialog" aria-label="locked">
+      <span class="m-lock-time" id="m-lock-clock">12:00</span>
+      <span class="m-lock-label">locked</span>
+      <button class="m-lock-btn" id="m-unlock" type="button">tap to unlock</button>
+    </div>
+
+    <div class="m-hints hidden" id="m-hints">
+      <div class="m-hint-bubble" id="m-hint-bubble"></div>
+    </div>
   </main>
 
   <!-- Hidden YouTube player target -->
